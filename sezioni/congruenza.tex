@@ -1,0 +1,570 @@
+\section{Classi di Congruenza}
+Siano $a,b\in\mathbb{Z}$, $n\in\mathbb{N}$, $n>0$\\
+Si dice che {\color{red} $a$ è \textbf{congruo} (o congruente) a $b$ modulo $n$ se}
+$$n|(a-b)$$
+Si scrive $a\equiv b\mod n$; oppure $a\equiv b (\mod n)$ oppure $a\equiv _n b$
+\paragraph{NB} $a\equiv b\mod n \Longleftrightarrow$
+\begin{tabular}{c}
+    il resto della divisione\\
+    di $a$ per $n$
+\end{tabular}$=$
+\begin{tabular}{c}
+    il resto della divisione\\
+    di $b$ per $n$
+\end{tabular}
+\paragraph{Dimostrazione} ipotesi: $a\equiv b\mod n$ tesi: i due resti sono uguali \\
+divido $a$ per $n$: {\color{green} $a=nq_1+r_1$}, {\color{blue} $0\leq r_1<n$}\\
+divido $b$ per $n$: {\color{green} $b=nq_2+r_2$}, {\color{blue} $0\leq r_2<n$}\\
+So che $a\equiv b\mod n \Longrightarrow n|(a-b)$\\
+Da $a-b\underset{{\color{blue}\uparrow}}{=}nq_1 +r_1-(nq_2+r_2)=n(q_1-q_2)+(r_1-r_2)$\\
+{\color{blue} $a=nq_1+r_1\\ b=nq_2 +r_2$}\\\\
+Si ottiene: $r_1-r_2=(a-b)-n(q_1-q_2)$
+$$
+\begin{cases}
+    n|n(q_1-q_2)\\
+    {\color{red} n|a-b}
+\end{cases}
+\Longrightarrow n| (a-b)-n(q_1-q_2)\Longrightarrow n|r_1-r_2
+$$
+{\color{red} Perché per ipotesi $a\equiv b\mod n$    }
+$$
+\textrm{se }r_1\geq r_2\Longrightarrow 
+\begin{cases}
+0\leq r_1-r_2<n\\
+n|r_1-r_2
+\end{cases}
+\Longrightarrow 
+r_1-r_2=0\Longrightarrow r_1=r_2
+$$
+        
+    
+$$
+\textrm{se }r_2\geq r_1\Longrightarrow 
+\begin{cases}
+0\leq r_2-r_1<n\\
+    n|(r_1-r_2)\Rightarrow n|(r_2-r_1)
+\end{cases}
+\Longrightarrow 
+r_2-r_1=0\Longrightarrow r_2=r_1
+$$
+\paragraph{Viceversa}
+\paragraph{Ipotesi} Considero\\
+\begin{tabular}{c c}
+    $a=nq_1 +r_1$ & $0\leq r_1<n$\\
+    $b=nq_2 +r_2$ & $0\leq r_2<n$\\
+    $r_2=r_1$
+\end{tabular}
+\paragraph{Tesi} $a\equiv b\mod n$
+\paragraph{Dimostrazione} Voglio arrivare a dire che $n|(a-b)$\\
+$
+\begin{cases}
+    a=nq_1+r_1\\
+    r_1=r_2
+\end{cases}
+\Longrightarrow a = nq_1+r_2 \Longrightarrow \\
+a-b = (nq_1+r_2)-(nq_2+r_2)= nq_1+\cancel{r_2}-nq_2-\cancel{r_2}=nq_1-nq_2=\\
+=n(q_1-q_2)\Longrightarrow n|(a-b)
+$
+\paragraph{NB 2} {\color{red} Fisso $n \in \mathbb{N}$}\\
+La relazione di congruenza gode delle seguenti proprietà:
+\begin{enumerate}
+    \item \textbf{è riflessiva}: $a\equiv a\mod n\forall a$\\
+        (infatti $n|(a-a)=0$)
+    \item \textbf{è simmetrica}: $a\equiv b\mod n\Longrightarrow b\equiv a\mod n$\\
+        (infatti $n|(a-b)\Longrightarrow n|(b-a)$)
+    \item \textbf{è transitiva}: 
+        $
+        \begin{cases}
+            a\equiv b\mod n\\
+            b\equiv c\mod n
+        \end{cases}
+        \Longrightarrow a\equiv c\mod n
+        $\\
+        Infatti 
+        $
+        \begin{cases}
+            a\equiv b\mod n\Longrightarrow n|(a-b) \\
+            b\equiv c\mod n\Longrightarrow n|(b-c)
+        \end{cases}
+        \Longrightarrow n|[(a-b)+(b-c)]=(a-c)\Longrightarrow\\
+        \Longrightarrow a\equiv c \mod n 
+        $\\
+        Ogni relazione che dove delle proprietà 1., 2., 3. si dice una \\
+        {\color{red}\textbf{relazione di equivalenza}.}\\
+        Fissato $n\in\mathbb{N}$, $n>0$, $a_1, a_2, b_1, b_2\in\mathbb{Z}$
+    \item 
+        $
+        \begin{cases}
+            a_1\equiv b_1\mod n\\
+            a_2\equiv b_2\mod n
+        \end{cases}
+        \Longrightarrow (a_1 + a_2)\equiv (b_1+b_2)\mod n\\
+        $
+        {\color{red} le congruenze modulo $n$ si possono ``sommare"}
+    \item 
+        $
+        \begin{cases}
+            a_1\equiv b_1\mod n\\
+            a_2\equiv b_2\mod n
+        \end{cases}
+        \Longrightarrow a_1 \cdot a_2\equiv b_1\cdot b_2\mod n\\
+        $
+        {\color{red} le congruenze modulo $n$ si possono ``moltiplicare"}
+        {\color{purple} PAOLO qui però ho copiato parecchio dalle slide vecchie}
+
+
+
+\end{enumerate}
+In generale 
+\begin{enumerate}
+    \item $\forall n\in\mathbb{N}$, $\forall a, k \in\mathbb{Z}$
+        $$[a]_n=[a+kn]_n$$
+    \item $c\in [a]_n\Longrightarrow [a]_n=[c]_n$
+    \item In particolare (dividevo) $a$ per:\\
+        $a=qn+r$ con $0\leq r< n$\\
+        Si ha $[a]_n=[r]_n$\\
+        Perché, essendo $r=a+n\cdot(-q)$, si ha che $r\in[a]_n$, quindi si può 
+        usare $[z]$??? con $c=r$
+\end{enumerate}
+\paragraph{Def.} $a\in\mathbb{Z}, n\in\mathbb{Z}, n>0$, si chiama
+\\{\color{red} 
+\textbf{classe di congruenza} $a$ modulo $n$} e si indica $[a]_n$ oppure $[a]\mod n$\\
+\begin{align*}
+    [a]_n & = \textrm{ insieme di tutti i numeri interi che sono congrui ad }a \textrm{ modulo }n\\
+    & =\{b\in\mathbb{Z}|b\equiv a\mod n\}\\
+\end{align*}
+\paragraph{NB 1} $\forall b\in\mathbb{N}$, $n>0$, $a,b\in\mathbb{Z}$\hspace{1cm}$[a]_n,[b]_n$\\
+Voglio vedere che $[a]_n=[b]_n$ oppure che $[a]_n \cap [b]_n=\varnothing$ \footnote{
+    $[a]_n$ e $[b]_n$, pensati come insiemi di numeri interi, sono \textbf{insiemi disgiunti}}
+\color{blue}\\
+Infatti o $[a]_n=[b]_n$
+
+Oppure $[a]_n\neq[b]_n$. Suppongo $[a]_n\cap[b]_n\neq\varnothing$\\
+$\Longrightarrow \exists c \in[a]_n\cap[b]_n \Longrightarrow
+\begin{cases}
+    c\in[a]_n\Longrightarrow [a]_n=[c]_n\\
+    c\in[b]_n\Longrightarrow [b]_n=[c]_n\\
+\end{cases}\\
+\Longrightarrow \color{red}
+[a]_n=[c]_n=[b]_n\Longrightarrow[a]_n=b_n$
+è una \textbf {contraddizione}
+\color{black}
+\paragraph{NB 2} $\forall n$, $n>0$\\
+Considero le classi di congruenza $[a]_n$ con $0\leq a<n$\\
+%\textbf{ogni numero intero appartiene ad una di queste classi.} Infatti,\\
+se $b\in\mathbb{Z}$, dividendo $b$ su $n$ si ha: $b=nq+r$ con $0\leq r<n
+\Longrightarrow [b]_n=[r]_n\Longrightarrow b\in[r]_n$\\ Quindi 
+$$\mathbb{Z}=[0]_n\cup[1]_n\cup[2]_n\cup...\cup [n-1]_n$$
+$$\mathbb{Z}=\underset{0\leq a <n}{\bigcup} [a]_n$$
+Queste classi sono a due a due \textbf{disgiunte}, l'insieme delle classi 
+$[0]_n,[1]_n,...,[n-1]_n$ sono una \textbf{partizione} di $\mathbb{Z}$
+\paragraph{Def.} L'insieme degli {\color{red} interi modulo $n$}, indicato con il simbolo
+$\mathbb{Z}_n$ è:\\
+$$\mathbb{Z}_n=\Big\{ [0]_n,[1]_n,[2]_n,...,[n-1]_n \Big\}$$
+In $\mathbb{Z}_n$ si definiscono $+$ e $\cdot$ nel seguente modo:\\
+%\begin{tabular}{c c}
+%   $\forall[a]_n,[b]_n\in\mathbb{Z}
+%\end{tabular}
+
+DA QUI RIPRENDO LEZIONE LIVE 6    
+
+\paragraph{Teorema 1} (*) ha soluzione $\Longleftrightarrow d=MCD(a,n)|b$\\
+se $d|b$ una soluzione $x_0=\alpha q$ dove $
+\begin{cases}
+    d=\alpha a+bn\\
+    b=\alpha q\textrm{ per cui }q=\frac{b}{d}
+\end{cases}
+$
+\paragraph{Teorema 2} se (*) ha soluzione e $x_0$ è una soluzione allora 
+l'insieme di \textbf{tutte} le soluzioni è:\\
+$\{x_k=x_0+k\cdot \frac{n}{d}|k\in\mathbb{Z}\}$ si ripartiscomno nelle classi: $[x_0]_n, [x_1]_n,...,[x_{d-1}]_n$\\
+{\color{red} ESERCIZI}
+\begin{enumerate}
+    \item $\underset{a}{2}x\equiv\underset{b}{5}\mod\underset{n}{8}$
+        \begin{enumerate}
+            \item Calcolo $d=MCD(a,n)=MCD(2,8)=2$
+            \item $d|b$ {\color{purple}PAOLO}
+        \end{enumerate}
+    \item $\underset{x}{3}\equiv\underset{b}{4}\mod\underset{n}{7}$
+        \begin{enumerate}
+            \item Calcolo $d=MCD(a,n)=MCD(3,7)=1$
+            \item $d|b$\hspace{1cm}$1|4$\\
+                La congruenza ha $\infty$ numeri come soluzioni:\\
+                $\{x_0+7k| x\in\mathbb{Z}\}=[x_0]_7$ dove $x_0$ è una particolare soluzione.\\
+                Soluzione: \\
+                $d=\alpha a +\beta n$\\
+                $1=\alpha\cdot 3+ \beta \cdot 7$\\
+                Bezout:\\
+                $\underset{n}{7}=\underset{a}{3}\cdot\underset{q_1}{2}+\underset{r_1}{1}
+                \Longrightarrow d=1$\\
+                $\underset{d}{1}=\underset{\beta =1}{7}+3\cdot (-2)\Longrightarrow \alpha=-2$\\
+                $4=7\cdot 4+3\cdot(-2)\cdot 4$\\
+                Le soluzioni sono tutte nella classe\\ $[(-2)\cdot 4]_7 \Longrightarrow [-8]_7
+                =[-8+7]_7=[-1]_7=[-1+7]_7=[6]_7$\\
+                {\color{purple} PAOLO}
+        \end{enumerate}
+    \item $\underset{a}{2}x\equiv\underset{b}{10}\mod\underset{n}{12}$\\
+        {\color{purple} PAOLO}
+        La congruenza ha infiniti numeri interi come soluzioni, che si ripartiscono in $d=2$ classi
+        di congruenza modulo $n=12$\\
+        \begin{enumerate}
+            \item calcolo $x_0$ (poi prendero anche $x_1=x_0+6$)\\
+                $\underset{a}{2}x\equiv\underset{b}{10}\mod\underset{n}{12}$
+                $d=\alpha\cdot2+\beta\cdot 12$\\
+                $2=\alpha\cdot2+\beta\cdot 12$\\
+                $\underset{a}{2}=\underset{n}{12}\cdot\underset{q_1}{0}+\underset{r_1}{2}
+                \Longrightarrow 
+                Continua
+                $\\
+                $\underset{d}{2}=\underset{a}{2}\cdot {\alpha}{1}+\underset{n}{12}\cdot \underset{\beta}{0}$ Moltiplico per $5=\frac{b}{d}$\\
+                $\underset{b=10}{5\cdot2}=5\cdot 2\cdot 1+5\cdot \underset{n}{12}\cdot 0$
+                Continua\\
+                L'insieme delle soluzioni della congruenza è:\\
+                $\big\{ 5+12k|k\in\mathbb{Z}\big\}\cup\big\{11+12k|k\in\mathbb{Z}\big\}$
+
+        \end{enumerate}
+
+
+\end{enumerate}
+
+\subsection{Invertibili in $\mathbb{Z}_n$ e il loro calcolo}
+$n\in\mathbb{Z}$, $n>0$, $a\in\mathbb{Z}$ si dice \textbf{invertibile modulo $n$}
+se la congruenza $ax\equiv 1\mod n$ ha soluzioni.\\
+{\color{blue} quindi $\Longleftrightarrow MCD(a,n)=d|b=1\Longleftrightarrow MCD(a,n)=1$\\
+Si dice {\color{purple} PAOLO}.}
+\paragraph{Def.} $n\in\mathbb{N}$, $n>0$\\
+$[a]_n\in\mathbb{Z}_n$ si dice \textbf{invertibile} in $\mathbb{Z}_n$ se \\
+$\exists [b]_n\in\mathbb{Z}_n$ tale che $[a]_n[b]-n=[1]_n$\\
+In questo case $[b]_n$ si dice \textbf{un inverso} di $[a]_n$\\
+$[a]_n=[1]_n$
+$ax\equiv 1\mod n$
+$d=MCD(a,n)=1$
+Essendo $[b]_n$ \textbf{unico}
+(Perché $d=1$) Allora $[b]_n$ è l'\textbf{inverso} di $[a]_n$
+    {\color{purple} PAOLO}
+
+\paragraph{Esempio 1} $6$ non è iunvertibile modulo $9$ perché $MCD(6,9)\neq 1$\\
+($6x\equiv 1\mod 9$ non ha soluzioni)
+\paragraph{Esempio 2} 4 è invertibile modulo $9$ perché $MCD(4,9)=1$\\
+($4$ e $9$ sono coprimi)\\
+$underset{a}{4} x\equiv \underset{b}{1}\mod \underset{n}{1}$ ha soluzione\\
+$\exists [4]_q^{-1}$\\
+Calcolo l'inverso di $[4]_q$, cioè calcolo $[4]_q^{-1}$\\
+$\underset{1}{d}=\alpha\underset{4}{a}+\underset{1}{\beta}\underset{9}{n}$\\
+$\underset{n}{9}=\underset{a}{4}\cdot\underset{q_1}{2}+\underset{r_1}{1}$\\
+$1=9+4\cdot (-2)$
+{color{red}$\mathbb{Z}_p$ (con $p$ un numero primo)}
+Sia $p$ un numero primo e $[a]_p\in\mathbb{Z}_p$\\
+Posso supporre $0\leq a < p$A\\
+\begin{description}
+    \item [se $a = 0$] allora $[a]_p=[0]_p$\\
+        $\not\exists [b]_p|[0]_p[b]_p=[1]_p$\\
+        $\exists [0]_p^{-1}$
+    \item[se $a\neq 0$] {\color{red} Siccome $p$ è un numero primo}
+        {\color{purple}PAOLO}
+\end{description}
+Di $\mathbb{Z}_p$ \textbf{tutti di elementi} $\neq [0]_p$ sono \textbf{invertibili}.\\
+Quanti sono? Sono $p-1$\\
+Il numero degli elemtni invertibili in $\mathbb{Z}_p$ è $p-1$\\
+Quanti sono gli invertibili in $\mathbb{Z}_n$?\\
+{\color{purple}PAOLO}
+\subsection{La funzione di Eulero}
+La funzione di Eulero $\phi$ li ``conta"\\
+$\phi : \mathbb{N}\longrightarrow\mathbb{N}$\\
+è definita da $\phi(n)=$il numero dei naturali $k$ tali che 
+$
+\begin{cases}
+    0\leq k<n\\
+    MCD(k,n)=1
+\end{cases}
+$
+Se $p$ è un numero primo ({\color{purple}PAOLO}) $\phi(p)=p-1$
+$$n=p_1^{\alpha_1}p_2^{a_2}...p_m^{a_m}\Longrightarrow\phi(n)=n(1-\frac{1}{p_1})(1-\frac{1}{p_2}...
+(1-\frac{1}{p_m})$$
+Finisci slide 
+\subsection{Sistema di congruenze}
+UN sistema di congruenze è \\
+$a_1x\equiv c_1\mod m_1$\\
+$a_2x\equiv c_2\mod m_2$\\
+...\\
+$a_kx\equiv c_k\mod m_k$\\
+Dove $a_i,c_i\in\mathbb{Z}$ $i=1,...,k$\\
+{\color{purple}PAOLO\\}
+{\color{red} ``Risolvere"} il sistema significa
+\begin{itemize}
+    \item Dire se ha soluzioni oppure no
+    \item nel caso le abbia, trovarle tutte
+\end{itemize}
+Un $x_0\in\mathbb{Z}$ è UNA SOLUZIONE del sistema se è \textbf{contemporaneamente soluzione} 
+di \textbf{ogni congruenza} del sistema. 
+    
+\paragraph{NB 1} Se una congruenza non ha soluzioni allora l'intero sistema non ne ha.\footnote{
+    come avviene in tutti i sistemi} \\
+\paragraph{NB 2} Anche se tutte le congruenze del sistema hanno soluzione, non è detto che il sistema abbia soluzione.\\
+Ad esempio\\
+
+$
+\begin{cases}
+    x\equiv 1\mod 2\\
+    x\equiv 0\mod 6
+\end{cases}$
+non ha soluzioni anche se ogni sua configurazione ha soluzioni
+
+\newpage
+\subsection{Il teorema cinese dei resti}
+Il teorema cinese dei resti da una condizione \textbf{sufficiente} affinché \textbf{particolari} sistemi di congruenze abbiano soluzioni. \\\\
+Dati $n_1, n_2,...,n_k\in\mathbb{N}, n_i>0$\hspace{1cm}$i=1,...,k$\\
+{\color{red} a due a due coprimi}\footnote{cioè se $i\neq j$ allora 
+$MCD(n_i, n_j)=1$}\\\\
+$\forall b_1,b_2,...,b_k\in\mathbb{Z}\textrm{ si ha che }
+\exists \textrm{ infinite soluzioni del sistema}$\\
+
+$
+\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+    ...\\
+    x\equiv b_k\mod n_k\\
+\end{cases}
+$
+\begin{tabular}{c}
+Esse si trovano tutte nella stessa classe\\ di congruenze modulo
+$n=n_1\cdot n_2\cdot...\cdot n_k$
+\end{tabular}
+\paragraph{NB} La condizione che gli $n_1$ siano a due a due coprimi
+non è una condizione neccessaria affinché il sistema abbia soluzioni:
+\paragraph{Esempio 1}
+$
+\begin{cases}
+    5x\equiv 3\mod \underset{n_1}{7}\\
+    3x\equiv 6\mod \underset{n_2}{7}
+\end{cases}
+$
+\begin{tabular}{c}
+ $n_1=n_2\Longrightarrow MCD(n_1,n_2)\neq 0$ \\Però il sistema ha soluzione $[2]_7$
+\end{tabular}
+\paragraph{Esempio 2}
+$
+\begin{cases}
+    x\equiv 0\mod \underset{n_1}{2}\\
+    x\equiv 2\mod \underset{n_2}{4}
+\end{cases}
+$
+\begin{tabular}{c}
+    $MCD(n_1,n_2)\neq 0$\\
+Però il sistema ha soluzione in $[2]_4$
+\end{tabular}
+\paragraph{Cominciamo a studiare Il caso $k=2$} 
+$$
+\begin{cases}
+    A\rightarrow\\
+    B\rightarrow
+\end{cases}
+\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_ 2
+\end{cases}
+MCD(n_1,n_2)=1
+$$
+%$n=n_1\cdot n_2$\\\\
+%Per il teorema cinese dei resti, $\exists x_2$ soluzione di $(*)$, 
+%e le soluzioni di $(*)$ sono esattamente gli interi nell'insieme
+%$$\big\{x_2+nk|k\in\mathbb{Z}\big\}=[x_2]_n$$
+    \subsubsection{Metodo di Newton}
+    \begin{enumerate}
+        \item $x_1=b_1$
+        \item Cerco $t_2\in\mathbb{Z}$ tale che $x_1+t_2n_1\equiv x_2$ sia soluzione di $B$\\
+            Così cerco $t_2\in\mathbb{Z}$ tale che \\
+            $b_1=t_2n_1\equiv b_2\mod n_2$\\
+            $t_2n_1\equiv (b_2-b_1)\mod n_2$\\
+            \footnotesize{dove $t_2$ è il numero intero che cerco in modo tale che:\\
+            $x_2\equiv b_2\mod 4$ (siccome cerco $t_2$)\\
+            $x_2=x_1+t_2n_1\equiv x-1=b_1\mod n_1$}
+        \item $x_2$ è una soluzione di $\begin{cases}A\\B\end{cases}$
+        \item Per il teorema cinese dei resti, le soluzioni del sistema sono esattamente tutti i numeri interi
+            nella classe $[x_2]_n = \{ \}$ {\color{purple} PAOLO} 
+    \end{enumerate}
+    \paragraph{Esempio}
+    $
+    \begin{cases}
+        x\equiv \underset{b_1}{4}\mod \underset{n_1}{6}\\
+        x\equiv \underset{b_2}{3}\mod \underset{n_2}{5}
+    \end{cases}
+    $\\
+    $MCD(n_1,n_2)=MCD(6,5)=1$ \\
+    Posso applicare il teorema dinese dei resti e concludere che il sistema ha infinite soluzioni: tutti i numeri in $[x_2]_30=\{x_2+30k|k\in\mathbb{Z}\}$
+    \begin{enumerate}
+        \item $x_1=4$
+        \item cerco $t_2\in\mathbb{Z}$ tale che 
+            \begin{tabular}{c c}
+                & \\
+                $x_2=$ & $x_1+t_2n_1\equiv b_2\mod n_2$, ovvero\\
+                & $4+t_2\cdot 6\equiv 3\mod 5$
+            \end{tabular}\\
+            Facendo i conti in $\mathbb{Z}_5$: $[4]_5+t_2[6]_5=[3]_5$\\
+            $t_2\cdot 6\equiv 3-4 \mod 5$\\
+            $6t_2\equiv -1\mod 5\Longrightarrow t_2\equiv 4\mod 5$
+        \item ad esempio prendo $t_2=4\Longrightarrow \\
+            \Longrightarrow x_2=x_1+t_2n_1=4+4\cdot 6=28$
+    \end{enumerate}
+    Per il teorema cinese dei resti tutte le soluzioni di $\begin{cases}A\\B\end{cases}$ 
+    sono gli interi nell'insieme 
+    $[28]_{30} = \{28+30k|k\in\mathbb{Z}\}$
+    \paragraph{Il caso $k=3$} Consideriamo \\
+
+    \begin{tabular}{c}
+        $A\longrightarrow$\\
+        $B\longrightarrow$\\
+        $C\longrightarrow$
+    \end{tabular}
+    $
+    \begin{cases}
+        x\equiv b_1\mod n_1\\
+        x\equiv b_2\mod n_2\\
+        x\equiv b_3\mod n_3
+    \end{cases}
+    $\\\\
+    E lo risolviamo col teorema cinese dei resti con l'ipotesi:\\\\
+    $MCD(n_1,n_2)=1$\\
+    $MCD(n_1,n_3)=1$\\
+    $MCD(n_2,n_3)=1$\\\\
+    Per trovare $x_3$:
+    \begin{enumerate}
+        \item Scelgo una soluzione di $A: x_1=b_1$
+        \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1
+            \equiv b_2\mod n_2$
+        \item $x_2$ è soluzione di $\begin{cases}A\\B\end{cases}$
+        \item Cerco $t_3\in\mathbb{Z}$ tale che $x_2+t_3(n_1\cdot n_2)=x_3$
+            $x_3$ è soluzione di 
+            $
+            \begin{cases}
+                A\\B\\C
+            \end{cases}
+            $\\\\
+            $\underset{\mod n_1}{x_3}\equiv x_2$ è soluzione di $A$\\
+            $\underset{\mod n_2}{x_3}\equiv x_2$ è soluzione di $B$
+            $$n=n_1\cdot n_2\cdot n_3$$
+        \item $x_3$ è una soluzione del sistema $\begin{cases}A\\B\\B\end{cases}$
+    \end{enumerate}
+    Per il teorema cinese dei resti la soluzione del $(*)$ sono i numeri interi nell'insieme $\{x_2+nk|k\in\mathbb{Z}\}$
+
+    \paragraph{Esempio 2} considero\\
+
+    $
+    \begin{cases}
+        x\equiv 10\mod \underset{n_1}{11} \\
+        x\equiv 5\mod \underset{n_2}{6} \\
+        x\equiv 10\mod \underset{n_3}{7} \\
+    \end{cases}
+    $
+    \begin{tabular}{c}
+        $MCD(11,6)=1$\\
+        $MCD(11,7)=1$\\
+        $MCD(6,7)=1$
+    \end{tabular}
+    $$n=11\cdot 6\cdot 7= 462$$
+    \begin{enumerate}
+        \item $x_1=10$
+        \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1\equiv b_2\mod n_2$\\
+            $10=t_2\cdot 11\equiv 5\mod n$\\
+            $11t_2\equiv 5-10 \mod 6$\\
+            ${\color{blue}11}t_2\equiv {\color{red}-5} \mod 6$\\
+            {\tiny
+            {\color{blue}$[1]_6=[5]_6$}\\
+            {\color{red}$[-5]_6=[1]_6$}
+            }
+            {\color{purple}PAOLO, e anche bello grosso}
+        \item Cerco $t_3\in\mathbb{Z}$ tale che  $x_3=x_2+t_3(n_1\cdot n_2)$ 
+            sia soluzione di $C$: $x\equiv 5\mod 7$\\
+            $x_2+t_3(n_1\cdot n_2)\equiv 5\mod 7$\\
+            $65+t_3(11\cdot 6)\equiv 5\mod 7 $\\
+            $66t_3\equiv -60\mod 7 $\
+            $3t_3\equiv 3\mod 7$\\\\
+            \begin{align*}
+                x_3 & =x_2+t_3\cdot n_1\cdot n_2\\
+                    & =65+1\cdot 11\cdot 6\\
+                    & =65+66=131
+            \end{align*}
+            FINISCI
+    \end{enumerate}
+    In generale se $k\geq 4$ e
+    $
+    \begin{cases}
+        x\equiv b_1\mod n_1\\
+        x\equiv b_2\mod n_2\\
+        x\equiv b_k\mod n_k\\
+    \end{cases}
+    $ Con $MCD(n_i,n_j)=1$ $\forall i\neq j $\\
+    Itero di procedimento 
+    \begin{itemize}
+        \item $x_1=b_1 $ è una soluzione di $1$
+        \item impongo che $x_1+n_1t_2=x_2$ Sia soluzione di $2$
+            FINISCI Cerco $t_2$...
+        \item Impongo che  $x_2+n_1n_2t_3=x_3$ sia soluzione di $3$\\
+            (Cerco $t_3\in\mathbb{Z}$ tale che ...) allora $x_3$ è soluzione di 
+            $\begin{cases}
+                1\\2\\3
+            \end{cases}$
+        \item Impongo che  $x_3+n_1n_2n_3t_4=x_3$ sia soluzione di $4$\\
+            (Cerco $t_4\in\mathbb{Z}$ tale che ...) allora $x_4$ è soluzione di 
+            $\begin{cases}
+                1\\2\\3\\4
+            \end{cases}$
+    \end{itemize}
+    {\color{purple} PAOLO}\\\\
+
+    Torniamo al caso $k=2$
+$    \begin{cases}
+        x\equiv b_1\mod n_1\\
+        x\equiv b_2\mod n_2\\
+    \end{cases}$
+    Metodo di Lagrange $MCD(n_1,n_2)=1$
+
+    Da $MCD(n_1,n_2)=1$, usando Bezout trovo:
+    $\alpha_1, \alpha_2\in\mathbb{Z}$ tali che 
+    $$\alpha_1n_1+\alpha_2n_2=1$$
+    Allora $z=\alpha_1n_1b_2+\alpha_2n_2b_1$ è una {\color{purple}PAOLO}
+    ..\\
+    ..\\
+    ..\\    
+    $z=\alpha_1n_1b_2+\alpha_2n_2b_1$\\
+    $z\equiv b_1\mod n_1$
+    $a_1n_1+\alpha_2n_2\Longrightarrow \alpha_2n_2=1-\alpha_1n_1$
+    \begin{align} 
+        z&=\alpha_1n_1b_2+(1-\alpha_1n_1)b_1\\
+         &=\alpha_1n_1b_2
+    \end{align} 
+    {\color{purple} \\\\PAOLO, c'è da finire la slide\\\\}
+    
+
+    $
+    \begin{cases}
+        x\equiv\underset{b_1}{4}\mod \underset{n_1}{6}\\
+        x\equiv\underset{b_2}{4}\mod \underset{n_2}{6}\\
+    \end{cases}
+    $
+
+    $MCD(\underset{n_1}{6},\underset{n_2}{5})=1$ cerco $\alpha_1,\alpha_2\in\mathbb{Z}|$
+    {\color{purple} \\\\PAOLO\\\\}
+
+    \textbf{Come ``ridurre", se si può, un generico sistema di congruenze}\\
+
+    $
+    \begin{cases}
+        a_1x\equiv c_1\mod m_1\\
+        a_2x\equiv c_2\mod m_2\\
+        ...\\
+        a_kx\equiv c_k\mod m_k
+    \end{cases}
+    $ad un sistema nella forma 
+    $
+    \begin{cases}
+        x\equiv b_1\mod n_1\\
+        x\equiv b_2\mod n_2\\
+        ...\\
+        x\equiv b_k\mod n_k
+    \end{cases}
+    $\\
+    {\color{purple} PAOLO ma proprio una riga}
+    \textbf{Ridurre} significa ``sostituire con un sistema equivalente"\\
+    \textbf{Equivalente} significa ``con le stesse soluzioni" 

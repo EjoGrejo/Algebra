@@ -1,0 +1,221 @@
+\section{Polinomi}
+$$S\in\{\mathbb{Z},\mathbb{Q},\mathbb{R},\mathbb{C}\}$$
+$S[x] =$Insieme dei polinomi a coefficienti in $S$ nella indeterminata $x$\\
+$f(x)\in S[x]$ se $f(x)=a_o+a_1x+a_2x^2+ ... +a_nx^n$
+Robette che non ho capito bene bene bene\\
+\underline{Se $a_n\neq 0$} IL GRADO DI $f(x)$ è \\
+$n=\deg f(x)$; $a_n$ si chiama \textbf{coefficiente direttore} di $f(x)$,
+$a_0$ si chiama \textbf{termine noto} di $f(x)$ 
+\paragraph{NB 1}
+$\begin{cases}
+c\in S\\
+c\neq 0
+\end{cases} \longrightarrow \deg c=0$
+\paragraph{NB 2} $c=0\in S$ \hspace{2cm}
+per convenzione di pone $\deg 0=-\infty$
+    \subsection{Somma di polinomi}
+    $\forall f(x), g(x)\in S[x]$ definisco $f(x)+g(x)\in S[x]$
+    \paragraph{Es} $f(x)= 2-x^3+3x^2\hspace{1cm}g(x)=7x+x^3+12$\\\\
+    \begin{tabular}{c c}
+        $2+0x+3x^2-x^3+$ & $\deg f(x)=3$\\
+        $12+7x+0x^2+x^3=$ & $\deg g(x)=3$\\
+        \hline
+        $14+7x+3x^2$ & $\deg\big(f(x)+g(x) \big)\leq 3$
+    \end{tabular}
+    \\
+    \begin{tabular}{c c}
+        $f(x)=a_0+a_1x+...+a_nx^n{\color{red} =\sum_{i=0}^{n}a_ix^i}$ & 
+        $a_n=0, \deg f(x)=n $\\
+        $g(x)=b_0+b_1x+...+b_mx^m{\color{red} =\sum_{i=0}^{m}b_ix^i}$ & 
+        $b_n=0, \deg g(x)=m $
+    \end{tabular}\\
+    {\color{blue} Per fissare le idee si ponga che $m\leq n$}
+    $$f(x)+g(x)=\sum_{i=0}^{m}(a_i+b_i)x^i+\sum_{i=m+1}^{n}a_ix^i$$
+    \paragraph{NB} $\deg \big(f(x)+g(x)\big)\leq \max\{\deg f(x),\deg g(x)\}$
+    \subsection{Prodotto di polinomi}
+        $\forall f(x),g(x)\in S[x]$ definisco $f(x),g(x)\in S[x]$\\
+    nel seguente modo:\\
+    se $f(x)=\sum_{i=0}^{n}a_ix^i$ e $g(x)=\sum_{i=0}^{m}b_ix^i$ allora
+            $$f(x)g(x)=\Bigg( \sum_{i=0}^{n}a_ix^i\Bigg)\Bigg(\sum_{i=0}^{m}b_ix^i\Bigg)=$$
+    $=(a_0+a_1x+a_2x^2+...+a_nx^n)(b_0+b_1x+b_2x^2+...+b_mx^m)=$\\
+    $=a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_a+a_2b_0)x^2+... =$
+    $=\sum_{i=0}^{i}a_kb_{i-k}\Bigg(\sum_{k=0}^{i} a_kb_{i-k}\Bigg)x^i$
+    \paragraph{NB} $\deg \big(f(x)\cdot g(x)\big)=\deg f(x)+\deg g(x)$
+    \paragraph{Esempio} $f(x)=2-x+6x^2\hspace{1cm} g(x)=1+4x$\\
+        $(2-x+6x^2)(1+4x)=...=2+7x-4x^2+6x^4+24x^5$\\\\
+    \textbf{DA QUESTO MOMENTO $S\neq \mathbb{Z}: \hspace{1cm} S\in
+    \{\mathbb{Q},\mathbb{R},\mathbb{C} \}$}
+    \subsection{Divisioni di polinomi}
+    $\forall f(x),g(x)\in S[x], g(x)\neq 0$
+    $\exists! q(x),r(x)\in S[x]$ tale che 
+    $
+    \begin{cases}
+        f(x)=g(x)q(x)+r(x)\\
+        \deg r (x) < \deg g(x)
+    \end{cases}
+    $
+    \paragraph{Esempio} Divido $f(x)=7x^4+3x-2\in\mathbb{Q}[x]$ per $g(x)=x^2+x+1\in\mathbb{Q}[x]$\\
+    \par
+    \polylongdiv[style=D]{7x^4+0x^3+0x^2_3x^-2}{x^2+x+1}
+    \subsection{Radici di un polinomio}
+    Sia $f(x) \in S[x]$. \\
+    Un numero $x_0\in S$ si dice una \textbf{radice} \footnote{oppure uno 
+    \textit{zero}} di $f(x)$ se $f(x_0)=0$ \footnote{``$f$ valutato in $x_0=0$"}\\
+    Quindi $x_0$  è una radice di $f(x)$ se e solo se $x_0$ è una soluzione
+    dell'equazione $f(x)=0$
+    \paragraph{Esempio} $f(x)=x^2+2x+1=(x+1)^2$\\
+    $x_0=-1$ è una radice di $f(x)$: $f(-1)=(-1+1)^2=0$\\
+    $x_0=1$ è soluzione dell'equazione $x^2+2x+1=0$ \footnote{ovvero $f(x)$}
+    \subsubsection{Teorema di Ruffini} 
+    Se $f(x)\in S[x]$ ed $x_0\in S$\\
+    ($x_0$ è una radice di $f(x)$) $\Longleftrightarrow (x-x_0)\underset{(divide)}{|}
+    f(x) \Longleftrightarrow \underset{\exists q(x)\in S[x]}{f(x)=(x-x_0)q(x)}$\\
+    dividendo $f(x)$ per $x-x_0$ si ha $r(x)=0$
+    \subsubsection{Radici di polinomi di 2$^o$ grado a coefficienti reali}
+    $ax^2+bx+c=0\hspace{2cm}a,b,c\in\mathbb{R}\hspace{1cm}a\neq 0 $\\
+    $\Delta = b^2-4ac$ è il discriminante dell'equazione
+    \begin{itemize}
+        \item \textbf{SE $\Delta > 0$ ci sono due soluzioni REALI distinte}
+            $$x_1=\frac{-b+\sqrt{\Delta}}{2a}\hspace{2cm}
+            x_2=\frac{-b-\sqrt{\Delta}}{2a}$$
+        \item \textbf{SE $\Delta = 0$ l'equazione ha UNA soluzione REALE} \\
+            ``contata due volte"
+            $$(x^2+2x+1)=(x+1)(x+1) \hspace{2cm} x_1=x_2=\frac{-b}{2a}$$
+        \item \textbf{SE $\Delta < 0$ l'equazione non ha soluzioni reali, ma
+            ha 2 soluzioni complesse}
+            $$x_1=\frac{-b+i\sqrt{-\Delta}}{2a}\hspace{2cm}
+            x_2=\frac{-b-i\sqrt{-\Delta}}{2a}$$
+            \color{red}
+            Poiché $\sqrt{-\Delta}\neq 0 \Longrightarrow x_1\neq x_2$\\
+            L'equazione ha 2 soluzioni complesse \textbf{coniugate}
+            (l'una coniugata dell'altra)
+            $$x_1=\overline{x_2}$$
+            $$x_2=\overline{x_1}$$
+    \end{itemize}
+    \paragraph{Equivalentemente} dato $f(x)=ax^2+bx+c$, $a,b,c\in\mathbb{R}$, $a\neq 0 $\\
+    $f(x)=a\Big( x^2+\frac{b}{a}x+\frac{c}{a}\Big)$ e $x^2+\frac{b}{a}x+\frac{c}{a}$ 
+    ha due radici complesse $x_1, x_2$
+    $$x^2+\frac{b}{a}x+\frac{c}{a}=(x-x_1)(x-x_2)$$
+    e quindi 
+    $$f(x)=ax^2+bx+c=a(x-x_1)(x-x_2)$$
+    $$\exists x_1, x_2\in\mathbb{C}\hspace{1cm}a,b,c\in\mathbb{R}, a\neq 0$$
+    \subsection{Teorema fondamentale dell'algebra}
+    $$\forall f(x)=a_0+a_1x+a_2x^2+...+a_nx^n$$
+    $$a_0, a_1,a_2,...,a_n\in\mathbb{C}$$
+    \begin{center}
+        polinomio di grano $n>0\hspace{1cm}(a_n\neq 0)$
+    \end{center}
+    $\exists {\color{blue}z_1, z_2,..., z_n} \in \mathbb{C}$ tale che 
+    $$f(x)=a_n(x-z_1)(x-z_2)...(x-z_n)$$
+    {\color{blue} potrebbero esserci ripetizioni}
+    \paragraph{Ad esempio} se $f(x)=(x-1)^n=(x-1)(x-1)...(x-1)$ allora $z_1=z_2=...=z_n=1$
+    {\color{red} Ogni polinomio di grado $n>0$ e coefficienti complessi è prodotto di $n$ 
+    polinomi di grado 1}\\
+    Se $z_0,z_1,...,z_x$ \footnote{sono le radici di $f(x)$} sono quegli $z_i$ DISTINTI, allora 
+    $$f(x)=a_n(x-z_1)^{m_2}(x-z_2)^{m_2}...(x-z_k)^{m_k}$$
+    {\color{red} $m_i=$ \textbf{la molteplicità algebrica di $z_i$}}\\
+    È equivalente a: $f(x)=a_0+a_1x+a_2x^2+...+a_nx^n$\\
+    L'equazione $f(x)=0$ \footnote{cioè $a(x-z_n)^{m_1}(x-z_2)^{m_2}...(x-z_k)^{m_k}=0$} 
+    ha $n$ soluzioni:\\
+    \begin{tabular}{c}
+        $z_1$ contata $m_1$ volte\\
+        $z_2$ contata $m_2$ volte\\
+        $z_3$ contata $m_3$ volte\\
+        ...\\
+        ...\\
+        $z_k$ contata $m_k$ volte\\
+    \end{tabular} \hspace{1cm}
+    {\color{red}$m_1+m_2+...+m_k=n$}
+    \paragraph{Esempio} $f(k)=(x^2+2x+1)(x-3)={\color{blue}(x-1)^2(x-3)}$\\
+    {\color{blue} 
+    $z_1=-1$ $m_1=2$\\
+    $z_2=3$ $m_2=1$}\\
+    \begin{center}
+    {\color{red} Ogni equazione a coefficienti complessi di grado $n$ ha $n$ soluzioni complesse\\
+    \textbf{contate con le loro molteplicità}}
+    \end{center}
+    \paragraph{Ritorniamo alle divisioni in $\mathbb{Z}$} \mbox{} \\
+    Se $a,b\in\mathbb{Z},\hspace{2cm}(a,b)\neq(0,0),\hspace{2cm}d=MCD(a,b)$
+    Vogliamo trovare $m,n\in\mathbb{Z}$ tali che
+    $$d=ma+nb$$
+    \paragraph{Esempio} 
+        $a=10\hspace{1cm}b=4\hspace{1cm}d=2$ \\cerco $m,n\in\mathbb{Z}$ tali che\\
+    $\underset{2}{d}=\underset{10}{a}m+\underset{4}{b}n$\\\\
+    Calcolo $d$ usando l'algoritmo di Euclide:\\
+
+    \begin{tabular}{c}
+        $\underset{a}{10}=\underset{b}{4}\cdot\underset{q_1}{2}+\underset{r_1}{2}$\\
+        $\underset{a}{4}=\underset{b}{2}\cdot\underset{q_1}{2}+\underset{r_1}{0}$
+    \end{tabular} $d=2$
+    {\color{blue}=$ \underset{a}{10}\underset{\uparrow}{}+\underset{b}{4}\cdot\underset{n}{(-2)}$}\\
+    . \hspace{4cm}{\color{blue}$m=1$}\\\\
+    {\color{red} \paragraph{NB} $m,n$ non sono univocamente individuati da $a$ e $b$}
+    \paragraph{Esempio} $2=m10+n4$ ma anche 
+    $\underset{d}{2}=\underset{a}{10}\cdot\underset{m}{3}+\underset{b}{4}\cdot\underset{n}{(-7)}$\\
+    $m=1$, $n=-2$
+    {\color{red} \subsection{Identità di Bezout (teorema)}}
+    $\forall a,b\in\mathbb{Z}$, $(a,b)\neq (0,0)$, posto $d=(a,b)$
+    $\exists m,n\in\mathbb{Z}$ tali che
+    $$d=ma+nb$$
+    \paragraph{NB} $m,n$ non sono unici\\
+    Per trovarli posso:
+    \begin{enumerate}
+        \item Applico l'algoritmo di Euclide in $\mathbb{Z}$ e lo ``ripercorro"all'indietro"\\
+            OPPURE
+        \item 
+            \begin{enumerate}
+                \item calcolo $|a|,|b|\in\mathbb{N}$
+                \item osservo $MCD(a,b)=MCD(|a|,|b|)$
+                \item prendo $d$ il $MCD(|a|,|b|)$\textbf{positivo}\\
+                    calcolato con l'algoritmo di Euclide in $\mathbb{N}$\\
+                    Lo ripercorro all'indietro e ottengo $m^*, n^*\in\mathbb{Z}$
+                    $$d=m^*|a|+n^*|b|$$
+                \item se $a\geq 0\Rightarrow |a|=a$ e $m=m^*$,
+                    {\color{red} se $a\leq 0\Rightarrow |a|=-a$ e $m=-m^* $}\\
+                    se $b\geq 0\Rightarrow |b|=b$ e $n=n^*$,
+                    {\color{red} se $b\leq 0\Rightarrow |b|=-b$ e $n=-n^* $}
+            \end{enumerate}
+    \end{enumerate}
+    \paragraph{Esempio} 
+    \begin{tabular}{c}
+        $a=-36$\\
+        $b=28$
+    \end{tabular} se $d=MCD(a,b)$, cerco $m,n\in\mathbb{Z}$ tale che $d=ma+nb$
+    \begin{description}
+        \item[1$^o$ Modo] Algoritmo di Euclide in $\mathbb{Z}$ e calcolo $d$\\
+            {\color{orange}
+            $\underset{a}{-36}=\underset{b}{28}\cdot\underset{q_1}{(-2)}+\underset{r_1}{20}
+            \Rightarrow$
+            \begin{tabular}{|c|}
+                \hline 
+                $20=-36+2\cdot 28$\\
+                \hline 
+            \end{tabular}
+            }\\
+            {\color{blue}N.B. $0\leq r_1<|b|=28$ }\\
+            {\color{green} 
+            $\underset{b}{28}=\underset{r_1}{20}\cdot\underline{q_2}{1}+\underline{r_2}{8}
+            \Longrightarrow 8=28+20\cdot (-1)$\\
+            }
+            {\color{blue} 
+            $\underset{r_1}{20}=\underset{r_2}{8}\cdot {q_3}{2}+\underset{r_3}{4} 
+            \Longrightarrow d=4=20+8\cdot (-2) = $
+            }
+            {\color{green}
+            $20+(-2)[28+20\cdot (-1)]=
+            \\ =20+(-2) \cdot 28 + 20 \cdot 2=\\
+            =3\cdot 20 + (-2)\cdot 28 =$\\}
+            {\color{orange} $3\cdot [-36 +2\cdot 28] + (-2) \cdot 28 \\
+            =3\cdot (-36) +6 \cdot 28 + (-2)\cdot 28= 
+            =3\cdot (-36) +4 \cdot 28 $}
+            
+        \item[2$^o$ Modo] 
+            Cerco $m$, $n\in\mathbb{Z}$ tali che $d=am+bn$ dove $d=MCD(a,b)$
+            $|a|=|-36|=36$ \hspace{1cm} \textbf{NB} $MCD(|a|,|b|)=MCD(a,b)=d$\\
+            $|b|=|28|=28$ 
+            Intanto (PAOLO) l'algoritmo di Euclide a $|a|$ e $|b|$ e trovo
+            $m*,n*\in\mathbb{Z}$\\
+            tali che $d=|a|\cdot m*+|b| \cdot n*$
+            \\\\PAOLO\\\\
+
+    \end{description}

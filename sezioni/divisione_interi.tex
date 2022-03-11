@@ -1,0 +1,300 @@
+\section{Divisione nei numeri naturali e nei numeri interi}
+Insieme dei numeri \textbf{naturali}:
+$$ \mathbb{N} = \{0, 1, 2, 3, 4, ...\}$$
+Insieme dei numeri \textbf{interi}:
+$$ \mathbb{Z} = \{... -4,-3,-2,-1,0, 1, 2, 3, 4, ...\}$$
+    \subsection{Divisione in $\mathbb{N}$}
+    $\forall a, b \in \mathbb{N}, b\neq 0 $\\
+    $$  
+    \exists! {\color{red} q}, {\color{green} r}\in \mathbb{N} 
+        \hspace{1cm} {\color{blue} | \hspace{1cm}} 
+        \begin{cases}
+            a=bq+r\\
+            0\leq r < b
+        \end{cases}
+    $$
+    {\color{red} $q$ = quoziente}\\
+    {\color{green} $r$ = resto}\\
+    {\color{blue} $|$ = tale che}\\
+    \paragraph{Esempio 1} $a=137$ $b=55 \hspace{1cm} \underset{a}{137}=\underset{b}{55}
+    \cdot\underset
+    {q}{2}+\underset{r}{27}$
+    \paragraph{Esempio 2} $a=137$ $b=142 \hspace{1cm}\underset{a}{137}=\underset{b}{142}
+    \cdot\underset{q}{0}+\underset{r}{137}$
+    \paragraph{NB1} per provare che $q$ ed $r$ \textbf{esistono} 
+    si usa il principio di induzione
+    \paragraph{NB2} $q$ ed $r$ \textbf{sono unici} significa:
+    $$
+    \begin{cases}
+        a=bq_1+r_1 \hspace{2cm} 0\leq r_1 < b\\
+        a=bq_2+r_2 \hspace{2cm} 0\leq r_2 < b
+    \end{cases}
+    \Longrightarrow
+    \begin{cases}
+        q_2=q_1\\
+        r_2=r_1
+    \end{cases}
+    $$\\
+
+    \subsection{Divisione in $\mathbb{Z}$}
+    La definizione è uguale per i numeri interi \\
+    $\forall a,$ $ b\in\mathbb{Z}$, $b\neq0$   $\exists!q,$ $r\in\mathbb{Z}$ tali che $a=bq+r$\\
+    con unica differenza $0\leq r<|b|$\\\\
+    $|r|=
+    \begin{cases}
+        r \textrm{ se } r\geq 0\\
+        -r \textrm{ se } r < 0
+    \end{cases}
+    $
+    \paragraph{NB} Se non si impone la condizione 
+    $
+    \begin{cases}
+        r\geq 0\\
+        r < |b| 
+    \end{cases}
+    $
+    non si ha l'unicità di $q$ e $r$ 
+
+    \textbf{Ad esempio}
+
+    $a=137$ $b=-55$\hspace{1cm} $\underset{a}{137}=\underset{b}{(55)}
+    \underset{q}{-2}
+    +\underset{r}{27}$ \hspace{0.5cm}{\color{blue} ma anche $\underset{a}{137}=\underset{b}{(-55)}
+    \underset{q}{-3}
+    +\underset{r}{-28}$}
+    \paragraph{NB1}la dimostrazione dell'esistenza di $q$ ed $r$ è simile a quella che si fa in $\mathbb{N}$, ottenuta sempre
+    col principio di induzione.
+    \color{red}
+    \paragraph{NB2} $q$, $r$ sono unici perché si richiede $0\leq r < |b|$ \color{black}
+    \paragraph{NB3} $a$, $b\in\mathbb{Z}$, $b\neq 0$ in $\mathbb{Z}:$ $a=bq_1+r_1$, $0\leq r-1<|b|$\\
+    $|a|,|b|\in\mathbb{N}$, $|b|\neq 0$ in $\mathbb{N}:$ $|a|=|b|\cdot q_2+r_2$ $0\leq r_2 <
+    |b|$\\
+    \paragraph{ATTENZIONE}
+    {\color{red}Non c'è un nesso tra il quoziente ed il resto della divizione di $a$ e $b$ in $\mathbb{Z}$ ed il quoziente
+    ed il resto della divizione di $|a|$ e $|b|$ in $\mathbb{N}$}
+    \paragraph{Ad esempio}
+    
+    \begin{center}
+        \begin{tabular}{ c c | c c }
+            $a=-137$ &
+            $\underset{a}{-137}=\underset{b}{55}\underset{q_1}{(-3)}+\underset{r_1}{28}$ & 
+            $|a|=137$ & 
+            $\underset{|a|}{137}=\underset{|b|}{55}\cdot\underset{q_2}{2}+\underset{r_2}{27}$\\
+            $b=55$ & & $|b|=55$
+        \end{tabular}
+    \end{center}
+    \subsection{Divisibilità in $\mathbb{N}$ e $\mathbb{Z}$}
+    \paragraph{Divisibilità in $\mathbb{N}$} $a,$ $b\in\mathbb{N}$, $b\neq 0$ \hspace{1cm} 
+    \begin{center}
+        \begin{tabular}{c c}
+            $b|a$ se $a=bq$ $\exists q\in\mathbb{N}$
+            \footnote{Il simbolo $|$ in questo caso significa 
+            \textit{divide}} &
+            $b\not| a$\\
+            divide & non divide\\
+            Es. $6|18$ & Es. $4|18$
+        \end{tabular}
+    \end{center}
+    Per esempio $6|18$
+    \paragraph{Divisibilità in $\mathbb{Z}$} 
+    $a$, $b\in\mathbb{Z}$, $b\neq 0$
+            $$b|a  \textrm{ se } \exists q\in\mathbb{Z}|a=bq\hspace{1cm}\textrm{altrimenti }b\not| a$$ 
+    \paragraph{NB} $a,b \in\mathbb{N}, b\neq 0, a\neq 0$
+    $
+    \begin{cases}
+        b|a\\
+        a|b
+    \end{cases}
+    \Longrightarrow a\in\{b,-b\}$\\
+
+    \subsection{Massimo Comun Divisore in $\mathbb{N}$ ed in $\mathbb{Z}$}
+    \paragraph{MCD In $\mathbb{N}$} $\forall a$, $b\in\mathbb{N}$, $(a,b)\neq \underset{\uparrow}
+    {(0,0)}$\\
+    (almeno uno dei due deve essere diverso da $0$) \\\\
+    Un $d\in\mathbb{N}$ è un $MCD(a,b)$ se 
+    \begin{enumerate}
+        \item $d|a$ e $d|b$ (è un divisore comune di $a$ e $b$)
+        \item se $z|a$ e $z|b$ $\Longrightarrow$ $z|d$
+    \end{enumerate}
+    Ossia, se $d$ è un divisore comune di $a$ E $B$ CHE 
+    \color{red}
+    \paragraph{NB 1} $MCD(a,b)$ è $!$ in $\mathbb{N}$ \hspace{1cm}è \textbf{il} $MCD(a,b)$
+    \color{black}
+    \begin{center}
+        \begin{tabular}{c c c}
+            $60=2^2\cdot 3\cdot 5$ & \hspace{2cm} & $18=2\cdot 3^2$\\
+            & & \\
+            $60|2$ & \hspace{2cm} & $18|2$ \\
+            $30|2$ & \hspace{2cm} & $9|3$ \\
+            $15|3$ & \hspace{2cm} & $3|3$ \\
+            $5|5$
+        \end{tabular}\\
+        $d=2\cdot 3= 6$
+    \end{center}
+    \paragraph{NB 2} $MCD(a,b) = MCD(b,a)$
+    \paragraph{NB 3}  
+     \begin{equation} 
+         \begin{cases}
+            b|a \\
+            b\neq 0
+         \end{cases}
+    \Longrightarrow 
+         MCD(a,b)=b
+    \end{equation} 
+    \paragraph{NB 4} $a$, $b\in\mathbb{N}$ $b\neq 0$ \hspace{1cm} $\exists q$, $r\in\mathbb{N}$\\
+    $a=bq+r$ \footnote{$r=a-bq$} \hspace{3cm} $0\leq r < b$\\\\
+    Perciò
+    \begin{center}
+        {\Large $$MCD(a,b) = MCD(b,r)$$}
+        Per provarlo, proviamo che i due insiemi $A$ e $B$ sono uguali:\\
+        $A=\{z\textrm{ $|$ } z|a \textrm{ e } z|b\}$ = insieme dei divisori comuni di $a$ e $b$\\
+        $B=\{w\textrm{ $|$ } w|b \textrm{ e } w|r\}$ = insieme dei divisori comuni di $b$ e $r$
+    \end{center}
+
+    $$
+    z\in A \Longrightarrow    
+    \begin{cases}
+        z|a\\
+        z|b
+    \end{cases}
+    \color{blue}
+    \begin{cases}
+        z|a-bq=r\\
+        z|b
+    \end{cases}
+    \Longrightarrow z\in B \Longrightarrow A\subseteq B
+    $$
+
+    \color{green}
+    $$
+    w\in B \Longrightarrow    
+    \begin{cases}
+        w|b\\
+        w|r
+    \end{cases}
+    \begin{cases}
+        w|b\\
+        w|bq+r=a
+    \end{cases}
+    \Longrightarrow w\in A \Longrightarrow B\subseteq A
+    $$
+    \color{black}
+    \paragraph{In $\mathbb{Z}$} $\forall a$, $b\in\mathbb{Z}$ con {\color{red} $(a,b)\neq(0,0)$}
+    $d\in\mathbb{Z}$ è \textbf{un} $MCD(a,b)$ se
+    \begin{enumerate}
+        \item $d|a$ e $d|b$ \hspace{1cm}$d$ è un divisore comune di $a$ e $b$
+        \item 
+            $    \begin{cases}
+                    z|a\\
+                    z|b
+                \end{cases}
+                \Longrightarrow z|d$
+            \hspace{1cm}$d$ è un multiplo di ogni divisore comune di $a$ e $b$
+    \end{enumerate}
+    Abbiamo già visto che 
+    $d=MCD(a,b) \textrm{ è unico in }\mathbb{N} $\\
+    Anche in $\mathbb{Z}$ scrivo $d=MCD(a,b)$ anche se la nozione è ``impropria".
+    \paragraph{NB} In $\mathbb{Z}$ $d$ è individuale e {\color{purple} non ha segno}.\\
+    Se $d$ è un massimo comun divisore di $a$ e $b$ allora anche $-d$ è un massimo 
+    comun divisore di $a$ e $b$.\\
+
+    Quindi in $\mathbb{Z}$ $MCD(a,b)$ non indica un solo numero, ma 2: $d$ e $-d$.\\
+    Es. $-6=MCD(-12, 18)=+6$\\\\
+    {\large {\color{red}{Perché per parlare di $MCD(a,b)$ è \textbf{necessario} supporre $(a,b)\neq(0,0)$}}}
+    \paragraph{NB}  $\underset{b}{2}|\underset{a}{0}$\hspace{1cm}$\underset{a}{0}=\underset{b}{2}\cdot\underset{q}{0}$\\
+    $3|0$\hspace{1cm}$142|0$\hspace{1cm}{\color{red}$\forall b\neq0$\hspace{0.3cm} $b|0$}\\
+
+    Ecco perché è importante quando si parla di MCD$(a,b)$\\
+    \textbf{se fosse} $(a,b)=(\underset{a}{0},\underset{b}{0})$ allora $\forall z\neq 0$ $z|0$\\\\
+    L'insieme dei divisori comini di $(a,b)=(0,0)$ è
+    $$\{z|z\in\mathbb{Z},z\neq0\}$$
+    Dunque non c'è un $MCD(a,b)$ nel casi in cui $(a,b)=(0,0)$
+    \paragraph{NB} $a,b\in\mathbb{Z}$, $b\neq 0$\\
+    $a=bq+r$\hspace{1cm}$0\leq r<|b|$
+    $$\Longrightarrow MCD(a,b)=MCD(b,r)$$
+    è la stessa osservazione che abbiamo fatto per $MCD(a,b)$ nel caso $a,b\in\mathbb{N}$, $b\neq 0$
+    \paragraph{NB} $a,b\in\mathbb{Z}$, \textbf{non entrambi nulli} allora\\
+    $MCD(a,b)=MCD(-a,b)=MCD(a,-b)=MCD(-a,-b)$
+    \subsection{Calcolo MCD in $\mathbb{N}$: Algoritmo di Euclide }
+    \subsubsection{In $\mathbb{N}$}
+    $$a,b\in\mathbb{N}, b\neq 0\neq a$$
+    \begin{description}
+        \item[$1^o$ passaggio] $a=bq_1+r_1$\hspace{1cm} $0\leq r_1 < b$\\
+        \begin{description}
+            \item[SE $r_1=0$] $MCD(a,b)=MCD(b,r_1)=MCD(b,0)=b$\\
+                \textbf{STOP}\\\\
+                \underline{Esempio 1}\hspace{0.5cm}MCD$(\underset{a}{36},\underset{b}{12})=$\\
+                \textbf{P1} $\underset{a}{36}=\underset{b}{12}\cdot\underset{q_1}{3}+\underset{r_1}{0}$
+                $\Longrightarrow MCD(36,12)=MCD(12,0)=12$\\
+                \textbf{1$^o$P} $a=bq_1+r_1$ \hspace{1cm}$0\leq r_1 < b$
+            \item[SE $r_1\neq 0$] \textbf{continua.}
+
+        \end{description}
+    \item[2$^o$ passaggio] \textbf{SI DIVIDE $b$ per $r_1$}\\
+
+        $b=r_1q_2+r_2\hspace{1cm}=\leq r_2 < r_1$
+            \begin{description}
+                \item[SE $R_2=0$]   \textbf{STOP}
+            \end{description}
+            $\textrm{MCD}(a,b)=\textrm{MCD}(b,r_1)
+            \underset{\uparrow}{=}\textrm{MCD}(r_1,r_2)
+            \underset{\uparrow}{=}\textrm{MCD}(r_1, 0)=r_1$\\
+            .\hspace{2.3cm} $b=r_1q_2+r_2$\hspace{1cm}se $r_2=0$\\\\
+            {\color{blue} Potevo vederlo così: \underline{se $r_2=0$} allora $b=r_1q_2+r_2=r_1q_2$\\
+            per cui MCD$(b,r_1)=r_1$ quindi MCD$(a,b)=$MCD$(b,r_1)=r_1$}\\
+
+            \underline{Esempio 2}\hspace{0.5cm}MCD$(\underset{a}{42},\underset{b}{12}=6)$ \\\\
+            \begin{tabular}{c c c}
+                & \underline{1$^o$p} & 
+                $\underset{a}{42}=\underset{b}{12}\cdot\underset{q_1}{3}=\underset{r_1}{6}$\\
+                \underline{$r_1\neq 0$} & \underline{2$^o p$} & 
+                $\underset{b}{12}=\underset{r_1}{6}\cdot\underset{q_2}{2}+\underset{r_2}{0}$
+            \end{tabular}
+            \underline{\textbf{SE $r_2\neq 0$} continuo...} 
+            \begin{center}
+                {\large{$MCD(A,B)$ \textbf{è l'ultimo resto non nullo della sequenza di divisioni successive}}}
+            \end{center}
+            \paragraph{Es 1} $MCD(\underset{a}{36},\underset{b}{28}){\color{red}=4}$\\
+            \begin{tabular}{c c c}
+                \underline{1$^o p$} & $\underset{a}{36}=\underset{b}{28}\cdot\underset{q_1}{1}+\underset{r_1}{8}$  &\\
+                \underline{2$^o p$} & $\underset{b}{28}=\underset{r_1}{8}\cdot\underset{q_2}{3}+\underset{r_2}{4}$ &  \\
+                \underline{3$^o p$} & $\underset{r_1}{8}=\underset{r_2}{4}\cdot\underset{q_3}{2}+\underset{r_3}{0}$ & 
+                $r_3=0\Longrightarrow r_2=\textrm{MCD}$
+            \end{tabular}\\
+            \paragraph{Es 2} $MCD(\underset{a}{2420},\underset{b}{1386}){\color{red}=22}$\\
+            \begin{tabular}{c c}
+                \underline{1$^o p$} & $\underset{a}{2420}=\underset{b}{1386}\cdot\underset{q_1}{1}+\underset{r_1}{1034}$  \\
+                \underline{2$^o p$} & $\underset{b}{1386}=\underset{r_1}{1034}\cdot\underset{q_2}{1}+\underset{r_2}{352}$   \\
+                \underline{3$^o p$} & $\underset{r_1}{1034}=\underset{r_2}{352}\cdot\underset{q_3}{2}+\underset{r_3}{330}$ \\ 
+                \underline{4$^o p$} & $\underset{r_2}{352}=\underset{r_3}{330}\cdot\underset{q_3}{1}+\underset{r_4}{22}$ \\ 
+                \underline{5$^o p$} & $\underset{r_3}{330}=\underset{r_4}{22}\cdot\underset{q_3}{15}+\underset{r_5}{0}$  
+            \end{tabular}\\
+    \end{description}
+    \subsubsection{In $\mathbb{Z}$}
+    \begin{description}
+        \item[1$^o$ modo] consigliato
+            \begin{itemize}
+                \item $|a|,|b|\in\mathbb{N}$
+                \item $MCD(|a|,|b|)=d\in\mathbb{N}$
+                \item $d$  $-d$ boh illeggibile \hspace{1cm} $MCD(a,b)$ in $\mathbb{Z}$
+            \end{itemize}
+        \item[2$^o$ modo] Algoritmo di Euclide in $\mathbb{Z}$
+    \end{description}
+	\paragraph{Esempio}$MCD(\underset{a}{-274},\underset{b}{110})$\\
+	$|a|=|-274|=274\\|b|=|110|=110$\\
+	\begin{description}
+		\item[1$^o$ Modo]svolgimento \\
+            \begin{tabular}{c c}
+                \underline{1$^o p$} & $\underset{a}{274}=\underset{b}{110}\cdot\underset{q_1}{2}+\underset{r_1}{54}$  \\
+                \underline{2$^o p$} & $\underset{b}{110}=\underset{r_1}{54}\cdot\underset{q_2}{2}+\underset{r_2}{2}$   \\
+                \underline{3$^o p$} & $\underset{r_1}{54}=\underset{r_2}{2}\cdot\underset{q_3}{27}+\underset{r_3}{0}$ \\ 
+            \end{tabular}\\
+	$MCD(|a|,|b|)=d=2\Longrightarrow$ $2$ e $-2$ sono i $MCD(-274,110)$
+\item[2$^o$ Modo] Algoritmo di Euclide in $\mathbb{Z}$\\
+            \begin{tabular}{c c c}
+                \underline{1$^o p$} & $\underset{a}{274}=\underset{b}{110}\cdot\underset{q_1}{(-3)}+\underset{r_1}{56}$ & $\underset{110}{|b|}>r_1\geq 0$ \\
+                \underline{2$^o p$} & $\underset{b}{110}=\underset{r_1}{56}\cdot\underset{q_2}{1}+\underset{r_2}{54}$ &  \\
+                \underline{3$^o p$} & $\underset{r_1}{56}=\underset{r_2}{54}\cdot\underset{q_3}{1}+\underset{r_3}{2}$ & $2$ e $-2$ sono i due massimi comuni divisori di $-274$ e $110$\\ 
+                \underline{4$^o p$} & $\underset{r_2}{54}=\underset{r_3}{2}\cdot\underset{q_3}{27}+\underset{r_4}{0}$ \\ 
+            \end{tabular}\\
+    \end{description}
