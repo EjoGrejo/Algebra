@@ -384,187 +384,382 @@ $$
         \item Per il teorema cinese dei resti, le soluzioni del sistema sono esattamente tutti i numeri interi
             nella classe $[x_2]_n = \{ \}$ {\color{purple} PAOLO} 
     \end{enumerate}
-    \paragraph{Esempio}
-    $
-    \begin{cases}
-        x\equiv \underset{b_1}{4}\mod \underset{n_1}{6}\\
-        x\equiv \underset{b_2}{3}\mod \underset{n_2}{5}
-    \end{cases}
-    $\\
-    $MCD(n_1,n_2)=MCD(6,5)=1$ \\
-    Posso applicare il teorema dinese dei resti e concludere che il sistema ha infinite soluzioni: tutti i numeri in $[x_2]_30=\{x_2+30k|k\in\mathbb{Z}\}$
-    \begin{enumerate}
-        \item $x_1=4$
-        \item cerco $t_2\in\mathbb{Z}$ tale che 
-            \begin{tabular}{c c}
-                & \\
-                $x_2=$ & $x_1+t_2n_1\equiv b_2\mod n_2$, ovvero\\
-                & $4+t_2\cdot 6\equiv 3\mod 5$
-            \end{tabular}\\
-            Facendo i conti in $\mathbb{Z}_5$: $[4]_5+t_2[6]_5=[3]_5$\\
-            $t_2\cdot 6\equiv 3-4 \mod 5$\\
-            $6t_2\equiv -1\mod 5\Longrightarrow t_2\equiv 4\mod 5$
-        \item ad esempio prendo $t_2=4\Longrightarrow \\
-            \Longrightarrow x_2=x_1+t_2n_1=4+4\cdot 6=28$
-    \end{enumerate}
-    Per il teorema cinese dei resti tutte le soluzioni di $\begin{cases}A\\B\end{cases}$ 
-    sono gli interi nell'insieme 
-    $[28]_{30} = \{28+30k|k\in\mathbb{Z}\}$
-    \paragraph{Il caso $k=3$} Consideriamo \\
+\paragraph{Esempio}
+$
+\begin{cases}
+    x\equiv \underset{b_1}{4}\mod \underset{n_1}{6}\\
+    x\equiv \underset{b_2}{3}\mod \underset{n_2}{5}
+\end{cases}
+$\\
+$MCD(n_1,n_2)=MCD(6,5)=1$ \\
+Posso applicare il teorema dinese dei resti e concludere che il sistema ha infinite soluzioni: tutti i numeri in $[x_2]_30=\{x_2+30k|k\in\mathbb{Z}\}$
+\begin{enumerate}
+    \item $x_1=4$
+    \item cerco $t_2\in\mathbb{Z}$ tale che 
+        \begin{tabular}{c c}
+            & \\
+            $x_2=$ & $x_1+t_2n_1\equiv b_2\mod n_2$, ovvero\\
+            & $4+t_2\cdot 6\equiv 3\mod 5$
+        \end{tabular}\\
+        Facendo i conti in $\mathbb{Z}_5$: $[4]_5+t_2[6]_5=[3]_5$\\
+        $t_2\cdot 6\equiv 3-4 \mod 5$\\
+        $6t_2\equiv -1\mod 5\Longrightarrow t_2\equiv 4\mod 5$
+    \item ad esempio prendo $t_2=4\Longrightarrow \\
+        \Longrightarrow x_2=x_1+t_2n_1=4+4\cdot 6=28$
+\end{enumerate}
+Per il teorema cinese dei resti tutte le soluzioni di $\begin{cases}A\\B\end{cases}$ 
+sono gli interi nell'insieme 
+$[28]_{30} = \{28+30k|k\in\mathbb{Z}\}$
+\paragraph{Il caso $k=3$} Consideriamo \\
 
-    \begin{tabular}{c}
-        $A\longrightarrow$\\
-        $B\longrightarrow$\\
-        $C\longrightarrow$
-    \end{tabular}
-    $
-    \begin{cases}
-        x\equiv b_1\mod n_1\\
-        x\equiv b_2\mod n_2\\
-        x\equiv b_3\mod n_3
-    \end{cases}
-    $\\\\
-    E lo risolviamo col teorema cinese dei resti con l'ipotesi:\\\\
-    $MCD(n_1,n_2)=1$\\
-    $MCD(n_1,n_3)=1$\\
-    $MCD(n_2,n_3)=1$\\\\
-    Per trovare $x_3$:
-    \begin{enumerate}
-        \item Scelgo una soluzione di $A: x_1=b_1$
-        \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1
-            \equiv b_2\mod n_2$
-        \item $x_2$ è soluzione di $\begin{cases}A\\B\end{cases}$
-        \item Cerco $t_3\in\mathbb{Z}$ tale che $x_2+t_3(n_1\cdot n_2)=x_3$
-            $x_3$ è soluzione di 
-            $
-            \begin{cases}
-                A\\B\\C
-            \end{cases}
-            $\\\\
-            $\underset{\mod n_1}{x_3}\equiv x_2$ è soluzione di $A$\\
-            $\underset{\mod n_2}{x_3}\equiv x_2$ è soluzione di $B$
-            $$n=n_1\cdot n_2\cdot n_3$$
-        \item $x_3$ è una soluzione del sistema $\begin{cases}A\\B\\B\end{cases}$
-    \end{enumerate}
-    Per il teorema cinese dei resti la soluzione del $(*)$ sono i numeri interi nell'insieme $\{x_2+nk|k\in\mathbb{Z}\}$
+\begin{tabular}{c}
+    $A\longrightarrow$\\
+    $B\longrightarrow$\\
+    $C\longrightarrow$
+\end{tabular}
+$
+\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+    x\equiv b_3\mod n_3
+\end{cases}
+$\\\\
+E lo risolviamo col teorema cinese dei resti con l'ipotesi:\\\\
+$MCD(n_1,n_2)=1$\\
+$MCD(n_1,n_3)=1$\\
+$MCD(n_2,n_3)=1$\\\\
+Per trovare $x_3$:
+\begin{enumerate}
+    \item Scelgo una soluzione di $A: x_1=b_1$
+    \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1
+        \equiv b_2\mod n_2$
+    \item $x_2$ è soluzione di $\begin{cases}A\\B\end{cases}$
+    \item Cerco $t_3\in\mathbb{Z}$ tale che $x_2+t_3(n_1\cdot n_2)=x_3$
+        $x_3$ è soluzione di 
+        $
+        \begin{cases}
+            A\\B\\C
+        \end{cases}
+        $\\\\
+        $\underset{\mod n_1}{x_3}\equiv x_2$ è soluzione di $A$\\
+        $\underset{\mod n_2}{x_3}\equiv x_2$ è soluzione di $B$
+        $$n=n_1\cdot n_2\cdot n_3$$
+    \item $x_3$ è una soluzione del sistema $\begin{cases}A\\B\\B\end{cases}$
+\end{enumerate}
+Per il teorema cinese dei resti la soluzione del $(*)$ sono i numeri interi nell'insieme $\{x_2+nk|k\in\mathbb{Z}\}$
 
-    \paragraph{Esempio 2} considero\\
+\paragraph{Esempio 2} considero\\
 
-    $
-    \begin{cases}
-        x\equiv 10\mod \underset{n_1}{11} \\
-        x\equiv 5\mod \underset{n_2}{6} \\
-        x\equiv 10\mod \underset{n_3}{7} \\
-    \end{cases}
-    $
-    \begin{tabular}{c}
-        $MCD(11,6)=1$\\
-        $MCD(11,7)=1$\\
-        $MCD(6,7)=1$
-    \end{tabular}
-    $$n=11\cdot 6\cdot 7= 462$$
-    \begin{enumerate}
-        \item $x_1=10$
-        \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1\equiv b_2\mod n_2$\\
-            $10=t_2\cdot 11\equiv 5\mod n$\\
-            $11t_2\equiv 5-10 \mod 6$\\
-            ${\color{blue}11}t_2\equiv {\color{red}-5} \mod 6$\\
-            {\tiny
-            {\color{blue}$[1]_6=[5]_6$}\\
-            {\color{red}$[-5]_6=[1]_6$}
-            }
-            {\color{purple}PAOLO, e anche bello grosso}
-        \item Cerco $t_3\in\mathbb{Z}$ tale che  $x_3=x_2+t_3(n_1\cdot n_2)$ 
-            sia soluzione di $C$: $x\equiv 5\mod 7$\\
-            $x_2+t_3(n_1\cdot n_2)\equiv 5\mod 7$\\
-            $65+t_3(11\cdot 6)\equiv 5\mod 7 $\\
-            $66t_3\equiv -60\mod 7 $\
-            $3t_3\equiv 3\mod 7$\\\\
-            \begin{align*}
-                x_3 & =x_2+t_3\cdot n_1\cdot n_2\\
-                    & =65+1\cdot 11\cdot 6\\
-                    & =65+66=131
-            \end{align*}
-            FINISCI
-    \end{enumerate}
-    In generale se $k\geq 4$ e
-    $
-    \begin{cases}
-        x\equiv b_1\mod n_1\\
-        x\equiv b_2\mod n_2\\
-        x\equiv b_k\mod n_k\\
-    \end{cases}
-    $ Con $MCD(n_i,n_j)=1$ $\forall i\neq j $\\
-    Itero di procedimento 
-    \begin{itemize}
-        \item $x_1=b_1 $ è una soluzione di $1$
-        \item impongo che $x_1+n_1t_2=x_2$ Sia soluzione di $2$
-            FINISCI Cerco $t_2$...
-        \item Impongo che  $x_2+n_1n_2t_3=x_3$ sia soluzione di $3$\\
-            (Cerco $t_3\in\mathbb{Z}$ tale che ...) allora $x_3$ è soluzione di 
-            $\begin{cases}
-                1\\2\\3
-            \end{cases}$
-        \item Impongo che  $x_3+n_1n_2n_3t_4=x_3$ sia soluzione di $4$\\
-            (Cerco $t_4\in\mathbb{Z}$ tale che ...) allora $x_4$ è soluzione di 
-            $\begin{cases}
-                1\\2\\3\\4
-            \end{cases}$
-    \end{itemize}
-    {\color{purple} PAOLO}\\\\
+$
+\begin{cases}
+    x\equiv 10\mod \underset{n_1}{11} \\
+    x\equiv 5\mod \underset{n_2}{6} \\
+    x\equiv 10\mod \underset{n_3}{7} \\
+\end{cases}
+$
+\begin{tabular}{c}
+    $MCD(11,6)=1$\\
+    $MCD(11,7)=1$\\
+    $MCD(6,7)=1$
+\end{tabular}
+$$n=11\cdot 6\cdot 7= 462$$
+\begin{enumerate}
+    \item $x_1=10$
+    \item Cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1\equiv b_2\mod n_2$\\
+        $10=t_2\cdot 11\equiv 5\mod n$\\
+        $11t_2\equiv 5-10 \mod 6$\\
+        ${\color{blue}11}t_2\equiv {\color{red}-5} \mod 6$\\
+        {\tiny
+        {\color{blue}$[1]_6=[5]_6$}\\
+        {\color{red}$[-5]_6=[1]_6$}
+        }
+        {\color{purple}PAOLO, e anche bello grosso}
+    \item Cerco $t_3\in\mathbb{Z}$ tale che  $x_3=x_2+t_3(n_1\cdot n_2)$ 
+        sia soluzione di $C$: $x\equiv 5\mod 7$\\
+        $x_2+t_3(n_1\cdot n_2)\equiv 5\mod 7$\\
+        $65+t_3(11\cdot 6)\equiv 5\mod 7 $\\
+        $66t_3\equiv -60\mod 7 $\
+        $3t_3\equiv 3\mod 7$\\\\
+        \begin{align*}
+            x_3 & =x_2+t_3\cdot n_1\cdot n_2\\
+                & =65+1\cdot 11\cdot 6\\
+                & =65+66=131
+        \end{align*}
+        FINISCI
+\end{enumerate}
+In generale se $k\geq 4$ e
+$
+\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+    x\equiv b_k\mod n_k\\
+\end{cases}
+$ Con $MCD(n_i,n_j)=1$ $\forall i\neq j $\\
+Itero di procedimento 
+\begin{itemize}
+    \item $x_1=b_1 $ è una soluzione di $1$
+    \item impongo che $x_1+n_1t_2=x_2$ Sia soluzione di $2$
+        FINISCI Cerco $t_2$...
+    \item Impongo che  $x_2+n_1n_2t_3=x_3$ sia soluzione di $3$\\
+        (Cerco $t_3\in\mathbb{Z}$ tale che ...) allora $x_3$ è soluzione di 
+        $\begin{cases}
+            1\\2\\3
+        \end{cases}$
+    \item Impongo che  $x_3+n_1n_2n_3t_4=x_3$ sia soluzione di $4$\\
+        (Cerco $t_4\in\mathbb{Z}$ tale che ...) allora $x_4$ è soluzione di 
+        $\begin{cases}
+            1\\2\\3\\4
+        \end{cases}$
+\end{itemize}
+{\color{purple} PAOLO}\\\\
 
-    Torniamo al caso $k=2$
+Torniamo al caso $k=2$
 $    \begin{cases}
-        x\equiv b_1\mod n_1\\
-        x\equiv b_2\mod n_2\\
-    \end{cases}$
-    Metodo di Lagrange $MCD(n_1,n_2)=1$
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+\end{cases}$
+Metodo di Lagrange $MCD(n_1,n_2)=1$
 
-    Da $MCD(n_1,n_2)=1$, usando Bezout trovo:
-    $\alpha_1, \alpha_2\in\mathbb{Z}$ tali che 
-    $$\alpha_1n_1+\alpha_2n_2=1$$
-    Allora $z=\alpha_1n_1b_2+\alpha_2n_2b_1$ è una {\color{purple}PAOLO}
-    ..\\
-    ..\\
-    ..\\    
-    $z=\alpha_1n_1b_2+\alpha_2n_2b_1$\\
-    $z\equiv b_1\mod n_1$
-    $a_1n_1+\alpha_2n_2\Longrightarrow \alpha_2n_2=1-\alpha_1n_1$
-    \begin{align} 
-        z&=\alpha_1n_1b_2+(1-\alpha_1n_1)b_1\\
-         &=\alpha_1n_1b_2
-    \end{align} 
-    {\color{purple} \\\\PAOLO, c'è da finire la slide\\\\}
-    
+Da $MCD(n_1,n_2)=1$, usando Bezout trovo:
+$\alpha_1, \alpha_2\in\mathbb{Z}$ tali che 
+$$\alpha_1n_1+\alpha_2n_2=1$$
+Allora $z=\alpha_1n_1b_2+\alpha_2n_2b_1$ è una {\color{purple}PAOLO}
+..\\
+..\\
+..\\    
+$z=\alpha_1n_1b_2+\alpha_2n_2b_1$\\
+$z\equiv b_1\mod n_1$
+$a_1n_1+\alpha_2n_2\Longrightarrow \alpha_2n_2=1-\alpha_1n_1$
+\begin{align} 
+    z&=\alpha_1n_1b_2+(1-\alpha_1n_1)b_1\\
+     &=\alpha_1n_1b_2
+\end{align} 
+{\color{purple} \\\\PAOLO, c'è da finire la slide\\\\}
 
-    $
-    \begin{cases}
-        x\equiv\underset{b_1}{4}\mod \underset{n_1}{6}\\
-        x\equiv\underset{b_2}{4}\mod \underset{n_2}{6}\\
-    \end{cases}
-    $
 
-    $MCD(\underset{n_1}{6},\underset{n_2}{5})=1$ cerco $\alpha_1,\alpha_2\in\mathbb{Z}|$
-    {\color{purple} \\\\PAOLO\\\\}
+$
+\begin{cases}
+    x\equiv\underset{b_1}{4}\mod \underset{n_1}{6}\\
+    x\equiv\underset{b_2}{4}\mod \underset{n_2}{6}\\
+\end{cases}
+$
 
-    \textbf{Come ``ridurre", se si può, un generico sistema di congruenze}\\
+$MCD(\underset{n_1}{6},\underset{n_2}{5})=1$ cerco $\alpha_1,\alpha_2\in\mathbb{Z}|$
+{\color{purple} \\\\PAOLO\\\\}
 
-    $
-    \begin{cases}
+\subsection{Ridurre un generico sistema di congruenze}
+Vediamo come ``ridurre", se si può, un generico sistema di congruenze:
+
+    $\underset{a_i, c_i \in\mathbb{Z}, m_i\in\mathbb{N}, m_i>0}
+    {\begin{cases}
         a_1x\equiv c_1\mod m_1\\
         a_2x\equiv c_2\mod m_2\\
         ...\\
         a_kx\equiv c_k\mod m_k
-    \end{cases}
-    $ad un sistema nella forma 
-    $
-    \begin{cases}
-        x\equiv b_1\mod n_1\\
-        x\equiv b_2\mod n_2\\
-        ...\\
-        x\equiv b_k\mod n_k
-    \end{cases}
-    $\\
-    {\color{purple} PAOLO ma proprio una riga}
-    \textbf{Ridurre} significa ``sostituire con un sistema equivalente"\\
-    \textbf{Equivalente} significa ``con le stesse soluzioni" 
+    \end{cases}}$
+ad un sistema nella forma 
+$
+\underset{b_i\in\mathbb{Z}, n_i\in\mathbb{Z}, n_i>0}
+{\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+    ...\\
+    x\equiv b_k\mod n_k
+\end{cases}}
+$\\\\
+\textbf{Ridurre} significa ``sostituire con un sistema equivalente"\\
+\textbf{Equivalente} significa ``con le stesse soluzioni" 
+
+%Lezione 
+
+\paragraph{Motivazione} Abbiamo\\
+
+{\color{blue}
+    \begin{tabular}{c}
+        $A\rightarrow$\\
+        $B\rightarrow$
+    \end{tabular}
+}
+$
+\begin{cases} 
+    2x\equiv 4\mod 8 \\
+    3x\equiv 6\mod 9 
+\end{cases} 
+$\\
+$A=MCD(2,8)=d=2|4
+\begin{cases}
+    [2]_8\hspace{0.5cm}2\cdot 2=4\equiv 4\mod 8\\
+    [6]_8\hspace{0.5cm}2\cdot 6=12\equiv 4\mod 8
+\end{cases}
+$\\
+$
+A
+\begin{cases}
+    x\equiv 2\mod 8 \hspace{0.5cm} {\color{green} C}\\
+    x\equiv 6\mod 8 \hspace{0.5cm} {\color{green} D}\\
+\end{cases}
+$\\
+$
+B: MCD(3,9)=d=3|6
+\begin{cases}
+    [2]_9 \hspace{.5cm} 3\cdot 2=6\equiv 6\mod 9\\
+    [5]_9 \hspace{.5cm} 3\cdot 5=15\equiv 6\mod 9\\
+    [8]_9 \hspace{.5cm} 3\cdot 8=24\equiv 6\mod 9\\
+\end{cases}
+$\\
+$
+B
+\begin{cases}
+    x\equiv 2\mod 9 \hspace{0.5cm} {\color{green} E}\\
+    x\equiv 5\mod 9 \hspace{0.5cm} {\color{green} F}\\
+    x\equiv 8\mod 9 \hspace{0.5cm} {\color{green} G}
+\end{cases}
+$\\
+\\
+Quindi le soluzioni di $\begin{cases}A\\B\end{cases}$ sono l'unione delle soluzioni
+di 6 sistemi:
+$$
+\begin{cases}
+    C\\E
+\end{cases}\cup
+\begin{cases}
+    C\\F
+\end{cases}\cup
+\begin{cases}
+    C\\G
+\end{cases}\cup
+\begin{cases}
+    D\\E
+\end{cases}\cup
+\begin{cases}
+    D\\F
+\end{cases}\cup
+\begin{cases}
+    D\\G
+\end{cases}
+$$
+E noi vorremmo non dover risolvere sei sistemi.
+\paragraph{Passaggio 1} Calcolo $d_i=MCD(a_i,m_i)$ $\forall i=1,...,k$
+%
+% non so bene come contestualizzare: 
+%
+% $i$-esima congruenza di $(*)\longrightarrow a_ix\equiv c_i\mod m_i
+\begin{itemize}
+    \item $\exists d_i$ tale che $d_i\not| c_i$ allora $a_ix\equiv c_i \mod m_i$ Non ha soluzioni, allora $(*)$ non ha soluzioni.
+    \item se $d_i|c_i$ $\forall i=1,...,k$ allora ogni congruenza di $(*)$ ha soluzione e 
+        \begin{itemize}
+            \item se $d_i=1$ \textbf{mantengo} la congruenza $a_ix\equiv c_i \mod m_i$
+            \item se $d_i\neq1$ \textbf{sostituisco} la congruenza $a_ix\equiv c_i \mod m_i$\\
+                con la congruenza
+                $$\frac{a_i}{d_i}x\equiv\frac{c_i}{d_i}\mod\frac{m_i}{d_i}$$
+        \end{itemize}
+\end{itemize}
+\paragraph{NB 1} La congruenza $\frac{a_i}{d_i}x\equiv\frac{c_i}{d_i}\mod\frac{m_i}{d_i}$ è \textbf{equivalente} alla congruenza $a_ix\equiv c_i \mod m_i$
+\paragraph{NB 2} La congruenza $a_ix\equiv c_i \mod m_i$\\
+
+{\color{blue}
+    Infatti\\\\
+    Sia $z\in\mathbb{Z}$
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $z$ è soluzione\\
+            di $a_ix\equiv c_i \mod m_i$\\
+            \hline
+        \end{tabular}
+        $\Longleftrightarrow$
+        \begin{tabular}{|c|}
+            \hline
+            $\exists k\in\mathbb{Z}$ tale che \\
+            $a_iz=c_i+m_ik$\\                             %questo è m_ik?
+            \hline
+        \end{tabular}
+    \end{center}
+}
+\begin{tabular}{c}
+    {\color{green}divido per $d_i$}\\
+    {\color{green}$\Longrightarrow$}\\
+    {\color{orange}$\Longleftarrow$}\\
+    {\color{orange}moltiplico per $d_i$}\\
+\end{tabular}
+{\color{blue}
+    \begin{tabular}{|c|}
+        \hline
+            $\exists k\in\mathbb{Z}$ tale che\\
+            $\frac{a_i}{d_i}z=\frac{c_i}{d_i}+\frac{m_i}{d_i}k$\\
+        \hline
+    \end{tabular}
+    $\longleftrightarrow$
+    \begin{tabular}{|c|}
+        \hline
+            $z$ è soluzione di \\
+            $\frac{a_i}{d_i}x\equiv \frac{c_i}{d_i}\mod \frac{m_i}{d_i}$\\
+        \hline
+    \end{tabular}
+}
+
+\paragraph{NB 3} Siccome $d_i=MCD(a_i, m_i)$ allora
+$$MCD(\frac{a_i}{d_i},\frac{m_i}{d_i})=1$$
+Quindi le soluzioni della congruenza $\frac{a_i}{d_i}x\equiv \frac{c_i}{d_i}\mod\frac{m_i}{d_i}$
+stanno tutte in un'unica classe di congruenza modulo $\frac{m_i}{d_i}$\\
+Alla fine del \textbf{passaggio 1} ottengo che $(*)$ non ha soluzioni, oppure che $(*)$ è equivalente a 
+
+$$(**)
+\begin{cases}
+    \frac{a_1}{d_1}x\equiv \frac{c_1}{d_1}\mod \frac{m_1}{d_1}\\
+    :\\
+    :\\
+    \frac{a_k}{d_k}x\equiv \frac{c_k}{d_k}\mod \frac{m_k}{d_k}
+\end{cases}
+$$
+\paragraph{Passaggio 2} Risolvo ciascuna congruenza di $(**)$ 
+$$\frac{a_i}{d_i}x\equiv \frac{c_i}{d_i}\mod\frac{m_i}{d_i} \Longrightarrow x\equiv {\color{orange}b_i}\mod \frac{m_i}{d_i}$$
+{\color{orange}
+    Dove $[b_i]_{\frac{m_i}{d_i}}=\{ b_i+\frac{m_i}{d_i}t|t\in\mathbb{Z}\}$ è \textbf{l'insieme delle soluzioni della congruenza}
+}\\\\
+Posto $n_i=\frac{m_i}{d_i}$ ottengo un sistema
+$$
+(***)
+\begin{cases}
+    x\equiv b_1\mod n_1\\
+    x\equiv b_2\mod n_2\\
+    ...\\
+    ...\\
+    x\equiv b_k\mod n_k\\
+\end{cases}
+$$
+{\color{red} SE} $MCD(n_i,n_j)=1$ $\forall i\neq j $ posso applicare il Teorema cinese dei resti. In tal caso:
+\paragraph{Passaggio 3} Con newton trovo $x_k$ una particolare soluzione di $(***)$ e per il teorema cinese dei resti l'insieme di tutte le soluzioni $(***)$,
+{\color{red} e quindi anche di $(*)$} è $[x_k]_n=\{x_k+nt|t\in\mathbb{Z}\}$\\
+$$\textrm{dove }n=n_1\cdot n_2\cdot...\cdot n_k$$
+
+
+
+\subsection{Esercizio tipo} Risolvere il sistema\\
+
+$
+\begin{cases}
+    \underset{a_1}{3}x\equiv \underset{c_1}{4}\mod \underset{m_1}{5}\\
+    \underset{a_2}{2}x\equiv \underset{c_2}{4}\mod \underset{m_2}{6}
+\end{cases}
+$
+
+\paragraph{Passaggio 1} 
+\begin{tabular}{c}
+    $a_1=MCD(a_1,m_1)=MCD(3,5)=1|4=c_1$\\
+    $a_2=MCD(a_2,m_2)=MCD(2,6)=2|4=c_2$
+\end{tabular}
+\\
+\\
+$a_1=1\Longrightarrow $ mantengo $3x\equiv 4\mod 5$\\
+$a_2=2\neq1 $ \textbf{sostituisco}  $2x\equiv 4\mod 6$\\
+Con $\frac{2}{\color{red} 2}x\equiv \frac{4}{\color{red} 2} \mod \frac{6}{\color{red} 2}{\color{red} : x\equiv 2\mod 3}$
+$$
+\textrm{arrivo a }(**)
+\begin{cases}
+    3x\equiv 4\mod 5\\
+    x\equiv 2\mod 3
+\end{cases}
+$$
+
+\paragraph{Passaggio 2} Risolvo ciascuna congruenza {\color{purple} PAOLO}  %difficoltà nel decifrare la slide 
