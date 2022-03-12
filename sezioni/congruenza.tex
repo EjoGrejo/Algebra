@@ -762,4 +762,108 @@ $$
 \end{cases}
 $$
 
-\paragraph{Passaggio 2} Risolvo ciascuna congruenza {\color{purple} PAOLO}  %difficoltà nel decifrare la slide 
+\paragraph{Passaggio 2} Risolvo ciascuna congruenza {\color{purple} PAOLO}\\  %difficoltà nel decifrare la slide 
+
+$\underset{a}{3}x\equiv\underset{b}{4}\mod \underset{n}{5}$\\\\
+$d=MCD(a,n)=1|4=b$\\
+$d=1=\alpha a+\beta n $\\
+$1={\color{red} \alpha}+\beta \cdot 5$\\
+{\color{red} \scriptsize{$\alpha = 2\\ x_0=\alpha q=2\cdot 4 = 8 $ }}\\
+{\color{blue}
+    $
+    \underset{n}{5}=\underset{a}{3}\cdot\underset{q_1}{1}+\underset{r_1}{2}\Longrightarrow {\color{orange} 2=5+3\cdot(-1)}\\
+    \underset{a}{3}=\underset{r_1}{2}\cdot\underset{q_2}{1}+\underset{r_2}{1}\\
+    $
+} 
+{\color{purple}
+        $\Longrightarrow$
+}
+\begin{tabular}{c}
+    {\color{purple} $1=3+3\cdot(-1) = 3+(-1)\big[5+3\cdot(-1)\big]=$}\\
+    {\color{purple} $=3+(-1)\cdot 5 + 3=3 \cdot 2 + 5 \cdot (-1)$}
+\end{tabular}
+$3x\equiv 4\mod 5$\\
+$[8]_5=[8-5]_5=[3]_5$\\
+Sostituisco $3x\equiv 4\mod 5$ con $x\equiv 3\mod 5$\\
+Per puro caso la congruenza $x=2\mod 3$ è già risolta. 
+
+$$(***)
+\begin{cases}
+    x\equiv \underset{b_1}{3}\mod \underset{n_1}{5}\\
+    x\equiv \underset{b_2}{2}\mod \underset{n_2}{3}
+\end{cases}
+$$
+Siccome $MCD(n_1,n_2)=MCD(5,3)=1$, \\
+Allora 
+{\color{blue}
+    posso applicare il teorema cinese dei resti e concludere che 
+}
+$(***)$ e quindi anche il sistema da cui sono partit\textschwa{ }ha infinite soluzioni (numeri interi)
+tutte nella stessa classe di congruenza modulo 
+
+$$n=n_2\cdot n_2 = 5\cdot 3 = 15$$
+
+\paragraph{Passaggio 3} Trovo $x_2$ una particolare soluzione di $(***)$
+\begin{description}
+    \item[1° Modo] per trovare
+        $x_2
+        \begin{cases}
+            x\equiv\underset{b_1}{3}\mod\underset{n-1}{5}\\
+            x\equiv\underset{b_2}{2}\mod\underset{n-2}{3}
+        \end{cases}
+        $
+        \begin{enumerate}
+            \item $x_1=3$
+            \item cerco $t_2\in\mathbb{Z}$ tale che $x_2=x_1+t_2n_1 \equiv 2\mod 3$\\
+                {\color{blue}
+                    $x_2\rightarrow 3+t_2\cdot 5$} $\equiv 2 \mod 3$
+        \end{enumerate}
+        $5t_2\equiv (2-3)\mod 3$\\
+        $5t_2\equiv -1\mod 3\equiv 2 \mod 3$A\\
+        $[5]_3 = [2]_3 \rightarrow 5t_2 = 2t_2$\\\\
+        $2t_2\equiv 2\mod 3$\\
+        Ad esempio $t_2=1$
+        {\color{red}
+            $x_2=3+1 \cdot 5 = 3 + 5 = 8 $\\
+            \textbf{tutte le soluzioni del (*) sono 
+            $\pmb{[8]_5=\{8+15k|k\in\mathbb{Z}\}}$} 
+        }
+    \item[2° Modo] per trovare $x_2=z$
+        $MCD(n_1,n_2)=1$ $\exists \alpha_1,\alpha_2\in\mathbb{Z}$ tale che \\
+        $\alpha_1n_1+\alpha_2n_2=1$\\
+        {\color{red}
+            $\underset{-1}{\alpha_1}$
+        }
+        $\cdot 5 +$
+        {\color{red} 
+            $\underset{2}{\alpha_2}$
+        }
+        $\cdot 3 = 1$ 
+        \\
+        \\
+        $z=$
+        {\color{red}
+            $\underset{-5}{\alpha_1n_1}$
+        }
+        $b_2+$
+        {\color{red}
+            $\underset{6}{\alpha_2n_2}$
+        }
+        $b_1=\\
+        =-5\cdot 2+6\cdot 3\\
+        =-10+18=8$
+        $$\pmb{[z]_n=[8]_{15}=\{8+15k|k\in\mathbb{Z}\}}$$
+\end{description}
+
+
+
+
+
+
+
+
+
+
+
+
+
