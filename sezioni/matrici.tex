@@ -155,8 +155,9 @@ Indico con $||$ la matrice con tutti i coefficienti $=0$
         \forall \alpha , \beta$ scalari
         $\forall$A
 \end{enumerate} 
-\paragraph{Notazioni} $(-1)\cdot$A$=-$A$=(-a_{ij})$
-$-$A si chiama \textbf{matrice opposta della matrice A}
+\paragraph{Notazioni} $(-1)\cdot$A$=-$A\\
+A$=[a_{ij}]\hspace{1cm}(-1)\cdot$A$=[(-1)a_{ij}$
+$-$A si chiama \textbf{la matrice opposta della matrice A}
 \subsection{Somma di due matrici}
 Date almeno due matrici A$=(a_{ij})m\times n$ e B$=(b_{ij})r\times s$ 
 \textbf{aventi le stesse dimensioni}, cioè 
@@ -238,7 +239,7 @@ $$
 \begin{bmatrix}
     v_1 & v_2& ... & v_n
 \end{bmatrix}$
-per 
+rer 
 $
 \underline{u}=
 \begin{bmatrix}
@@ -258,3 +259,320 @@ $$
 {\color{red}
 La riga \textbf{deve necessariamente avere} tanti elementi quanti ne ha la colonna
 }
+
+\paragraph{Esempio}
+$
+\begin{bmatrix}
+    7 & 1+i & 3
+\end{bmatrix}
+\begin{bmatrix}
+    -1 \\1-i
+\end{bmatrix}
+$ non esiste\\\\
+\begin{align*}
+    \begin{bmatrix}
+        7 & 1+i & 3
+    \end{bmatrix}
+    \begin{bmatrix}
+        -1 \\1-i \\ 2i
+    \end{bmatrix}
+& = -7+(1+i)(1-i)+3\cdot 2i\\
+& = -7+1^2-i^2+6i\\
+& = -7+1-(-1)+6i\\
+& = -7+1+1+6i\\
+& = -5+6i
+\end{align*}
+\paragraph{NB 1}  
+\begin{enumerate}
+    \item $\vec{v}^T\cdot \vec{0}$
+    \item $\vec{u}=
+        \begin{bmatrix}
+            u_1\\u_2\\: \\u_n
+        \end{bmatrix},
+        \vec{v}^T=
+        \begin{bmatrix}
+            v_1 & v_2 & ...& v_n
+        \end{bmatrix}\\
+        \vec{v}=
+        \begin{bmatrix}
+            u_1\\u_2\\: \\u_n
+        \end{bmatrix},
+        \vec{u}^T=
+        \begin{bmatrix}
+            u_1 & u_2 & ...& u_n
+        \end{bmatrix}
+        $
+\end{enumerate}
+{\color{blue}
+$$ 
+    \vec{v}^T\vec{u}=
+    \begin{bmatrix}
+        v_1 & v_2 & .. v_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        u_1 \\ u_2 \\ .. u_2
+    \end{bmatrix}=
+    v_1u_1+v_2u_2+...+v_nu_n=$$
+$$
+    =u_1v_1+u_2v_2+...+u_nv_n=
+    \begin{bmatrix}
+        u_1 & u_2 & .. u_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1 \\ v_2 \\ .. v_2
+    \end{bmatrix}
+    \
+$$
+}
+\paragraph{NB 2} \textbf{non vale la legge di cancellazione}\\
+Ossia\\
+$\vec{u}\neq\vec{0}$ e $\vec{v}^T\vec{u}=0\nRightarrow\vec{v}^T=\vec{0}^T$\\
+ed anche $\vec{v}^T\neq\vec{0}^T$ e $\vec{v}^T\vec{u}=0\nRightarrow\vec{u}=\vec{0}$
+
+\paragraph{Esempio} 
+$
+\begin{bmatrix}
+    1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+    0 \\1
+\end{bmatrix}
+=1\cdot 0 + 0\cdot 1= 0 $
+
+
+\subsection{Prodotto di due matrici (riga per colonna) } 
+A$_{m\times n}$, B$_{r\times s}$ Il prodotto di A e B è possibile solo se 
+$$n = r$$
+$$\textrm{A}_{m\times {\color{red}n}} \textrm{B}_{{\color{red}r}\times s}$$
+In tal caso il prodotto 
+A$_{m\times n}\cdot$ B$_{r\times s}=$ C$_{\color{red}m\times s}$\\
+dove\\
+$c_{ij}=(i$-esima riga di A$)\cdot(j$-esima colonna di B$)$
+{\color{purple} PAOLO}
+
+\paragraph{Esempio} 
+A$_{2\times 3}=
+\begin{bmatrix}
+    2 & 3 & 7\\
+    6 & 0 & 5 
+\end{bmatrix},
+$
+B$_{2\times 2}=
+\begin{bmatrix}
+    7 & 4\\
+    2 & 3
+\end{bmatrix},
+$
+C$_{2\times 3}=
+\begin{bmatrix}
+    7 & 6i & 1\\
+    3 & 4 & -2
+\end{bmatrix},
+$\\
+E$_{3\times 3}=
+\begin{bmatrix}
+    1 & 1 & -2\\
+    4 & 3i & 3\\
+    0 & -1 & 2
+\end{bmatrix},
+$
+F$_{3\times 2}=
+\begin{bmatrix}
+    7i & 6 + i\\
+    -2 & 5 \\
+    4 & -3
+\end{bmatrix}
+$\\
+Non esiste AB, come non esiste AC.\\
+Esiste però AE$_{2\times 3}$ perche il numero delle colonne di A coincide col numero di righe di E.
+
+Per la stessa ragione esiste anche AF$_{2\times 2}$
+$$
+\textrm{AF}=
+\begin{bmatrix}
+    22+14i & 6 + 2i\\
+    20 + 42i & 21+ 6i
+\end{bmatrix}
+$$
+Calcoliamo AE\\
+
+$
+\begin{bmatrix}
+    2 & 3 & 7\\
+    6 & 0 & 5 
+\end{bmatrix}
+\begin{bmatrix}
+    1 & 1 & -2\\
+    4 & 3i & 3\\
+    0 & -1 & 2
+\end{bmatrix}
+$=
+\begin{tabular}{|c|c|c|}
+    \hline
+    14 & -5+9i & 19 \\
+    \hline
+    6 & 1 & -2\\
+    \hline
+\end{tabular}
+\begin{align*}
+    c_{11}=
+    \begin{bmatrix}
+        2 & 3 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\ 4 \\ 0
+    \end{bmatrix} & = 2 + 12 =14\\
+    c_{12}=
+    \begin{bmatrix}
+        2 & 3 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\ 3i \\ -1
+    \end{bmatrix} & = 2 + 9i -7 = -5 + 9i\\
+    c_{13}=
+    \begin{bmatrix}
+        2 & 3 & 7
+    \end{bmatrix}
+    \begin{bmatrix}
+        -2 \\ 3 \\ 2 
+    \end{bmatrix} & = -4 +9 +14 = 19\\
+    c_{21}=
+    \begin{bmatrix}
+        6 & 0 & 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\ 4 \\ 0
+    \end{bmatrix} & =6\\
+    c_{22}=
+    \begin{bmatrix}
+        6 & 0 & 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\ 3i \\ -1
+    \end{bmatrix} & = 6-5=1 \\
+    c_{23}=
+    \begin{bmatrix}
+        6 & 0 & 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        -2 \\ 3 \\ 2 
+    \end{bmatrix}& = -12+10=-2\\
+\end{align*}
+
+\paragraph{Proprietà di cui gode il prodotto}\mbox{}\\
+Supponiamo che tutte le operazioni seguenti si possano fare con A, B, C matrici 
+e $\alpha$ scalare 
+\begin{enumerate}
+    \item $\underset{s\times r}{\textrm{A}}
+        \Big(
+        \underset{r\times n}{\overset{r\times m}{\textrm{B}}\cdot\overset{m\times n}{C}}
+        \Big)
+        =
+        \Big(
+        \underset{s\times m}{\overset{s\times r}{\textrm{A}}\cdot\overset{r\times m}{\textrm{B}}}
+        \Big)
+        \underset{m\times n}{\textrm{C}}$
+        proprietà associativa
+
+    \item $\underset{r\times m}{||}\cdot\underset{m\times n}{\textrm{A}}=\underset{r\times n}{||}$
+    \item Se I$_n$indica la matrice $n\times n$ allora la matrice\\
+
+        $$\textrm{I}_n=
+        \begin{bmatrix}
+            {\color{red}1} & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & {\color{red}1} & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & 0 & {\color{red}1} & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & 0 & 0 & {\color{red}1} & 0 & 0 & 0 & 0 \\ 
+            0 & 0 & 0 & 0 & {\color{red}1} & 0 & 0 & 0 \\ 
+            0 & 0 & 0 & 0 & 0 & {\color{red}1} & 0 & 0 \\ 
+            0 & 0 & 0 & 0 & 0 & 0 & {\color{red}1} & 0 \\ 
+            0 & 0 & 0 & 0 & 0 & 0 & 0 & {\color{red}1} 
+        \end{bmatrix}
+        $$
+
+        Si chiama \textbf{matrice identica di ordine }$\pmb{n}$
+        \begin{center}
+            I$_2=$
+            \begin{tabular}{|c|c|}
+                \hline
+                $1$ & $0$ \\
+                \hline
+                $0$ & $1$\\
+                \hline
+            \end{tabular} \hspace{1cm}
+            I$_3=$
+            \begin{tabular}{|c|c|c|}
+                \hline
+                $1$ & $0$ & $0$\\
+                \hline
+                $0$ & $1$ & $0$\\
+                \hline
+                $0$ & $0$ & $1$\\
+                \hline
+            \end{tabular} \hspace{1cm}
+            Eccetera...
+        \end{center}
+        $$\textrm{I}_M\cdot\underset{m\times  n}{\textrm{A}} = \textrm{A} = \underset{m\times n}{\textrm{I}_n}$$
+    \item A$($B$+$C$)=$AB$+$AC
+    \item $($A$+$B$)$C$=$AC$+$BC
+    \item $\alpha($AB$)=(\alpha\cdot$A$)$B$=${\color{red}A$(\alpha\cdot$B$)$}\\
+        Questo perché $\alpha$ è uno scalare.
+\end{enumerate}
+
+\paragraph{Proprietà di cui il prodotto non gode}
+\begin{enumerate}
+    \item \textbf{non vale la legge di cancellazione} \\
+        ossia 
+        $
+        \begin{cases}
+            \textrm{AB}=||\\
+            \textrm{A}\neq||
+        \end{cases}
+        \nRightarrow
+        $
+        B
+        $=||$\\
+        anche 
+        $
+        \begin{cases}
+            \textrm{AB}=||\\
+            \textrm{B}\neq||
+        \end{cases}
+        \nRightarrow
+        $
+        A
+        $=||$\\\\
+        \textbf{Esempio}  \\\\
+        AB
+        $
+        \begin{bmatrix}
+            2 & 3\\
+            4 & 6
+        \end{bmatrix}
+        \begin{bmatrix}
+            6 & -3\\
+            -4 & 2
+        \end{bmatrix}=
+        \begin{bmatrix}
+            2\cdot 6+3\cdot (-4) & 2\cdot (-3)+3\cdot 2\\
+            4\cdot 6+6\cdot (-4) & 4\cdot (-3)+6\cdot 2
+        \end{bmatrix}=
+        \begin{bmatrix}
+            0&0\\
+            0&0 
+
+        \end{bmatrix}
+        $\\\\
+        Dunque AB $=||$ che A $\neq0$ e B $\neq 0$\\
+        (ed anche sia A che B sono ``quadrate")
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
