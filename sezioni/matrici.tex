@@ -565,9 +565,100 @@ e $\alpha$ scalare
         $\\\\
         Dunque AB $=||$ che A $\neq0$ e B $\neq 0$\\
         (ed anche sia A che B sono ``quadrate")
-
+    \item \textbf{Il prodotto (righe per colonne) NON è commutativo}\\
+        Cioè AB$\neq$BA
+        \begin{itemize}
+            \item $\exists$AB$\nRightarrow$BA\\\\
+                $
+                \begin{cases}
+                    \textrm{A}_{x\times n}\\
+                    \textrm{B}_{n\times k}
+                \end{cases}
+                \Longrightarrow \exists\textrm{AB}_{m\times k}
+                $
+                , ma se $k\neq m$  allora $\nexists$BA
+            \item 
+                $
+                \begin{cases}
+                    \exists \textrm{AB}\\
+                    \exists \textrm{BA}
+                \end{cases}
+                \centernot\Longrightarrow
+                $
+                AB e BA hanno le stesse dimensioni\\\\
+                dunque \\\\
+                A$_{m\times n}$ e B$_{n\times m }\Longrightarrow$
+                \begin{tabular}{c}
+                    $\exists$AB ed è $m\times m$\\
+                    $\exists$BA ed è $n\times n$
+                \end{tabular}
+                $\Longrightarrow$ 
+                \begin{tabular}{c}
+                    se $n\neq m$ allora\\
+                    AB$\neq$BA
+                \end{tabular}
+            \item Ma anche se A e B sono entrambe $m\times m$ per cui 
+                $\exists$AB$_{m\times m}$ ed $\exists$BA$_{m\times m}$, ma non è detto che AB sia uguale a BA\\\\
+                \textbf{Esempio}\\\\
+                AB$=
+                \begin{bmatrix}
+                    2 & 3\\
+                    -1 & 6
+                \end{bmatrix}
+                \begin{bmatrix}
+                    4 & 3\\
+                    2 & 6
+                \end{bmatrix}
+                =$
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $8+6$ & $6 + 18$ \\
+                    \hline
+                    $-4+ 2$ & $-3+36$\\
+                    \hline
+                \end{tabular}
+                $=$
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $14$ & $24$\\
+                    \hline
+                    $8$ & $32$\\
+                    \hline
+                \end{tabular}\\\\\\
+                BA$=
+                \begin{bmatrix}
+                    $4$ & $3$\\
+                    $2$ & $6$
+                \end{bmatrix}
+                \begin{bmatrix}
+                    2 & 3\\
+                    -1 & 6
+                \end{bmatrix}
+                =$
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $8-3$ & $12+18$\\
+                    \hline
+                    $4-6$ & $6+36$\\
+                    \hline
+                \end{tabular}
+                $=$
+                \begin{tabular}{|c|c|}
+                    \hline
+                    $5$ & $30$\\
+                    \hline
+                    $-2$ & $42$\\
+                    \hline
+                \end{tabular}
+        \end{itemize}
 \end{enumerate}
 
+\subsection{La trasposta}
+Sia A$=(a_{ij})$ $m\times n$, la \textbf{trasposta di A} è B$=(b_{ij})$ $n\times m$ tale che \\
+
+$b_{ij}=a_{ji}$\\\\
+E si indica con B$=$A$^T$
+\subsection{La coniugata}
 
 
 
