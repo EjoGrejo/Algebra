@@ -224,7 +224,7 @@ Sono chiamati \textbf{vettori riga} matrici con una sola riga e \textbf{vettori 
 In notazione:
 $$\underline u = 
 \begin{bmatrix} 
-    u_1 \\ u_2 \\ : \\ : \\ u_m
+    u_1 \\ u_2 \\ ... \\ u_m
 \end{bmatrix} 
 $$
 
@@ -243,7 +243,7 @@ rer
 $
 \underline{u}=
 \begin{bmatrix}
-    u_1\\u_2\\:\\u_n
+    u_1\\u_2\\...\\u_n
 \end{bmatrix}
 $ è 
 
@@ -252,7 +252,7 @@ $$\underline{v}^T\underline{u}=
     v_1 & v_2 & ... & v_n
 \end{bmatrix}
 \begin{bmatrix}
-    u_1\\u_2\\:\\u_n
+    u_1\\u_2\\...\\u_n
 \end{bmatrix}
 =v_1u_1+v_2u_2+...+v_nu_n
 $$
@@ -287,7 +287,7 @@ $ non esiste\\\\
     \item $\vec{v}^T\cdot \vec{0}$
     \item $\vec{u}=
         \begin{bmatrix}
-            u_1\\u_2\\: \\u_n
+            u_1\\u_2\\... \\u_n
         \end{bmatrix},
         \vec{v}^T=
         \begin{bmatrix}
@@ -295,7 +295,7 @@ $ non esiste\\\\
         \end{bmatrix}\\
         \vec{v}=
         \begin{bmatrix}
-            u_1\\u_2\\: \\u_n
+            u_1\\u_2\\... \\u_n
         \end{bmatrix},
         \vec{u}^T=
         \begin{bmatrix}
@@ -658,7 +658,319 @@ Sia A$=(a_{ij})$ $m\times n$, la \textbf{trasposta di A} è B$=(b_{ij})$ $n\time
 
 $b_{ij}=a_{ji}$\\\\
 E si indica con B$=$A$^T$
+
+\paragraph{Esempio}  A$=
+\begin{bmatrix}
+    1 & 2+3i & 1-i \\
+    {\color{red} 7} & {\color{red}0} & {\color{red}4}
+\end{bmatrix}
+\Longrightarrow
+$A$^{T}=
+\begin{bmatrix}
+    1 & {\color{red}7i}\\
+    2+3i & {\color{red}0}\\
+    1-i & {\color{red}4}
+\end{bmatrix}
+$\\\\
+Per questo $\vec{v}=
+\begin{bmatrix}
+    v_1 \\ v_2 \\ ...\\v_n
+\end{bmatrix}
+\Longrightarrow
+\vec{v}^T=
+\begin{bmatrix}
+    v_1 & v_2 & ... & v_n
+\end{bmatrix}
+$
 \subsection{La coniugata}
+Sia A$=(a_{ij})m\times n$\\
+La \textbf{coniugata di A} è B$=(b_{ij})m\times n$ tale che $b_{ij}=a_{ij}$
+\begin{center}
+    Si indica B $= \overline{\textrm{A}}$
+\end{center}
+\paragraph{Esempio} 
+A$=
+\begin{bmatrix} 
+    1 & 2+3i & 1+i\\
+    7i & 0 & 4
+\end{bmatrix} 
+\Longrightarrow
+\overline{\textrm{A}}=
+\begin{bmatrix}
+    \overline{1} & \overline{2+3i} & \overline{1-i}\\
+    \overline{7i} & \overline{0} & \overline{4}
+\end{bmatrix}=
+\begin{bmatrix}
+    {1} & {2+3i} & {1-i}\\
+    {7i} & {0} & {4}
+\end{bmatrix}
+\begin{bmatrix}
+    \overline{1} & \overline{7i} \\
+    \overline{2+3i} & \overline{0} \\
+    \overline{1-i} & \overline{4} 
+\end{bmatrix}
+\begin{bmatrix}
+    {1} & {7i} \\
+    {2+3i} & {0} \\
+    {1-i} & {4} 
+\end{bmatrix}
+$
+{\color{purple} PAOLO}\\
+
+{\color{red} 
+Proprieta delle trasposte, delle coniugate e delle H-trasposte
+}\\
+Siano A,B matrici, $\alpha$ scalare, supponiamo che tutte le operazioni scritte siano possibili.
+\paragraph{Trasposte}
+\begin{enumerate}
+    \item $(\alpha A)^T=\alpha\cdot$A$^T$
+    \item $($A$+$B$)=$A$^T+$B$^T$
+    \item $($A$^T)^T=$ PAOLO
+        {\color{red}
+    \item $($AB$)^T=$B$^T$A$^T$
+        }
+\end{enumerate}
+
+\paragraph{Coniugate}
+\begin{enumerate} 
+    \item $\overline{\alpha\textrm{A}}=\overline{\alpha}\cdot\overline{\textrm{A}}$
+    \item $\overline{\textrm{A}+\textrm{B}}=\overline{\textrm{A}}+\overline{\textrm{B}}$
+    \item $\overline{\overline{\textrm{A}}}=$ A
+    \item $\overline{\textrm{AB}}=\overline{\textrm{A}}\cdot\overline{\textrm{B}}$ 
+\end{enumerate} 
+
+\paragraph{H-trasposte}
+\begin{enumerate}
+        {\color{red}
+    \item $(\alpha $A$)^H=\overline{\alpha}\cdot $A$^H$
+        }
+    \item $($A$+$B$)^H=$A$^H+$B$^H$
+    \item $($A$^H)^H=$A
+        {\color{red}
+    \item $($AB$)^H=$B$^H$A$^H$
+        }
+\end{enumerate}
+\subsection{Tipi di matrici}
+L'insieme di tutte le matrici $m\times n$ a coefficienti in $\mathbb{R}$ viene indicato\\
+
+$\underset{m\times n}{\textrm{M}(\mathbb{R})}$
+oppure
+$\underset{m,n}{\textrm{M}(\mathbb{R})}$\\\\
+Stessa cosa per quanto riguarda in $\mathbb{C}$:\\
+
+$\underset{m\times n}{\textrm{M}(\mathbb{C})}$
+oppure
+$\underset{m,n}{\textrm{M}(\mathbb{C})}$\\
+\\
+Sia A$\in$M$_{m\times n}(\mathbb{C})$
+Diro: ``una matrice" invece di ``una matrice complessa", specificherò 
+``una matrice \textbf{reale}" per dire che i coefficienti sono reali. 
+
+$\big($cioè nel caso A$\in$M$_{m\times n}(\mathbb{R})\big)$
+\begin{enumerate}
+    \item A si dice \textbf{quadrata} se $n=m$\\
+        In A$_{n\times n}$, $n$ indica l'\textbf{ordine delle matrice quadrata di A}\\\\
+        M$_n(\mathbb{C})$ è preferibile a M$_{n\times n}(\mathbb{C})$\\
+        M$_n(\mathbb{R})$ è preferibile a M$_{n\times n}(\mathbb{R})$\\\\
+        M$_{2\times 3}(\mathbb{C})$ e M$_{2,3}(\mathbb{C})=$ matrici $2\times 3$\\
+        M$_{23}(\mathbb{C})=$ matrici $23\times 23$
+        \textbf{Esempio} A$=
+        \begin{bmatrix}
+            {\color{orange}7} & 3 & 1-i\\
+            0 & {\color{orange}2+3i} & 4\\
+            5 & 1 & {\color{orange}2}
+        \end{bmatrix}
+        \in
+        $M$
+        _3(\mathbb{C})$\\\\
+        {\color{orange} Diagonale principale}\\\\
+        I coefficienti diagonali di A sono $7$, $2+3i$, $2$
+    \item A si dice \textbf{diagonale} se 
+        \begin{itemize}
+            \item è quadrata ($n\times n$)
+            \item tutti i coefficienti che non sono diagonali sono uguali a $0$ \\
+                (cioè: $a_{ij}=0\forall i\neq j$)
+        \end{itemize}
+        \textbf{Esempi}
+        $
+            \underset{\textrm{Non è quadrata}}
+                {
+                    \begin{bmatrix}
+                        3 & 0 & 0\\
+                        0 & 7 & 0 
+                    \end{bmatrix}
+                },
+            \underset{\textrm{È diagonale}}
+                {
+                    \begin{bmatrix}
+                        3 & 0 \\
+                        0 & 7
+                    \end{bmatrix}
+                },
+            \underset{\textrm{Non è diagonale}}
+                {
+                    \begin{bmatrix}
+                        3 & 1\\
+                        0 & 7
+                    \end{bmatrix}
+                },
+            \underset{\textrm{È diagonale}}
+                {
+                    \begin{bmatrix}
+                        0 & 0\\
+                        0 & 7
+                    \end{bmatrix}
+                }
+        $
+    \item A$=(a_{ij})$ si dice \textbf{scalare} se $m\times n$\\
+        A$=Diag(d,d,...,d)$\\\\\\
+        A=
+        $
+            \begin{bmatrix}
+                d & 0 & 0 & 0 & 0 & 0\\
+                0 & d & 0 & 0 & 0 & 0\\
+                0 & 0 & d & 0 & 0 & 0\\
+                0 & 0 & 0 & d & 0 & 0\\
+                0 & 0 & 0 & 0 & d & 0\\
+                0 & 0 & 0 & 0 & 0 & d\\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                1 & 0 & 0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0 & 0 & 0\\
+                0 & 0 & 1 & 0 & 0 & 0\\
+                0 & 0 & 0 & 1 & 0 & 0\\
+                0 & 0 & 0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 0 & 0 & 1\\
+            \end{bmatrix}
+            =d\cdot$I$_n
+        $\\\\
+        {\color{red}
+            $d$I$_n$ si chiama \textbf{scalare} perché\\
+           $d$I$_n$B$_{n\times k}=d($I$_n$B$)=d$B
+        }\\
+        {\color{blue}
+            C$_{m\times n}(d$I$_n)=$C$($I$_nd)=($CI$_n)\cdot d=$C$\cdot d$
+        }\\
+        {\color{green}
+            Moltiplicare per la matrice scalare indivuata dallo scalare $d$ equivale a moltiplicare per lo scalare $d$
+        }
+    \item $\vec{v}=
+        \begin{bmatrix}
+            v_1\\v_2\\...\\v_n
+        \end{bmatrix}
+        $ è un \textbf{vettore colonna}\\\\
+        Un vettore colonna con $n$ elementi si indica $\mathbb{C}^n$ o $\mathbb{R}^n$\\\\
+        Analogamente $\vec{v}^T
+        =
+        \begin{bmatrix}
+            v1 & v2 & ... & v_n
+        \end{bmatrix}
+        $\\\\
+        Un vettore riga di $n$ elementi si indica $\mathbb{C}_n$ o $\mathbb{R}_n$
+    \item Caso particolare: i vettori coordinati\\
+        {\color{purple} PAOLO}\\
+    \item A si dice \textbf{simmetrica} se A$^T=$A\\
+        \underline{NB} A$_{m\times  n}\Longrightarrow$A$^T_{n\times m}$\\
+        Se $\underset{n\times m}{\textrm{A}}^T=\underset{m\times n}{\textrm{A}} \Longrightarrow$A è \textbf{quadrata}\\
+        \textbf{Esempio} A$=
+        \begin{bmatrix}
+            1 & 3+i\\
+            3+i & 2
+        \end{bmatrix}
+        $
+    \item A si dice \textbf{Hermitana} se A$^H=$A\\
+        \underline{NB} se A$^H=$ A $\underset{\centernot\Longleftarrow}{\Longrightarrow}$ A quadrata\\
+        \textbf{Esempio}: A=
+        $
+        \begin{bmatrix}
+            1 & 3+i\\
+            3+i & 2
+        \end{bmatrix}
+        $
+    \item A si dice \textbf{antisimmetrica} se \\
+        A$^T=-$A\\
+        Se A$^T=-$A$\underset{\centernot\Longleftarrow}{\Longrightarrow}$ A è quadrata. \\\\
+        Esempio: A $=
+        \begin{bmatrix}
+            0 & 3+i\\
+            -3-i & 0
+        \end{bmatrix}
+        $
+    \item A si dice \textbf{antihermitana} se\\
+        A$^H=-$A\\
+        Se A$^H=-$A $\underset{\centernot\Longleftarrow}{\Longrightarrow}$ A è quadrata\\
+        Esempio: A$=
+        \begin{bmatrix}
+            2i & 3+i\\
+            -3+i & 7i
+        \end{bmatrix}
+        $
+\end{enumerate}
+
+\subsection{Scrittura matriciale di un sistema lineare}
+Dato un sistema lineare\footnote{ovvero ogni equazione ha grado 1} \\
+
+$(*)
+\begin{cases}
+    a_{11}x1 + a_{12}x_2 & a_{13}x_3 + ... + a_{1n}x_n= b_1\\
+    a_{21}x2 + a_{22}x_2 & a_{23}x_3 + ... + a_{2n}x_n= b_2\\
+    ...\\
+    ...\\
+    ...\\
+    a_{m1}xn + a_{m2}x_n & a_{m3}x_3 + ... + a_{mn}x_n= b_m\\
+\end{cases}
+$\\\\
+La matrice $\underset{m\times n}{\textrm{A}}=
+\begin{bmatrix}
+    a_{11} & a_{12} & ... & a_{1n}\\
+    a_{21} & a_{22} & ... & a_{2n}\\
+    ...\\
+    ...\\
+    a_{m1} & a_{m2} & ... & a_{mn}
+\end{bmatrix}
+$
+\begin{tabular}{c}
+    Si chiama la \\
+    \textbf{matrice dei coefficienti}\\
+di (*)
+\end{tabular}\\
+Il vettore $\vec{b}=
+\begin{bmatrix}
+    b_1\\
+    b_2\\
+    ...\\
+    ...\\
+    b_n\\
+\end{bmatrix}
+\in\mathbb{C}^m
+$
+\begin{tabular}{c}
+    Si chiama il \\
+    \textbf{vettore dei termini noti}\\
+di (*)
+\end{tabular}\\
+Il vettore $\vec{x}=
+\begin{bmatrix}
+    x_1\\
+    x_2\\
+    ...\\
+    ...\\
+    x_n\\
+\end{bmatrix}
+$
+\begin{tabular}{c}
+    Si chiama il \\
+    \textbf{vettore delle incognite}\\
+di (*)
+\end{tabular}\\
+
+%Lezione 11
+
+
+
+
+
 
 
 
