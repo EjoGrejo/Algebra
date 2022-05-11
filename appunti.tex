@@ -13,9 +13,12 @@
 \usepackage[hidelinks]{hyperref}
 \renewcommand{\vec}[1]{\underline{#1}}
 
+\usepackage{scrextend}
+\deffootnotemark{\textsuperscript{(\thefootnotemark)}}
+\deffootnote{2em}{1.6em}{(\thefootnotemark)\enskip}
+
 \title{Appunti di Algebra}
 \author{Quel ragazzo con la maglia blu} 
-\date{}
 
 \begin{document}
 \maketitle
@@ -26,5 +29,6 @@
 \input{sezioni/polinomi.tex}\newpage
 \input{sezioni/congruenza.tex}\newpage
 \input{sezioni/matrici.tex}\newpage
+\input{sezioni/spazi_vettoriali.tex}\newpage
 
 \end{document}

@@ -1,0 +1,1119 @@
+\section{Spazi vettoriali reali e complessi}
+Sia $K\in\{\mathbb{R},\mathbb{C}\}$
+
+Uno spazio vettoriale su $K$
+\begin{itemize}
+    \item se $K=\mathbb{C}$ dirò uno spazio vettoriale (complesso)
+    \item se $K=\mathbb{C}$ dirò uno spazio vettoriale reale
+\end{itemize}
+è un insieme \textbf{non vuoto} $V$ su cui sono definite due operazioni
+
+\begin{description}
+    \item[addizione:] $V \times V \longrightarrow v$
+    \item[prodotto di elementi di V per uno scalare:] $k \times v = v$
+\end{description}
+che verificano le seguenti condizioni:
+\begin{itemize}
+    \item $\forall \vec{u}, \vec{v}, \vec{w} \in V$ (gli elementi di $V$ si chiamano \textbf{vettori})
+    \item $\forall \alpha, \beta \in K$ (gli elementi di $K$ si chiamano \textbf{scalari})
+\end{itemize}
+\begin{enumerate} 
+    \item $\vec{u} + (\vec{v} + \vec{w})=(\vec{u} + \vec{v}) + \vec{w}$ {\hspace{1cm}}+ associativa
+    \item $\vec{u}+\vec{v} = \vec{v} + \vec{u}$ {\hspace{1cm}}+ commutativa
+    \item $\alpha(\beta\vec{v})=(\alpha\beta)\vec{v}$
+    \item $1\cdot \vec{v} = \vec{v}$
+    \item $(\alpha + \beta)\vec{v}=\alpha\vec{v} + \beta\vec{v}$
+    \item $\alpha (\vec{u} + \vec{v})= \alpha\vec{u} + \alpha\vec{v}$
+    \item $\exists\vec{0}\in V$ tale che $\vec{v}+\vec{0}=\vec{v}$
+    \item $\forall \vec{v} \in V \exists \vec{w}\in V$ tale che $\vec{v}+\vec{w}=\vec{0}$, 
+        \hspace{1cm} $\vec{w}$ 
+        si indica con $-\vec{v}$
+\end{enumerate}
+\paragraph{Esempi}
+\begin{enumerate}
+    \item $\mathbb{R}^2, \mathbb{R}^n, \mathbb{R}_n, M_{m\times n}(\mathbb{R})$ 
+        sono spazi vettoriali reali \\
+    $\mathbb{C}^2, \mathbb{C}^n, \mathbb{C}_n, M_{m\times n}(\mathbb{C})$ sono spazi vettoriali 
+        (complessi)
+    \item $a,b\in\mathbb{R}\hspace{1cm} a<b\hspace{1cm} [a,b]=\{x\in\mathbb{R}|a\leq x \leq b\}$\\
+    $f:[a,b]\longrightarrow \mathbb{R}$, \hspace{1cm} $\{f|f:[a,b]=\mathbb{R}\}=\mathcal{F}([a,b])$ 
+        \footnote{dove $f$ è l'insieme delle funzioni definite in $[a,b]$ 
+        ed a valori in $\mathbb{R}$}
+$\mathcal{F}([a,b])$ è uno spazio vettoriale reale rispetto a:
+\begin{itemize}
+    \item $\pmb{+}$ : $\mathcal{F}([a,b])\times \mathcal{F}([a,b])
+        \longrightarrow \mathcal{F}([a,b])$  \\
+        $(f,g)\longrightarrow f + g : [a,b]\longrightarrow \mathbb{R}$\\
+        $(f+g)(x)\overset{def}{=}{\color{blue}f(x)+g(x)}\hspace{1cm}\forall x \in [a,b]$
+    \item $\pmb{\cdot}$ : $\mathbb{R}\times\mathcal{F}([a,b])\longrightarrow \mathcal{F}([a,b])$\\
+        $(\alpha, f)\longrightarrow \alpha f: [a,b]\longrightarrow \mathbb{R}$\\
+        $(\alpha f)(x)\overset{def}{=}{\color{blue} \alpha\cdot f(x)}\hspace{1cm}\forall x\in [a,b]$
+\end{itemize}
+{\color{green}
+    $\mathcal{C}([a,b]) = \{f \in \mathcal{F}([a,b])| f \textrm{ continue}\}$\\
+    con le stesse operazioni di sopra è uno spazio vettoriale reale
+}
+    \item $\mathbb{R}[x] = $insieme dei polinomi a coefficienti reali \\
+        è uno spazio vettoriale reale (rispetto a $+$ e $\cdot$ ) \\
+    $\mathbb{C}[x] = $insieme dei polinomi a coefficienti complessi \\
+        è uno spazio vettoriale (rispetto a $+$ e $\cdot$ ) \\
+    \item $\mathbb{R}_n[x]=\{f(x)\in\mathbb{R}[x]|\deg f(x)\leq n\}$\\
+        è uno spazio vettoriale reale
+    \item $\{\vec{0}\}$ contiene un unico vettore, che chiamo $\vec{0}$\\\\
+        $\vec{0} + \vec{0} = \vec{0}$\\
+        $\alpha \in K \hspace{1cm} \alpha\cdot\vec{0} = \vec{0}$\\
+        $k\in\{\mathbb{R}, \mathbb{C}\}$\\\\
+        Rispetto a queste operazioni, $\{\vec{0}\}$ è un {\color{purple} PAOLO} vettore su $K$
+\end{enumerate}
+\paragraph{NB}
+Sia $V$ uno spazio vettoriale su $K\in\{\mathbb{R},\mathbb{C}\}$\\ Allora
+\begin{enumerate}
+    \item $0 \cdot \vec{v} = \vec{0}$, $\forall \vec{v}\in V$
+    \item $\alpha \cdot \vec{0} = \vec{0}$, $\forall \alpha\in K$
+    \item {\color{red} Vale la legge di cancellazione per il prodotto per scalari}\\
+        $\alpha\in k$, $\vec{v}\in V$ e $\alpha\vec{v}=\vec{0}
+        \Longrightarrow \alpha = \vec{0}$ o $\vec{v}=\vec{0}$
+    \item $-(\alpha\vec{v})=(-\alpha)\vec{v}=\alpha(-\vec{v})$, 
+        $\forall \alpha\in K$, $\forall\vec{v}\in V$
+
+\end{enumerate}
+
+
+\subsection{Sottospazi di spazi vettoriali}
+Sia $V$ uno spazio vettoriale in $K\in\{\mathbb{R}, \mathbb{C}\}$
+\paragraph{Def} Un sottoinsieme $U$ di $V$ si dice un \textbf{sottospazio vettoriale}
+(o semplicemente 
+un \textbf{sottospazio}) di $V$ se sono soddisfatte le seguenti condizioni:
+\begin{enumerate}
+    \item $\vec{0}\in U$
+    \item $\vec{u}_1+\vec{u}_2\in U$, $\forall \vec{u}_1,\vec{u}_2\in U$ 
+        ($U$ è chiuso alla \textbf{somma})
+    \item $\alpha\vec{u}\in U$, $\forall\vec{u}\in U$, $\forall\alpha\in K$ 
+        ($U$ è chiuso al \textbf{prodotto per scalari})
+\end{enumerate}
+\paragraph{NB 1} Sia $V$ uno spazio vettoriale su $K \in \{\mathbb{R}, \mathbb{C}\}$ \\
+Sia $U$ un sottoinsieme di $V$. Allora\\\\
+
+$\begin{bmatrix}
+    U \textrm{ soddisfa le condizioni}\\
+    \pmb{\vec{0}\in U}\\
+    \vec{u}_1=\vec{u}_2\in U, \forall \vec{u}_1, \vec{u}_2\in U\\
+    \alpha \vec{u}\in U, \forall \vec{u}\in U, \forall \alpha \in K
+\end{bmatrix}
+\Longleftrightarrow
+\begin{bmatrix}
+    U \textrm{ soddisfa le condizioni}\\
+    \pmb{U \neq \varnothing}\\
+    \vec{u}_1=\vec{u}_2\in U, \forall \vec{u}_1, \vec{u}_2\in U\\
+    \alpha \vec{u}\in U, \forall \vec{u}\in U, \forall \alpha \in K
+\end{bmatrix}$\\\\\\
+``$\Longrightarrow$" ovvia: $\vec{0}\in U\Longrightarrow U\neq \varnothing$\\
+``$\Longleftarrow$" $U \neq \varnothing \Rightarrow \exists \vec{u}\in U 
+\Rightarrow \alpha\vec{u}\in U \forall \alpha \in k \Rightarrow 0\cdot \vec{u}\in U$
+
+\paragraph{NB 2} {\color{red}
+    Sia $V$ uno spazio vettoriale su $K \in\{\mathbb{R}, \mathbb{C}\}$\\
+    Se $U$ è un sottospazio di $V$, allora $U$ è uno spazio vettoriale if 
+    (con le operazioni $+$ e $\cdot$ che si ottengono restringendo quelle di $V$)
+}
+
+\paragraph{Esempio 1} $V=\mathbb{R}^3$ è uno spazio vettoriale reale $(K=\mathbb{R})$\\
+$$U=\Bigg\{
+    \begin{bmatrix}
+        a\\
+        0\\
+        b
+    \end{bmatrix}
+    | a,b\in\mathbb{R} 
+    \Bigg\}
+\subseteq V \hspace{1cm} U \textrm{ è sottospazio di }V?$$
+\begin{enumerate} 
+    \item $\vec{0}\in U$ \footnote{
+        $\begin{bmatrix}
+            0\\
+            0\\
+            0
+        \end{bmatrix}
+        =0\in V=\mathbb{R}^3$
+        }
+        \hspace{2cm}
+        {\color{blue}
+        $
+            \underset{?}{\exists} a,b\in\mathbb{R}|
+            \begin{bmatrix}
+                0\\
+                0\\
+                0
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                a\\
+                0\\
+                b
+            \end{bmatrix}
+        $
+        \\
+        Si: $a=0$, $b=0$
+}\\\\
+        Quindi $\vec{0}\in U$
+    \item $\vec{u}_1+\vec{u}_2\in U$ $\forall \vec{u}_1,\vec{u}_2\in U$\\
+        $ 
+        \vec{u} = 
+        \begin{bmatrix}
+            a_1\\
+            0\\
+            b_1
+        \end{bmatrix}
+        $
+        per opportuni $a_1,b_1\in\mathbb{R} $
+        \\
+        $ 
+        \vec{u}_2= 
+        \begin{bmatrix}
+            a_2\\
+            0\\
+            b_2
+        \end{bmatrix}
+        $ 
+        per opportuni $a_2,b_2\in\mathbb{R} $
+        \\
+        $ 
+        \vec{u}_1+\vec{u}_2= 
+        \begin{bmatrix}
+            a_1\\
+            0\\
+            b_1
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+            a_2\\
+            0\\
+            b_2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            a_1 + a_2\\
+            0\\
+            b_1 + b_2
+        \end{bmatrix}
+        \underset{?}{\in}\mathbb{R}
+        $\\
+
+        $
+        \underset{?}{\exists}a,b \in\mathbb{R}| 
+        \begin{bmatrix}
+            a_1+a_2\\
+            0\\
+            b_1+b_2
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            a\\0\\b
+        \end{bmatrix}
+        $
+        Sì 
+        $ 
+        \begin{cases}
+            a=a_1+a_2\\
+            b=b_1+b_2\\
+        \end{cases}
+        $
+        \\\\
+        \textbf{Quindi $U$ è chiuso alla somma}
+    \item $\alpha \vec{u} \underset{?}{\in} U$ $\forall\vec{u}\in U$ $\forall\alpha\in\mathbb{R}$
+        $
+        \vec{u}=
+        \begin{bmatrix}
+            a\\0\\b
+        \end{bmatrix}
+        \hspace{1cm}
+        \alpha\vec{u}=\alpha
+        \begin{bmatrix}
+            a\\0\\b
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            \alpha a\\0\\\alpha b
+        \end{bmatrix}
+        \underset{?}{\in}U$         \\
+        $ 
+            \underset{?}{\exists}a^*, b^* \in\mathbb{R}\Big|
+            \begin{bmatrix}
+                \alpha a\\0\\ \alpha b
+            \end{bmatrix}
+            = 
+            \begin{bmatrix}
+                a^*\\0\\b^*
+            \end{bmatrix}
+        $\\
+        Sì: $
+        \begin{cases}
+            a^* =\alpha a\\
+            b^*=\alpha b
+        \end{cases}
+            $
+        Quindi $U$ è chiuso al prodotto per scalari\\
+        Da \textbf{1.}, \textbf{2.} e \textbf{3.} concludo che $U$ è 
+        un sottospazio di $\mathbb{R}^3$
+\end{enumerate} 
+\paragraph{Esempio 2} Sia $A\in M_{m\times n}(\mathbb{C})$ un insieme lineare
+del tipo 
+$$A\vec{x}=\vec{0}$$
+si chiama \textbf{un sistema lineare omogeneo}
+(ossia tale che il vettore dei termini noti sia $\vec{0}$), dove: 
+\begin{itemize}
+    \item $A= m\times n$
+    \item $\vec{x} = n\times 1$
+    \item $\vec{0} = m\times 1$
+\end{itemize}
+
+Un sistema lineare omogeneo ha sempre soluzioni, ad esempio la soluzione
+nulla
+\\{\color{purple}PAOLO}\\
+
+Sia A$\in M_{m\times n}(\mathbb{C})$
+
+\begin{center}
+    $N($A$)=$
+    \begin{tabular}{c}
+        insieme delle\\
+        soluzioni del \\
+        sistema lineare\\
+        omogeneo\\
+        A$_{m\times n}\vec{x}_{n\times 1}=\vec{0}_{m\times 1}$
+    \end{tabular}
+    $=\{\vec{v}\in\mathbb{C}^n|$A$\vec{v}=\vec{0}\}$
+\end{center}
+
+$N($A$)$ è un sottoinsieme di $\mathbb{C}^n$\\
+Proviamo che $N($A$)$ è un sottospazio di $\mathbb{C}^n$\\
+(Quindi $N($A$)$ è a sua volta uno spazio vettoriale) \\
+Chiamiamo $N($A$)$ lo \textbf{spazio nullo} della matrice A 
+\begin{enumerate}
+    \item $ 
+        \begin{bmatrix}
+            0\\
+            :\\
+            :\\
+            0
+        \end{bmatrix}
+        =\vec{0}\underset{?}{\exists} N($A$)$\\\\
+        Si: A$\vec{0}_{n\times 1}=\vec{0}_{m\times 1}$\\\\
+        Quindi $\vec{0}_{n\times 1}= 
+        \begin{bmatrix}
+            0\\
+            :\\
+            :\\
+            0
+        \end{bmatrix}
+        \in N($A$)$
+    \item $\vec{u}_1, \vec{u}_2\in N($A$) \underset{?}{\Longrightarrow}
+        \vec{u}_1+\vec{u}_2\in N($A$)$
+        Per provare che $\vec{u}_1+\vec{u}_2\in N($A$)$ devo provare che 
+        $
+        \begin{cases}
+            \vec{u}_1+\vec{u}_2\in\mathbb{C}^n\\
+            \textrm{A}\times (\vec{u}_1+\vec{u}_2)=0
+        \end{cases}
+        $\\
+        So che $\vec{u}_1+\vec{u}_2\in N($A$)$, quindi 
+        $ 
+        \begin{cases}
+            \vec{u}_1\in\mathbb{C}^n\\
+            \textrm{A} \vec{u}_1=0
+        \end{cases}
+        $ 
+        e che $\vec{u}_2\in N($A$)$, quindi 
+        $ 
+        \begin{cases}
+            \vec{u}_2\in\mathbb{C}^n\\
+            \textrm{A} \vec{u}_2=0
+        \end{cases}
+        $ \\\\
+        \footnotesize{
+            $\vec{u}_1, \vec{u}_2\in\mathbb{C}^n 
+            \Longrightarrow
+            \vec{u}_1+\vec{u}_2\in\mathbb{C}^n$ 
+            A$(\vec{u}_1+\vec{u}_2)=$A$\vec{u}_1+$A$\vec{u}_2=
+            \vec{0}+\vec{0}\vec{0}$; 
+            quindi $\vec{u}_1+\vec{u}_2\in N($A$)$
+        }
+    \item $
+            \begin{cases}
+                \vec{u}\in N(\textrm{A})\\
+                \alpha \in \mathbb{C}
+            \end{cases}
+            \Longrightarrow
+            \alpha\vec{u}\in n($A$)
+            $\\
+            Per provare che $\alpha\vec{U}\in N($A$)$ devo provare che $ 
+            \begin{cases}
+                \alpha\vec{u}\in\mathbb{C}^nA\\
+                \textrm{A} \cdot (\alpha\vec{u})=0
+            \end{cases}
+            $\\
+            So che $\vec{u}\in N($A$)$ quindi $ 
+            \begin{cases}
+                \vec{u}\in\mathbb{C}^n\\
+                \textrm{A}\vec{u}=\vec{0}
+            \end{cases}
+            $\\
+            $\vec{u}\in\mathbb{C}^n, \alpha\in\mathbb{C}\Longrightarrow 
+            \alpha\vec{u}\in\mathbb{C}^n
+            $\\
+            A$\cdot (\alpha\vec{u})=\alpha\cdot($A$\vec{u})=\alpha\cdot\vec{0}
+            =\vec{0}$ 
+            Quindi $\alpha\vec{u}\in N($A$)$\\
+            \textbf{1.} + \textbf{2.} + \textbf{3.} $\Longrightarrow N($A$)$ 
+            \textbf{è un sottospazio di }$\pmb{\mathbb{C}^n}$ 
+\end{enumerate}
+
+\subsection{Insieme dei multipli di un vettore}
+Siano $V$ uno spazio vettoriale su $K\in\{\mathbb{R},\mathbb{C}\}$ e 
+$\vec{v}\in V$
+
+$$\{\alpha\vec{v}|\alpha\in K\}=\textrm{insieme dei multipli di }V$$
+\begin{center}
+    Si indica $<\vec{v}>$ oppure Span$(\vec{v})$
+\end{center}
+\begin{enumerate}
+    \item $\pmb{<\vec{v}>}$ \textbf{è un sottospazio di V}
+        \begin{enumerate}
+            \item $\vec{0}\in V$: $\vec{0}=0\cdot \vec{v}$ (prendo $a=0$)
+            \item $\alpha_1\vec{v}+\alpha_2\vec{v}=(\alpha_1+\alpha-2)\vec{v}$ 
+                La somma di due multipli di $\vec{V}$ è un multiplo di $\vec{v}$
+            \item $\beta(\alpha\vec{v})=(\beta\alpha)\vec{v}$
+                Il prodotto di $\beta$ per un multiplo di $\vec{v}$ è un multiplo di $\vec{v}$
+        \end{enumerate}
+    \item \textbf{Se }$\pmb{\vec{v}=0}$ allora $<\vec{v}>=<0>=\{\alpha\cdot\vec{0}| 
+        \alpha \in K \} = \{\vec{0}\}$\\
+        e $<\vec{v}>$ ha un unico elemento.\\\\
+        Se $\pmb{\vec{v}\neq \vec{0}}$ allora $<\vec{v}>= 
+        \{\alpha\vec{v}|\alpha\in K\}$
+        ha tanti elementi quanti sono gli elementi di $K$\\
+        Per vederlo provo che 
+        $ 
+        \begin{cases}
+            \alpha\vec{v}=\beta\vec{v}\\
+            \vec{v}\neq 0\\
+            \alpha,\beta\in K
+        \end{cases}
+        \Longleftrightarrow
+        \alpha = \beta
+        $\\
+        ``$\Longleftarrow$" ovvio\\
+        ``$\Longrightarrow$" $\alpha\vec{v}=\beta\vec{v}\Rightarrow\alpha\vec{v}
+        -\beta\vec{v}=\vec{0}\Rightarrow
+        \begin{cases}
+            (\alpha-\beta)\vec{v}\\
+            \vec{v}\neq \vec{0}
+        \end{cases}
+        \Longrightarrow \alpha - \beta =0 \Longrightarrow\alpha=\beta$
+\end{enumerate}
+
+% Lezione 29
+\paragraph{NB} Sia $V$ uno spazio vettoriale su 
+$K\in\{\mathbb{R}, \mathbb{C}\}$, 
+allora: 
+\begin{enumerate}
+    \item $Z\leq U\leq V \Longrightarrow Z\leq V$ \footnote{
+            dove $leq$ sta per \textit{sottospazio di }
+        }
+    \item $\{\vec{0}\}\leq V$, $V\leq V$
+\end{enumerate}
+Quindi se $V$ è uno spazio vettoriale su $K\in\{\mathbb{R},\mathbb{C}\} $ 
+ed $U$ è un sottospazio di $V$ allora 
+\begin{itemize}
+    \item o $U=\{\vec{0}\}$ ed allora $|U|=1$
+    \item o $U\neq\{\vec{0}\}$ ed allora $\exists\vec{u}\in U,\vec{u}\neq 0$
+\end{itemize}
+Essendo $U$ un sottospazio di $V$ ed $\vec{u}\in U$ allora $\alpha\vec{u}\in U$ 
+$\forall\alpha\in k$\\
+
+\[
+    \begin{cases}
+        <u>=\{\alpha\vec{u}| \alpha\in K\}\subseteq U\\
+        \vec{u}\neq \vec{0}\Longrightarrow |<\vec{u}>|=\infty
+    \end{cases}
+    =|U|=\infty
+\]
+Sia $V$ uno spazio vettoriale du $k\in\{\mathbb{R}, \mathbb{C}\}$ \\
+La \textbf{combinazione lineare degli $\pmb{n}$ vettori}
+{\color{red} è una ``lista" di vettori: i vettori non sono necessariamente
+distinti tra loro (possono esserci ripetizioni)}\\
+$\vec{v}_1, \vec{v}_2, ..., \vec{v}_n \in V$ con \textbf{coefficienti} o pesi\\
+$\alpha_1, \alpha_2, \dots, \alpha_n\in K$ è il vettore \[
+    \alpha_1\vec{v}_1+\alpha_2\vec{v}_2+\alpha_3\vec{v}_3+\dots+\alpha_n\vec{v}_n\in V
+\]
+\paragraph{Esempio} $V=\mathbb{R}^3$, $K=\mathbb{R}$\\
+\[
+    \vec{v}_1= 
+    \begin{bmatrix}
+        1\\2\\1
+    \end{bmatrix}, 
+    \vec{v}_2= 
+    \begin{bmatrix}
+        1\\0\\0
+    \end{bmatrix}, 
+    \vec{v}_3= 
+    \begin{bmatrix}
+        1\\1\\0
+    \end{bmatrix}, 
+    \vec{v}_4= 
+    \begin{bmatrix}
+        1\\0\\0
+    \end{bmatrix}
+\]
+\begin{align*}
+    \vec{v}= 
+    \begin{bmatrix}
+        27\\24\\12
+    \end{bmatrix}
+    &
+    =
+    \begin{bmatrix}
+        12\\24\\12
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        12\\0\\0
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        0\\0\\0
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        3\\0\\0
+    \end{bmatrix}\\
+    &= 
+    12\vec{v}_1 + 12\vec{v}_2+0\vec{v}_3+3\vec{v}_4\\
+    \vec{v} & = 12\vec{v}_1 + 15\vec{v}_2 + 0\vec{v}_3+ 0\vec{v}_4
+\end{align*}
+$\vec{v}=\sum_{i=1}^{n}\alpha i\vec{v}i$ con\\
+$
+    \alpha_1=12\\
+    \alpha_2=12\\
+    \alpha_3=0\\
+    \alpha_4=3
+$\\
+
+Dati $\vec{v}_1,\vec{v}_2, \dots, \vec{v}_n\in V$ ($V$ spazio vettoriale
+su $K$) l' insieme di tutte le loro combinazioni lineari è: 
+\[
+    \{\alpha_1\vec{v}_1 + \alpha_2\vec{v}_2+\dots+\alpha_n\vec{v}_n\big|\alpha_1,\alpha_2,\dots
+    ,\alpha_n\in K\}=
+\]
+    
+\[
+    =\Big\{\sum_{i=1}^{n}\alpha_i\vec{v}_i\big|\alpha_1,\alpha_2,\dots,\alpha_n\in K\Big\}
+\]
+Si indica $\pmb{<\vec{v}_1,\vec{v}_2,\dots,\vec{v}_n>}$\\
+oppure $\pmb{Span(\vec{v}_1,\vec{v}_2,\dots,\vec{v}_n)}$\\
+Si chiama il \textbf{sottospazio (di $\pmb{V}$) generato da }
+$\pmb{\vec{v}_1, \vec{v}_2,\dots,\vec{v}_n}$
+
+\paragraph{NB} $<\vec{v}_1,\dots,\vec{v}_n>$ è effettivamente un sottospazio di $V$\\
+Infatti: 
+\begin{enumerate}
+    \item $\vec{0}=0\cdot\vec{v}_1+0\cdot\vec{v}_2+\dots+0\cdot\vec{v}_n$\\
+        $\underset{?}{\exists}\alpha_1,\dots, \alpha_n\in K|\vec{0}=\alpha_1\vec{v}_1 
+        \alpha_2\vec{v}_2+\dots+\alpha_n\vec{v}_n$\\
+        {\color{red} Sì, prendiamo
+        $ 
+            \alpha_1=\alpha_2=\dots=\alpha_n=0
+        $ 
+        }
+    \item 
+        $ 
+        \sum_{i=1}^{n}\alpha_i\vec{v}_i, 
+        \sum_{i=1}^{n}\beta_i\vec{v}_i 
+        \underset{?}{\Longrightarrow}
+        \sum_{i=1}^{n}\alpha_i\vec{v}_i + 
+        \sum_{i=1}^{n}\beta_i\vec{v}_i 
+        \underset{?}{=}
+        \sum_{i=1}^{n}\delta_i\vec{v}_i 
+        $
+    \item $\beta\in K$, $\sum_{i=1}^{n}\alpha_i\vec{v}_i
+        \underset{?}{\Longrightarrow}
+        \beta(\sum_{i=1}^{n}\alpha_i\vec{v}_i)\underset{?}{=}
+        \sum_{i=1}^{n}\delta_i\vec{v}_i$
+\end{enumerate}
+\paragraph{Def} Si dice che $\vec{v}_1,\dots, \vec{v}_n$ è un 
+\textbf{sistema di generatori di $\pmb{V}$}\\
+$\{\vec{v}_1,\dots, \vec{v}_n\}$ \footnote{
+    userò le parentesi graffe anche se i vettori $\vec{v}_1,\dots,\vec{v}_n$
+    potrebbero essere tutti distinti
+    } è un \textbf{insieme di generatori} 
+se $V=<\vec{v}_1,\dots, \vec{v}_n>$
+\\\\
+$S=\{\vec{v}_1,\dots\vec{v}_n\}$ è un \textbf{inieme di generatori di $\pmb{V}$}\\
+$\Longleftrightarrow <\vec{v}_1,\dots,\vec{v}_n>=\{\sum \alpha_1\vec{v}_i| \alpha_1, 
+\dots, \alpha_n\in K\}\supseteq$ \footnote{
+        dal momento che è sempre vero
+        (qualunque sia $S$ che $\vec{v}_1,\dots\vec{v}_n\subseteq V$)
+    }$ V$\\\\
+{\color{red}
+    $S = \{\vec{v}_1,\dots\vec{v}_n\}$ è un insieme di generatori di $V \Longleftrightarrow$\\
+    $\forall\vec{v}\in V$  $\exists\alpha_1,\alpha_2, \dots, \alpha_n\in K|$
+    $\vec{v}=\alpha_1\vec{v}_1+\alpha_2\vec{v}_2+\dots+\alpha_n\vec{n}$
+}
+\paragraph{Esempi} 
+\begin{enumerate}
+    \item $V=\mathbb{R}^n$, $K=\mathbb{R}$\\
+        Siano $\vec{c}_1, \vec{c}_2,\dots, \vec{c}_n$  le colonne di $I_n$\\
+        $S=\{\vec{c}_1, \vec{c}_2,\dots, \vec{c}_n\}$ è un insieme di generatori di $V$ \\
+        $\forall \vec{v}= 
+        \begin{bmatrix}
+            \alpha_1\\\alpha_2\\:\\\alpha_n
+        \end{bmatrix}
+        \in\mathbb{R}
+        $  $ 
+        \exists\alpha_1, \alpha_2,\dots, \alpha_n \in\mathbb{R}|
+        $
+        \begin{align*}
+            \begin{bmatrix}
+                \alpha_1\\\alpha_2\\:\\\alpha_n
+            \end{bmatrix}
+            & \overset{?}{=}
+            \alpha_1\vec{c}_1+
+            \alpha_2\vec{c}_2+\dots+
+            \alpha_n\vec{c}_n\\
+            & =
+            \alpha_1 
+            \begin{bmatrix}
+                1\\0\\0\\:\\0
+            \end{bmatrix}+
+            \alpha_2 
+            \begin{bmatrix}
+                0\\1\\0\\:\\0
+            \end{bmatrix}+\dots+
+            \alpha_n 
+            \begin{bmatrix}
+                0\\0\\0\\:\\1
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                \alpha_1\\\alpha_2\\:\\\alpha_n
+            \end{bmatrix}
+        \end{align*}
+        Sì: $\alpha_i=a_i$  $\forall i=1,\dots,n$
+    \item $V=\mathbb{C}_n[x], K=\mathbb{C}, S=\{1,x,x^2,\dots,x^n\}$\\
+        Posto $f(x)\leq n$ \\
+        $\forall f(x)\in\mathbb{C}_n[x]$ $f(x)=a_0+a_1x+\dots+a_nx^n$\\
+        $\underset{?}{\exists}\alpha_0, \alpha_1,\dots,\alpha_n\in\mathbb{C}$ 
+        $\big|$ $ f(x)=\alpha_0\cdot 1 + \alpha_1x_1+\dots+\alpha_nx^n$\\
+        Sì: $\alpha_i=a_i$
+    \item $V=M_2(\mathbb{C})$ spazio vettoriale $k=\mathbb{C}$ \\\\
+        $S=\Bigg\{    
+            \begin{bmatrix}
+                1 & 0 \\
+                0 & 0
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                0 & 1 \\
+                0 & 0
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                0 & 0 \\
+                1 & 0
+            \end{bmatrix}
+            ,
+            \begin{bmatrix}
+                0 & 0 \\
+                0 & 1
+            \end{bmatrix}
+        \Bigg\}$\\\\
+        è un insieme di generatori di $V$\\
+        $\forall 
+        \begin{bmatrix}
+            a & b \\
+            c & d
+        \end{bmatrix}
+        \in M_2\mathbb{C}
+        \underset{?}{\exists}\alpha_1, \alpha_2, \alpha_3, \alpha_4 \in \mathbb{C}$\\
+        tali che
+        \begin{align*}
+            \begin{bmatrix}
+                a & b \\
+                c & d
+            \end{bmatrix}
+            & = 
+            \alpha_1
+            \begin{bmatrix}
+                1 & 0\\
+                0 & 0
+            \end{bmatrix}
+            \alpha_2
+            \begin{bmatrix}
+                0 & 1\\
+                0 & 0
+            \end{bmatrix}
+            \alpha_3
+            \begin{bmatrix}
+                0 & 0\\
+                1 & 0
+            \end{bmatrix}
+            \alpha_4
+            \begin{bmatrix}
+                0 & 0\\
+                0 & 1
+            \end{bmatrix}
+            \\
+            & = 
+            \begin{bmatrix}
+                \alpha_1 & \alpha_2\\
+                \alpha_3 & \alpha_4
+            \end{bmatrix}
+        \end{align*}
+        Sì: $\alpha_1=a$, $\alpha_2=b$, $\alpha_3=c$, $\alpha_4=d$
+\end{enumerate}
+{\color{red}
+    Il problema di stabilire se $S$ è un insieme di generatopri di $V$ si traduce
+    nel problema di stabilire se una famiglia di sistemi lineari A$\vec{x}=\vec{b}$ 
+    dove A è fissato e $\vec{b}$ è un vettore dai termini noti \textbf{variabile}\\
+    abbia o non abbia soluzioni. \\
+}
+Cioè:\\
+$A\vec{x}=\vec{b}$ ha soluzioni {\color{red}$\forall\vec{b}\in\mathbb{C}^m$} ?
+\footnote{ 
+$A = m\times n$
+}\\
+$[\textrm{A}|\vec{b}] \overset{EG}{\rightarrow}[U|\vec{d}]$
+{\color{red}$\vec{d}$ è libera $\forall\vec{b}\in\mathbb{C}^m$} ?
+\paragraph{Esempio} $V=M_2(\mathbb{C}), K=\mathbb{C}$\\
+$S=\Bigg\{    
+    \begin{bmatrix}
+        1 & 1 \\
+        0 & 0
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        1 & 0 \\
+        1 & 0
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        0 & 0 \\
+        1 & 0
+    \end{bmatrix}
+\Bigg\}$\\\\
+È uun insieme di generatori di $V$?\\
+$\forall 
+    \begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix}
+\in M_2\mathbb{C}
+\underset{?}{\exists}\alpha_1, \alpha_2, \alpha_3, \alpha_4 \in \mathbb{C}$\\\\
+tali che
+\begin{align*}
+    \begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix}
+    & = 
+    \alpha_1
+    \begin{bmatrix}
+        1 & 1\\
+        0 & 0
+    \end{bmatrix}
+    \alpha_2
+    \begin{bmatrix}
+        1 & 0\\
+        0 & 0
+    \end{bmatrix}
+    \alpha_3
+    \begin{bmatrix}
+        1 & 0\\
+        1 & 0
+    \end{bmatrix}
+    \alpha_4
+    \begin{bmatrix}
+        0 & 0\\
+        1 & 1
+    \end{bmatrix}
+    \\
+    & = 
+    \begin{bmatrix}
+        \alpha_1+\alpha_2 + \alpha_3 &  \alpha_1\\
+            \alpha_3+\alpha_4 &  0
+    \end{bmatrix}
+\end{align*}
+\color{blue}
+Quindi il problema diventa:\\
+è vero che il sistema lineare 
+$
+\begin{cases}
+    \alpha_1+\alpha_2+ \alpha_3 = a\\
+    \alpha_1 = b\\
+    \alpha_3 + \alpha_4 = c\\
+    0 = d
+\end{cases}
+$\\
+Ha soluzioni 
+\color{red}
+$\forall a,b,c,d \in \mathbb{C}$ ?\\
+\color{blue}
+$ 
+    \forall 
+    \begin{bmatrix}
+        a\\b\\c\\d
+    \end{bmatrix}
+$
+Vettori di termini noti 
+(quindi un vettore di termini noti variabile)
+\color{black}
+
+$$
+\textrm{A}\vec{x}=\vec{b} \hspace{0.7cm} = [\textrm{A}|\vec{b}]=
+\left(
+\begin{array}{cccc|c}
+    1 & 1 & 1 & 0 & a\\
+    1 & 0 & 0 & 0 & b\\
+    0 & 0 & 1 & 1 & c\\
+    0 & 0 & 0 & 0 & d\\
+\end{array}
+\right)
+\underset{EG}{\longrightarrow}
+$$
+
+\[
+    [\textrm{A}|\vec{b}]= 
+    \left(
+    \begin{array}{cccc|c}
+        1 & 1 & 1 & 0 & a\\
+        1 & 0 & 0 & 0 & b\\
+        0 & 0 & 1 & 1 & c\\
+        0 & 0 & 0 & 0 & d\\
+    \end{array}
+    \right)
+    \underset{E_{21}(-1)}{\longrightarrow}
+    \left(
+    \begin{array}{cccc|c}
+        1 & 1 & 1 & 0 & a\\
+        0 & -1 & -1 & 0 & b-a\\
+        0 & 0 & 1 & 1 & c\\
+        0 & 0 & 0 & 0 & d\\
+    \end{array}
+    \right)
+    \underset{E_{2}(-1)}{\longrightarrow}
+    \left(
+    \begin{array}{cccc|c}
+        1 & 1 & 1 & 0 & a\\
+        0 & 1 & 1 & 0 & a-b\\
+        0 & 0 & 1 & 1 & c\\
+        0 & 0 & 0 & 0 & d\\
+    \end{array}
+    \right)
+\]
+La colonna $d$ non è libera $\forall a, b, c, d$ (basta prendere $d=0$)\\
+$S$ non è un insieme di generatori di $V$ \\
+
+\paragraph{NB} Abbiamo definito \textit{insieme di generatori S} \\
+solo nel caso $S$ non sia una lista finita. \\
+\paragraph{Def} Uno spazio vettoriale $\pmb{V}$ si dice \textbf{finitamente generato (f.g.)}
+se ha un insieme di generatori che è un insieme finito. 
+\footnote{Noi, in realtà abbiamo parlato solo di insiemi di generatori finiti}.\\
+Esempi di spazi f.g. 
+
+\[
+    \mathbb{R}^n, \mathbb{C}^n, \mathbb{C}^n[x], \mathbb{R}^n[x], 
+    \textrm{M}_{m\times n }(\mathbb{C}), \textrm{M}_{m\times n}(\mathbb{R})
+\]
+
+\paragraph{NB} non tutti gli spazi vettoriali sono finitamente generati.\\
+Esempio\\
+$\mathbb{C}[x], R[x]$ \textbf{non} sono finitamente generati. \footnote 
+{anche gli spazi di funzioni non sono finitamente generati}.\\
+Nel nostro caso, d'ora in poi, supporremmo $V$ finitamente generato. 
+
+\paragraph{Proprietà degli insiemi di generatori:} se $V$ è uno spazio vettoriale su 
+$K\in\{\mathbb{R}, \mathbb{C}\}$ 
+\begin{enumerate}
+    \item Sovrainsiemi di insiemi di generatori sono insiemi di generatori. \\
+        Cioè: 
+        $ 
+        \begin{cases}
+            \textrm{A insieme di generatori di } V\\
+            \textrm{A} \subseteq \mathcal{B}
+        \end{cases}
+        \Longrightarrow \mathcal{B}
+        $
+        insieme di generatoridi $V$
+        \textbf{Dim}
+        {\color{purple}\\\\PAOLO\\\\} 
+    \item Se da un insieme di generatori $S$ di $V$ si toglie un vettore che è 
+        combinazione lineare dei rimanenti vettori di $S$ si ottiene un insieme 
+        di vettori che è ancora un insieme di generatori di $V$
+        \textbf{Esempio:}\\
+        $V=< 
+        \vec{v}_1=
+        \begin{bmatrix}
+            1\\0\\0\\0
+        \end{bmatrix}
+        ,
+        \vec{v}_2=
+        \begin{bmatrix}
+            1\\1\\0\\0
+        \end{bmatrix}
+        ,
+        \vec{v}_3=
+        \begin{bmatrix}
+            0\\1\\0\\0
+        \end{bmatrix}
+        ,
+        \vec{v}_3=
+        \begin{bmatrix}
+            0\\0\\1\\0
+        \end{bmatrix}
+        >\leq \mathbb{C}^4
+        $\\
+        \\
+        $S=\{\vec{v}_1,\vec{v}_2, \vec{v}_3, \vec{v}_4\}$ 
+        è un insime di generatori di $V$\\
+        notiamo anche che \\
+        $\vec{v}_2=\vec{v}_1+\vec{v}_3=1\cdot\vec{v}_1+1\cdot\vec{v}_3+0\cdot\vec{v}_4 
+        \Longrightarrow
+        S_1=\{\vec{v}_1, \vec{v}_3, \vec{v}_4\}$\\ è ancora un insieme di generatori di $V$
+        \color{blue}
+        \paragraph{NB} $\vec{v}_1=\vec{v}_2-\vec{v}_3\Longrightarrow S_2=\{\vec{v}_2, \vec{v}_3, \vec{v}_4\}$
+        \\è sempre un insieme di generatori di $V$
+        \color{green}
+        \paragraph{NB} $\vec{v}_3=-\vec{v}_1-\vec{v}_2\Longrightarrow S_3=\{\vec{v}_1, \vec{v}_2, \vec{v}_4\}$
+        \\è sempre un insieme di generatori di $V$
+        \color{red}
+        \paragraph{Attenzione!} Invece, togliendo $\vec{v}_4$ da $S$ non si ottiene più un insieme
+        di generatori di $V$.
+        \color{black}
+        Per quanto riguarda lo spazio vettoriale $V=\{\vec{0}\}$ si ha che 
+        $S_1=\{\vec{0}\}$è un suo insieme di generatori. 
+        \paragraph{NB} Per convenzione si pone che anche $S_2=\varnothing$ è un insieme di 
+        generatori di $\{\vec{0}\}$
+\end{enumerate}
+
+\subsection{Insiemi di vettori linearmente indipendenti (L.I.) e 
+insiemi di vettori linearmente dipendenti}
+Sia $V$ uno spazio vettoriale su $K\in \{\mathbb{R}, \mathbb{C}\}$
+e \\
+A$\{\vec{v})_1, \vec{v_2},\dots \vec{v}_n\}$ un'``insieme" di vettori di $V$
+\footnote{In realtà non è un insieme: è una lista (ci possono essere ripetizioni)}\\
+\paragraph{Def}A si dice \textbf{linearmente indipendente (L.I.)} 
+se l'unica combinazione lineare dei suoi elementi \textbf{nulla} è quella
+con i coefficienti tutti nulli, cioè\\
+
+$
+\begin{cases}
+\alpha_1\vec{v}_1+\alpha_2\vec{v}_2+...+\alpha_n\vec{v}_n\\
+\alpha_1,\alpha_2,...,\alpha_n\in K
+\end{cases}
+$
+$\Longrightarrow$
+$\alpha_1=\alpha_2=...=\alpha_n=0$
+
+\paragraph{Def 2} A$\{\vec{v}_1,\dots, \vec{v}_n\}$ si dice 
+\textbf{lienarmente dipendente (L.D.)} se \textbf{non è} linearmente indipendente\\
+Cioè $\exists \alpha_1,\dots, \alpha_n$ \textbf{non tutti nulli} tali che \\
+$\alpha_1\vec{v}_1, \alpha_2\vec{v}_2,\dots, \alpha_n\vec{v}_n=0$\\
+
+\paragraph{NB} per convenzione $\varnothing$ è L.I.
+\paragraph{NB} $v\in V$\\
+$\{\vec{v}\}$ è L.I. $\Longleftrightarrow \vec{v}=0$\\
+Proviamo ``$\Longleftarrow$": ipotesi $\vec{v}_0$, tesi $\vec{v}$ L.D.\\
+\paragraph{Dim} Dobbiamo provare che esiste una combinazione lineare nulla di $\vec{v}_0$\\
+con coefficienti nokn tutti nulli. Eccola: prendo $\alpha=1\neq - $ coefficiente non nullo, 
+ed ho: $\alpha \cdot \vec{v}=1\cdot \vec{v}= 1\cdot\vec{0} = \vec{0}$.\\
+Proviamo ``$\Longrightarrow$": ipotesi $\vec{v}$ L.D., tesi $\vec{v}=\vec{0}$
+\paragraph{Dim} Siccome $\{\vec{v}\}$ è L.D. $\exists\alpha\vec{v}=\vec{0}$ con 
+$\alpha\neq =$. Da $\alpha\neq 0$ segue che $\exists\frac{1}{\alpha}$\\
+$ 
+\begin{cases}
+    \alpha\vec{v}=\vec{0}\\
+    \exists\frac{1}{\alpha}
+\end{cases}
+\Longrightarrow\frac{1}{\alpha}\cdot(\alpha\vec{v})=\frac{1}{\alpha}=\vec{0}
+$\\
+ma  
+$ 
+\frac{1}{\alpha} \cdot(\alpha\vec{v})=(\frac{1}{\alpha}\cdot \alpha)\cdot \vec{v}
+=1\cdot{\vec{v}}= \vec{v}
+$ e $ 
+\frac{1}{\alpha}\cdot\vec{0}=0$ quindi $\vec{v}=\vec{0}$
+
+{\color{red}
+    \paragraph{NB}$\{\vec{v}\}L.D. \Longleftrightarrow\vec{v}=\vec{0}$
+    \paragraph{NB}$\{\vec{v}\}L.I. \Longleftrightarrow\vec{v}\neq\vec{0}$
+    \footnote{questo nb è equivalente a quello prima}
+}
+\subsection{Proprietà degli insiemi L.D. e degli insiemi L.I.}
+\begin{enumerate}
+    \item \textbf{Sovrainsiemi di L.D. sono L.D.}\\\\
+
+        Cioè 
+        $ 
+        \begin{cases}
+            B \subseteq A\\
+            B\textrm{ L.D.}
+        \end{cases}
+        \Longrightarrow A \textrm{ L.D.}
+        $\\\\
+        
+        \textbf{Dim} $B$ L.D. $\exists \alpha_1,\cdot, \alpha_n$ non tutti nulli t.c.
+        $\alpha_1\vec{v}_1+\dots+\alpha_n\vec{v}_n=\vec{0}$ \\
+        $\Longrightarrow \exists\alpha_1,\dots, \alpha_n,\beta_1,\dots,\beta_k$ 
+        non tutti nulli tali che \\
+        $\alpha_1, \vec{v}_1+\dots+\alpha_n\vec{v}_n,\beta_1\vec{w}_1,\dots,\beta_k\vec{w}_k$
+        $\Longrightarrow A$ L.D.
+    \item \textbf{Sottoinsiemi di L.I. sono L.I.}\\\\
+        
+        cioè 
+        $
+            \begin{cases}
+                B\subseteq A\\
+                A \textrm{ L.I.}
+            \end{cases}
+            \Longrightarrow
+            B\textrm{ L.I.}
+        $\\\\
+        \color{red}
+        \textbf{Dim}
+        $
+        \begin{cases}
+            \alpha_1\vec{v}_1+\alpha_2\vec{v}_2+\dots+\alpha_n\vec{v}_n=\vec{0}\\
+            \alpha_1,\dots,\alpha_n\in K
+        \end{cases}
+        \underset{?}{\Longrightarrow} \alpha_1=\alpha_2=\dots =\alpha_n=0
+        $\\
+        \color{black}
+        $\alpha_1\vec{v}_1+\dots\alpha_n\vec{v}_n+0\vec{w}_1+0\cdot\vec{w}_2+
+        \dots\vec{w}_k=\vec{0}$\\
+        Siccome $A$ è L.I. \textbf{tutti} i coefficienti della combinazione lineare
+        in rosso devono essere $=0$. In particolare \\
+        $\alpha_1=\dots=\alpha_n=0$
+\end{enumerate}
+
+\paragraph{Def} Sia $V$ uno spazio vetoriale si $K$\\
+Una \textbf{BASE} di $V$ è un insieme di generatori di $V$ che sia anche L.I. 
+\paragraph{Esempi}
+\begin{enumerate}
+    \item $V=\mathbb{C}^n, K=\mathbb{C}$\\
+        $\{\vec{e}_1,\vec{e}_2, ... , \vec{e}_n\}=$insieme delle colonne di $I_n$ 
+        PAOLO
+\end{enumerate}
+
+
+\subsection{Basi ordinate e mappe delle coordinate}
+Sia $V$ uno spazio vettoriale su $K\in\{\mathbb{R}, \mathbb{C}\}$
+\paragraph{Def} Una \textbf{base ordinata} di $V$ `e una base di $V$ in cui si sia fissato l' ordine degli elementi. 
+\paragraph{Esempio} $V= \mathbb{R}^2, K=\mathbb{R}$\\
+$
+\mathcal{B}_1= \{ 
+    \begin{bmatrix}
+        1\\0
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+\mathcal{B}_2= \{ 
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+    ,
+    \begin{bmatrix}
+        1\\0
+    \end{bmatrix}
+\}$
+
+PAOLO\\\\
+SIa $\mathcal{B}=\{\vec{v}_1;\vec{v}_2;\dots\vec{v}_n\}$ una \textbf{base ordinata} di $V$ e sia $\vec{v}\in V$\\
+$\mathcal{B}$ `e un insieme di generatori di $V\Longrightarrow \exists\alpha_1,\alpha_2,\dots,\alpha_n\in K\Big|\vec{v}
+=\sum_{i-1}^{n}\alpha_i\vec{v}i$
+$\mathcal{B}$ `e L.I. \\
+PAOLO\\
+$\mathcal{B}$ `e ordinata \\
+\large{
+    $\forall \vec{v}\in V \exists!
+    \begin{bmatrix}
+        \alpha_1\\
+        \alpha_2\\
+        :\\
+        \alpha_n
+    \end{bmatrix}
+    \in\mathbb{C}^n $
+}
+tale che \\
+PAOLO\\
+
+\paragraph{Def}
+Siano $V$ spazi vettoriali su $K \in\{\mathbb{R}, \mathbb{C}\}$ e $\mathcal{B}=\{\vec{v}_1, \dots, \vec{v}_n\}$ una base ordinata diu $V$\\
+Sia $\vec{v}\in V$.\\
+Si chiama \textbf{vettore delle coordinate} del vettore $\vec{v}\in V$ rispetto alla base ordinata B il vettore 
+
+PAOLO 
+
+\paragraph{Esempio} $V=\mathbb{R}^2, \vec{v}= 
+\begin{bmatrix}
+    2\\7
+\end{bmatrix}$\\
+$\mathcal{B}_1=
+\begin{bmatrix}
+    1\\0
+\end{bmatrix}
+,
+\begin{bmatrix}
+    0\\1
+\end{bmatrix}
+\mathcal{B}_2=
+\begin{bmatrix}
+    0\\1
+\end{bmatrix}
+,
+\begin{bmatrix}
+    1\\0
+\end{bmatrix}
+$\\
+
+\[
+    C_{\mathcal{B}_1}( 
+    \begin{bmatrix}  
+        2\\7
+    \end{bmatrix}  
+    )
+    = 
+    \begin{bmatrix}
+        \alpha_1\\
+        \alpha_2
+    \end{bmatrix}
+    \in\mathbb{R}\Big| 
+    \begin{bmatrix}
+        2\\7
+    \end{bmatrix}
+    =\alpha_1
+    \begin{bmatrix}
+        1\\0
+    \end{bmatrix}
+\]
+
+PAOLO
+
+
+
+
+
+
+
+    
+
+
+
+% presta attenzione quando arrivi a INSIEMI DI VETTORI LINEARMENTE INDIPENDENTI (L.I.)
+
+
