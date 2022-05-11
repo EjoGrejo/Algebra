@@ -835,6 +835,7 @@ $\mathbb{C}[x], R[x]$ \textbf{non} sono finitamente generati. \footnote
 {anche gli spazi di funzioni non sono finitamente generati}.\\
 Nel nostro caso, d'ora in poi, supporremmo $V$ finitamente generato. 
 
+% Lezione 31
 \paragraph{Proprietà degli insiemi di generatori:} se $V$ è uno spazio vettoriale su 
 $K\in\{\mathbb{R}, \mathbb{C}\}$ 
 \begin{enumerate}
@@ -1005,10 +1006,157 @@ Una \textbf{BASE} di $V$ è un insieme di generatori di $V$ che sia anche L.I.
 \begin{enumerate}
     \item $V=\mathbb{C}^n, K=\mathbb{C}$\\
         $\{\vec{e}_1,\vec{e}_2, ... , \vec{e}_n\}=$insieme delle colonne di $I_n$ 
-        PAOLO
+        è una base di $V$ (è anche base di $\mathbb{R}^n$ su $\mathbb{R}$) \\
+        Si chiama \textbf{la base canonica} di $\mathbb{C}^n$ su $\mathbb{c}$ 
+        \footnote{anche di $\mathbb{R}^n$ su $\mathbb{R}$}\\
+        Per verificare che $\mathcal{E}$ è una base di $\mathbb{C}^n$ su $\mathbb{C}$
+        occorre verificare: 
+        \begin{enumerate}
+            \item $\mathcal{E}$ è un insieme di generatori di $\mathbb{C}^n$
+            \item $\mathcal{E}$ è L.I.
+        \end{enumerate}
+        $\mathcal{E}=\{\vec{e}_1,\dots, \vec{e}_n\}$\\ \\
+        $ 
+        \begin{cases}
+            \alpha_1\vec{e}_1+\alpha_2\vec{e}_2+\dots+\alpha_n\vec{e}_n=\vec{0}\\
+            \alpha_1,\alpha_2,\dots, \alpha_n\in\mathbb{C}
+        \end{cases}
+        \Longrightarrow
+        \alpha_1=\alpha_2=\dots=\alpha_n=0
+        $ \\\\
+        $
+        {\color{blue}
+            \begin{bmatrix}
+                \alpha_1\\
+                \alpha_2\\
+                \alpha_3\\
+                :\\
+                \alpha_n\\
+            \end{bmatrix}
+        }
+        =\alpha_1
+        \begin{bmatrix}
+            1\\0\\0\\:\\0
+        \end{bmatrix}
+        +\alpha_2
+        \begin{bmatrix}
+            0\\1\\0\\:\\0
+        \end{bmatrix}
+        +\dots+\alpha_n
+        \begin{bmatrix}
+            0\\0\\0\\:\\1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            0\\0\\0\\:\\0
+        \end{bmatrix}
+        {\color{blue}
+            \Longrightarrow \alpha_1=\alpha-2=\dots=\alpha_n=0=0
+        }
+        $
+    \item $V=\mathbb{C}_n[x]$, $K=\mathbb{C}$
+        $S=\{1, x, x^2, \dots, x6 n\}$ è una base di $V$ su $\mathbb{C}$\\
+        difatti 
+        \begin{enumerate}
+            \item $S$ è un insieme di generatori di $V$ 
+            \item $S$ è L.I.\\
+                $\alpha_0\cdot1+\alpha_1\cdot x+\alpha_2\cdot x^2+\dots+\alpha_nx^n=0$\\
+                $\Longrightarrow \alpha_0 = \alpha_1 = \alpha_2 = \dots = \alpha_n = 0$
+            \item $V = M_2(\mathbb{C})$, $K=\mathbb{C}$\\
+                $S =\Bigg\{ 
+                \begin{bmatrix}
+                    1 & 0\\
+                    0 & 0
+                \end{bmatrix}
+                \begin{bmatrix}
+                    0 & 1\\
+                    0 & 0
+                \end{bmatrix}
+                \begin{bmatrix}
+                    0 & 0\\
+                    1 & 0
+                \end{bmatrix}
+                ,
+                \begin{bmatrix}
+                    0 & 0\\
+                    0 & 1
+                \end{bmatrix}
+                \Bigg\}
+                $ è una base di $V$\\
+                Infatti
+                \begin{enumerate}
+                    \item $S$ è un insieme di genertori di $V$
+                    \item $S$ è L.I.\\\\
+                        
+                        $
+                        \begin{cases}
+                        \begin{bmatrix}
+                            \alpha & \beta\\
+                            \delta & \gamma
+                        \end{bmatrix}
+                        =\alpha
+                        \begin{bmatrix}
+                            1 & 0 \\
+                            0 & 0
+                        \end{bmatrix}
+                        +\beta
+                        \begin{bmatrix}
+                            0 & 1 \\
+                            0 & 0
+                        \end{bmatrix}
+                        +\delta
+                        \begin{bmatrix}
+                            0 & 0 \\
+                            1 & 0
+                        \end{bmatrix}
+                        +\gamma
+                        \begin{bmatrix}
+                            0 & 0 \\
+                            0 & 1
+                        \end{bmatrix}
+                        = 
+                        \begin{bmatrix}
+                            0 & 0\\
+                            0 & 0
+                        \end{bmatrix}\\
+                        \alpha,\beta, \delta, \gamma \in \mathbb{C}
+                        \end{cases}$ \\\\
+                        $\Longrightarrow \alpha =\beta=\delta=\gamma=0$
+                \end{enumerate}
+        \end{enumerate}
 \end{enumerate}
+$V=\{\vec{0}\}$ \textbf{che base ha?}\\\\
+$S_1=\{\vec{0}\}$ è un insieme di generatori. \\
+\textbf{ma è L.D.}\\
+\textbf{Non è una base di $\pmb{V=\vec{0}}$}\\\\
+$ 
+\begin{cases}
+    \varnothing \textrm{ è un insieme di generatori di }V\textrm{ per convenzione}\\
+    \varnothing \textrm{ è L.I. per convenzione}
+\end{cases}
+$\\\\
+$\Longrightarrow \varnothing$ è (l'unica) base di $\{\vec{0}\}$
+
+\paragraph{Teorema 1} \textbf{Ogni spazio vettoriale (f.g.) ha una base}\\\\
+Sia $V$  uno spazio vettoriale finitamente generato\dots
+
+Si parte da un insieme di generatori $S$ di $V$ (che essendo $V$ f.g. è un insieme \textbf{finito di vettori})
+e si tolgono via via i vettori che siano combinazioni lineari di quelli rimasti al passaggio precedente.
+
+\paragraph{Teorema 2} Sia $V$ uno spazio vettoriale su $K\in\{\mathbb{R}, \mathbb{C}\}$\\
+Siano $\mathcal{B}_1$ e $\mathcal{B}_2$ due basi di $V$. Allora 
+
+\begin{center}
+    (il numero di elemento di $\mathcal{B}_1$) $=$ 
+    (il numero di elemento di $\mathcal{B}_2$) 
+\end{center}
+
+Tale numero è quindi un invariante di $V$, si chiama \textbf{la dimensione} di $V$ e si indica \textbf{dim $\pmb{V}$}
 
 
+
+
+% megapaolo
 \subsection{Basi ordinate e mappe delle coordinate}
 Sia $V$ uno spazio vettoriale su $K\in\{\mathbb{R}, \mathbb{C}\}$
 \paragraph{Def} Una \textbf{base ordinata} di $V$ `e una base di $V$ in cui si sia fissato l' ordine degli elementi. 
