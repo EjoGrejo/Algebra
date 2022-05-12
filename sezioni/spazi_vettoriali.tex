@@ -1217,8 +1217,236 @@ $\exists\alpha_1,\dots, \alpha_n$ non tutti nulli tali che $\alpha_1\vec{v}_1+\d
         \end{cases}
         \Longrightarrow U=V
         $
+    \item 
+        $ 
+        \begin{cases}
+            U\leq V\\
+            \dim U=0
+        \end{cases}
+        \Longleftarrow U=\{\vec{0}\}
+        $
 \end{enumerate}
 
+\paragraph{Rango di una matrice}\hspace{1cm} 
+
+A$_{m\times n}$
+\begin{enumerate}
+    \item A$\underset{EG}{\longrightarrow}$U$_1$ forma ridotta di Gauss per $A$\\
+        A$\underset{EG}{\longrightarrow}$U$_2$ forma ridotta di Gauss per $A$\\\\
+        La possibilità che sia U$_1\neq$u$_2$ dipende solo dalla possibilità di fare \textbf{scelte} 
+        in scamdi di righe \textbf{necessari} nelle EG. 
+
+        Siccome nelo scambio di righe non cambia il numero di righe non nullo si ha 
+        \begin{center}
+            $\Bigg($
+               \begin{tabular}{c}
+                   il numero delle righe\\
+                   non nulle di U$_1$
+               \end{tabular} 
+            $\Bigg)$
+            =
+            $\Bigg($
+               \begin{tabular}{c}
+                   il numero delle righe\\
+                   non nulle di U$_2$
+               \end{tabular} 
+            $\Bigg)$
+        \end{center}
+        Lo chiamiamo {\color{red}rango di A$=$
+        \begin{tabular}{c}
+            rk A\\
+            rg A
+        \end{tabular}
+        }
+        $=k$
+    \item A$_m\times n$, rk A$=k$\\
+        A$\longrightarrow$ U$=$ DISEGNINO DELLA MATRICE\\\\
+        $k=$ il numero delle colonne dominanti di U \\
+        (perché ogni gradino è alto una riga)
+    \item A$_{m\times n}$, rk A$=k$. Si ha \\
+        $k\leq m$ e $k \leq n$\\
+        
+        infatti: \\$k\underset{(1)}{=}
+        \Bigg($
+        \begin{tabular}{c}
+            numero delle righe\\
+            non nulle di U
+        \end{tabular}
+        $\Bigg)\leq\Bigg($
+        \begin{tabular}{c}
+            il numero \\
+            delle righe di U
+        \end{tabular}
+        $\Bigg)=m$\\
+        $k\underset{(2)}{=}
+        \Bigg($
+        \begin{tabular}{c}
+            numero delle colonne\\
+            dominanti di U
+        \end{tabular}
+        $\Bigg)\leq\Bigg($
+        \begin{tabular}{c}
+            il numero \\
+            delle colonne di U
+        \end{tabular}
+        $\Bigg)=n$
+\end{enumerate}
+
+\paragraph{I quattro sottospazi fontamentali di una matrice}\hspace{1cm}\\\\
+A$\in$M$_{m\times n}(\mathbb{C})$\\\\
+A$=[\vec{a}_1,\vec{a}_2,\dots\vec{a}_n]= 
+\begin{bmatrix}
+    \vec{r}^T_1\\
+    \vec{r}^T_2\\
+    ;\\
+    \vec{r}^T_n\\
+\end{bmatrix}
+$
+
+{\color{purple}PAOLO schemini cazzi mazzi\\\\}
+
+\begin{enumerate}
+    \item \textbf{Lo spazio delle colonne di A:}\\
+        C(A)$=<\vec{a}_1,\vec{a}_2,\dots, \vec{a}_n >= \{\alpha_1\vec{a}_1+\alpha_2\vec{a}_2+\dots+\alpha_n\vec{n}|
+        \alpha_i\in\mathbb{C}
+        \}\leq \mathbb{C}^m$
+    \item \textbf{Lo spazio delle righe di A:}\\
+        \begin{align*}
+            \textrm{R(A)} & =<\overline{\vec{r}}_1, \overline{\vec{r}}_2,\dots, \overline{\vec{r}}_m> \leq \mathbb{C}^n\\
+            & =\{\alpha_1\overline{\vec{r}}_1+\alpha_2\overline{\vec{r}}_2+\dots+\alpha_m\overline{\vec{r}}_m| 
+            \alpha-i\in\mathbb{C}\}
+        \end{align*}
+        \textbf{NB} A$_{m\times n} = 
+        \begin{bmatrix}
+            \vec{r}^T_1\\
+            \vec{r}^T_2\\
+            :\\
+            \vec{r}^T_m\\
+        \end{bmatrix}$\\
+        A$^H_{n\times m}= 
+        \begin{bmatrix}
+            \overline{\vec{r}}_1 &     
+            \overline{\vec{r}}_2 &     
+            \dots & 
+            \overline{\vec{r}}_m &     
+        \end{bmatrix}
+        $
+        \[
+            \textrm{R(A)} = \textrm{C(A}^H)
+        \]
+    \item \textbf{lo spazio nullo di A:}\\
+        N(A)$=\{\vec{x}|$A$\vec{x}=\vec{0}\}\leq \mathbb{C}^n$
+        \footnote{A$_{m\times n }$, $\vec{x}_{n\times 1}$} 
+    \item \textbf{Lo spazio nullo sinistro di $\pmb{\underset{m\times n}{\textrm{A}}}$:}\\
+        N(A$^H$)$=\{\vec{x}|\textrm{A}^H\vec{x}=\vec{0}\}\leq \mathbb{C}^m$
+        \footnote{A$_{n\times m }$, $\vec{x}_{m\times 1}$}
+\end{enumerate}
+
+\paragraph{Come trovare basi di C(A), di R(A) e di N(A)}\hspace{1cm}\\
+A$\in$M$_{m\times n}(\mathbb{C})$, rk A$=k$\\
+A$\underset{EG}{\longrightarrow}$U forma ridotta di Gauss per A
+\begin{enumerate}
+    \item \textbf{U ha k colonne dominanti} (rk A$=k$) \\
+        Siano esse: $\vec{u}_{i_1},\vec{u}_{i_2}, \dots, \vec{u}_{i_k}$\\
+        A$=[\vec{a}_1, \vec{a}_2, \dots\vec{a}_n]\hspace{1cm}$U$=[\vec{u}_1, \vec{u}_2, \dots\vec{u}_n]$\\\\
+        Una base B di C(A) è l'insieme \textbf{delle colonne di A} corrispondenti alle colonne dominanti di U.
+        \[
+            \textrm{B} =\{a_{i_1},a_{i_2}, \dots, a_{i_k}\}
+        \]
+        \textbf{NB 1} $\dim$ C(A) $=|$B$|=k=$rk A\\
+        \textbf{Nb 2} $\dim$C(A)$=$rk A$=$ rk U = $\dim$C(U)\\
+        Ma C(A)$\neq$C(U) in generale, per cui \\
+        $\vec{u}_{i_1}, \vec{u}_{i_2}, \dots, \vec{u}_{i_k}$ è una base di C(U) 
+        {\color{red}Ma può essere una base di C(A)}\\
+        \textbf{Esempio} A$= 
+        \begin{bmatrix}
+            1 & 2\\
+            1 & 2
+        \end{bmatrix}
+        \underset{E_{21}(-1)}{\longrightarrow} 
+        \begin{bmatrix}
+            1 & 2 \\
+            0 & 0 
+        \end{bmatrix}
+        =$U\\\\
+        Una base di C(A) è $\Bigg\{
+            \begin{bmatrix} 
+                1\\1
+            \end{bmatrix} 
+            \Bigg\}$\\
+        Una base di C(U) è $\Bigg\{
+            \begin{bmatrix} 
+                1\\0
+            \end{bmatrix} 
+            \Bigg\}$\\\\
+        \textbf{Attenzione:
+        $\pmb{\Bigg\{
+            \begin{bmatrix} 
+                1\\0
+            \end{bmatrix} 
+            \Bigg\}}$
+        non è una bse di C(A)\\
+        Addirittura 
+        $\pmb{
+            \begin{bmatrix} 
+                1\\0
+            \end{bmatrix} 
+            \not\in}$ C(A)
+        } $=\Bigg\{\alpha
+        \begin{bmatrix}
+            1\\1
+        \end{bmatrix}
+        + 
+        \beta
+        \begin{bmatrix}
+            2\\2 
+        \end{bmatrix}
+        | \alpha,\beta\in\mathbb{C}
+        \Bigg\}$\\
+        $=\Bigg\{
+            \delta
+            \begin{bmatrix}
+                1\\1 
+            \end{bmatrix}
+            |\delta\in\mathbb{C} 
+        \Bigg\}$
+    \item A$=
+        \begin{bmatrix}
+            \vec{r}^T_1\\
+            \vec{r}^T_2\\
+            :\\
+            \vec{r}^T_m\\
+        \end{bmatrix}
+        \underset{EG}{\longrightarrow}$
+        U $=${\color{purple}PAOLO} \\
+        $\vec{r}_i^T\in \mathbb{C}_n$  \\
+        U ha le prime $k$ righe non nulle (e le altre $m-k$ nulle)\\
+        Si ha che R(A) $=$R(U) e che una base $D$ di R(A)$=$R(U) è 
+        \[
+            \textrm{D} = \{\overline{\vec{s}}_1,\overline{\vec{s}}_2,\dots,\overline{\vec{s}}_k\}\\
+        \]
+        \textbf{NB 1} $\dim$R(A)$=|$D$|=k=\dim$R(U)  \\
+        \textbf{NB 2} R(A)$=$R(U) ma non è detto che le H-trasposte delle righe di A corrispondenti alle righe 
+        non nulle di U siano una bse: \textbf{occorre prendere le H-trasposte delle righe non nulle di U}
+        (Dipende dal fatto che nelle EG su A ci possono essere scambi di righe)
+        \textbf{Esempio} A$= 
+        \begin{bmatrix}
+            0 & 0\\
+            1 & i
+        \end{bmatrix}
+        \underset{E_{12}}{\longrightarrow}
+        \begin{bmatrix}
+            1 & i\\
+            0 & 0
+        \end{bmatrix}\footnote{$1$ e $i$ $\vec{s}^T_1$, $0$ $0$ $\vec{0}^T$}
+        =$U {\color{purple}PAOLO}\\\\
+    \item N(A)$=\{\vec{x}|$A$\vec{x}=\vec{0}\}\leq \mathbb{C}^n\hspace{1cm}$A$_{m\times n}$\\
+        $[$A$|\vec{0}]\longrightarrow[$U$|\vec{0}]$\\
+        A$\vec{x}=\vec{0}$ è equivalente U$\vec{x}=\vec{0}$\\
+        \textbf{NB: N(A)=N(U)}\\
+\end{enumerate}
+
+\paragraph{Teorema nullità del rango}
 
 % megapaolo
 \subsection{Basi ordinate e mappe delle coordinate}
