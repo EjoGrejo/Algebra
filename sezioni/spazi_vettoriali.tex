@@ -1153,7 +1153,71 @@ Siano $\mathcal{B}_1$ e $\mathcal{B}_2$ due basi di $V$. Allora
 
 Tale numero è quindi un invariante di $V$, si chiama \textbf{la dimensione} di $V$ e si indica \textbf{dim $\pmb{V}$}
 
+\paragraph{NB} Nelle basi \textbf{non} ci sono ripetizioni.\\
+Anzi, negli insiemi L.I. non ci sono ripetizioni. \\
 
+È equivalente a dire:\\
+$$
+\begin{cases}
+    A=\{\vec{v}_1.\vec{v}_2,\dots, \vec{v}_n\} \textrm{ è un insieme di vettori}\\
+    \textrm{ e } \vec{v}_i=\vec{v}_j \footnote{ovvero se in a ci sono ripetizioni}
+\end{cases}
+\Longrightarrow A\textrm{ è L.D.}
+$$
+$\exists\alpha_1,\dots, \alpha_n$ non tutti nulli tali che $\alpha_1\vec{v}_1+\dots+\alpha_n\vec{v}_n=\vec{0}$?\\
+{\color{blue}
+    $0\cdot\vec{v}_1+\dots +1\cdot\vec{v}_i+\dots+(-1)\vec{v}_j+\dots+0\vec{v}_n=\vec{0}$
+}
+{\color{purple}\\\\PAOLO\\\\}
+
+\textbf{Quindi A è L.D.}
+
+\paragraph{Esempi di dimensione}
+\begin{enumerate}
+    \item $\dim \mathbb{C}^n=n\hspace{2cm} \mathcal{E}=\{\vec{e}_1,\dots,\vec{e}_n\} \textrm{ è una base}$\\
+        $\dim \mathbb{R}^n = n $
+    \item $\dim \mathbb{C}_n[x]=n+1\hspace{1.5cm}\{1,x,x^2, \dots,x^n\}$\\
+        $\dim \mathbb{R}_n[x]=n+1$
+    \item $\dim M_2(\mathbb{C})=4\hspace{1.5cm}
+        \Bigg\{
+            \begin{bmatrix}
+                1 & 0 \\
+                0 & 0 
+            \end{bmatrix}
+            ; 
+            \begin{bmatrix}
+                0 & 1\\
+                0 & 0 
+            \end{bmatrix}
+            ; 
+            \begin{bmatrix}
+                0 & 0 \\
+                1 & 0
+            \end{bmatrix}
+            ; 
+            \begin{bmatrix}
+                0 & 0\\
+                0 & 1
+            \end{bmatrix}
+        \Bigg\}
+    \textrm{ è una sua base}\\
+    $
+\item  $\dim \{\vec{0}\}=0 \hspace{2cm}\textrm{ è una sua base}$
+\end{enumerate}
+
+\paragraph{Proprietà della dimensione} Sia $V$ uno spazio vettoriale.
+\begin{enumerate}
+    \item $U\underset{\uparrow}{\leq} V\Longrightarrow \dim U\leq \dim{V}$\\
+        sottospazio\\
+    \item 
+        $
+        \begin{cases}
+            U\leq V\\
+            \dim U =\dim V
+        \end{cases}
+        \Longrightarrow U=V
+        $
+\end{enumerate}
 
 
 % megapaolo
