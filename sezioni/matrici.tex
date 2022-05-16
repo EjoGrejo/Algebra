@@ -694,7 +694,8 @@ A$=
 \begin{bmatrix} 
     1 & 2+3i & 1+i\\
     7i & 0 & 4
-\end{bmatrix} 
+\end{bmatrix}$\\ 
+$
 \Longrightarrow
 \overline{\textrm{A}}=
 \begin{bmatrix}
@@ -702,21 +703,36 @@ A$=
     \overline{7i} & \overline{0} & \overline{4}
 \end{bmatrix}=
 \begin{bmatrix}
-    {1} & {2+3i} & {1-i}\\
-    {7i} & {0} & {4}
-\end{bmatrix}
-\begin{bmatrix}
-    \overline{1} & \overline{7i} \\
-    \overline{2+3i} & \overline{0} \\
-    \overline{1-i} & \overline{4} 
-\end{bmatrix}
-\begin{bmatrix}
-    {1} & {7i} \\
-    {2+3i} & {0} \\
-    {1-i} & {4} 
+    {1} & {2-3i} & {1+i}\\
+    {-7i} & {0} & {4}
 \end{bmatrix}
 $
-{\color{purple} PAOLO}\\
+\subsection{La H-trasposta}
+La H-trasposta di A$=(a_{ij})_{m\times n}$ è \\
+B$=(b_{ij})_{n\times m}$ tale che $b_{ij}=\overline{a_{ji}}$\\
+Si indica B$=$A$^H$
+\paragraph{Esempio} \hspace{1cm}\\
+A$= 
+\begin{bmatrix}
+    1 & 2+3i & 1-i\\
+    7i & 0 & 4
+\end{bmatrix}
+\Longrightarrow$ 
+A$^H=\overline{{\textrm{A}}^T}= 
+\begin{bmatrix}
+    \overline{1} & \overline{7i}\\
+    \overline{2+3i} & \overline{0}\\
+    \overline{1-i} & \overline{4}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    1 & -7i\\
+    2-3i & 0\\
+    1+i & 4
+\end{bmatrix}
+$
+\paragraph{NB} A$^H=\overline{\textrm{A}^T}=(\overline{\textrm{A}})^T$ $\forall$A
+
 
 {\color{red} 
 Proprieta delle trasposte, delle coniugate e delle H-trasposte
