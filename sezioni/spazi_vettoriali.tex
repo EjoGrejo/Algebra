@@ -1447,14 +1447,42 @@ A$\underset{EG}{\longrightarrow}$U forma ridotta di Gauss per A
 \end{enumerate}
 
 \paragraph{Teorema nullità del rango}
+$\dim$N(A)$=$
+\begin{tabular}{c}
+    numero delle \\
+    colonne di A
+\end{tabular}
+$-$rk A$=n-k$\\
+    A$_{m\times n}$\\
+    rk A$=k$
+    In U ci sono $n-k$ colonne libere, per cui A$\vec{x}=\vec{0}$ ha $\infty^{n-k}$ 
+    soluzioni, per cui gli elementi di N(A) sono ``descritti" da $n-k$ parametri: \\
+    $h_1, h_2\cdots,h_{n-k}$\\
+    Una base $\mathcal{C}$ di N(A)$=$N(U) è
+    \[
+        \mathcal{C}=\{\vec{v}_1,\vec{v}_2, \dots, \vec{v}_{n-k}\}\textrm{ dove}
+    \]
+    N(A)$\in\vec{v}_1$ si ottiene ponendo $h_1=1$ e $h_i=0$ $\forall i\neq 1$ \\
+    N(A)$\in\vec{v}_2$ si ottiene ponendo $h_2=1$ e $h_i=0$ $\forall i\neq 2$ \\
+    :\\
+    N(A)$\in\vec{v}_{n-k}$ si ottiene ponendo $h_{n-k}=1$ e $h_i=0$ $\forall i\neq {n-k}$ 
+    
+    \paragraph{Proprietà del rango}\hspace{1cm}\\
+    Da $dim$ C(A) $=$ rk (A) segue che 
+    
+    \begin{enumerate}
+        \item rk(AB) $\leq$ rk A\\
+        \item rk(AB) $\leq$ rk B\\
+        \item rk A $=$ rk A$^H=$ rk A$^T$
+    \end{enumerate}
 
-% megapaolo
 \subsection{Basi ordinate e mappe delle coordinate}
 Sia $V$ uno spazio vettoriale su $K\in\{\mathbb{R}, \mathbb{C}\}$
-\paragraph{Def} Una \textbf{base ordinata} di $V$ `e una base di $V$ in cui si sia fissato l' ordine degli elementi. 
-\paragraph{Esempio} $V= \mathbb{R}^2, K=\mathbb{R}$\\
+\paragraph{Def} Una \textbf{base ordinata} di $V$ è una base di $V$ in cui si sia fissato 
+l'ordine degli elementi. 
+\paragraph{Esempio} $V= \mathbb{R}^2, K=\mathbb{R}$\\\\
 $
-\mathcal{B}_1= \{ 
+\mathcal{B}_1= \Bigg\{ 
     \begin{bmatrix}
         1\\0
     \end{bmatrix}
@@ -1462,7 +1490,8 @@ $
     \begin{bmatrix}
         0\\1
     \end{bmatrix}
-\mathcal{B}_2= \{ 
+    \Bigg\}$, $
+\mathcal{B}_2= \Bigg\{ 
     \begin{bmatrix}
         0\\1
     \end{bmatrix}
@@ -1470,16 +1499,36 @@ $
     \begin{bmatrix}
         1\\0
     \end{bmatrix}
-\}$
+\Bigg\}$\\
+\\
+$B_1$ e $B_2$ sono la stessa base di $V=\mathbb{R}^2$, ma sono diverse
+in quanto basi ordinate.\\
 
-PAOLO\\\\
-SIa $\mathcal{B}=\{\vec{v}_1;\vec{v}_2;\dots\vec{v}_n\}$ una \textbf{base ordinata} di $V$ e sia $\vec{v}\in V$\\
-$\mathcal{B}$ `e un insieme di generatori di $V\Longrightarrow \exists\alpha_1,\alpha_2,\dots,\alpha_n\in K\Big|\vec{v}
+Sia $\mathcal{B}=\{\vec{v}_1;\vec{v}_2;\dots;\vec{v}_n\}$ una \textbf{base ordinata} di $V$\\
+e sia $\vec{v}\in V$\\
+$\mathcal{B}$ è un insieme di generatori di 
+$V\Longrightarrow \exists\alpha_1,\alpha_2,\dots,\alpha_n\in K\Big|\vec{v}
 =\sum_{i-1}^{n}\alpha_i\vec{v}i$
-$\mathcal{B}$ `e L.I. \\
-PAOLO\\
-$\mathcal{B}$ `e ordinata \\
-\large{
+$\mathcal{B}$ è L.I. \\
+$\Longrightarrow \alpha_1, \dots, \alpha_n$ sono univocamente individuati da $\vec{v}$.\\
+Infatti
+\[
+    \begin{cases}
+        \vec{v}=\sum \alpha_i\vec{v}_i\\
+        \vec{v}=\sum \beta_i\vec{v}_i
+    \end{cases}
+    \Longrightarrow\beta_i=a\alpha_i \forall i=1, \dots, n
+\]
+\[
+    \sum\alpha_i\vec{v}_i=\sum\beta_i\vec{v}_i\Longrightarrow
+    \sum\alpha_i\vec{v}_i-\sum\beta_i\vec{v}_i=0=\sum(\alpha_i-\beta_i)\vec{v}_i=0
+\]
+\[
+    \Longrightarrow\alpha_i-\beta_i=0\hspace{0.5cm} \forall i\Longrightarrow\beta_i=\alpha_i 
+    \hspace{0.5cm}\forall i
+\]
+$\mathcal{B}$ è ordinata \\
+{\Large
     $\forall \vec{v}\in V \exists!
     \begin{bmatrix}
         \alpha_1\\
@@ -1488,22 +1537,41 @@ $\mathcal{B}$ `e ordinata \\
         \alpha_n
     \end{bmatrix}
     \in\mathbb{C}^n $
+tale che 
+$\vec{v}=\sum_{i=1}^{n}\alpha_i\vec{v}_i$
 }
-tale che \\
-PAOLO\\
 
 \paragraph{Def}
 Siano $V$ spazi vettoriali su $K \in\{\mathbb{R}, \mathbb{C}\}$ e $\mathcal{B}=\{\vec{v}_1, \dots, \vec{v}_n\}$ una base ordinata diu $V$\\
 Sia $\vec{v}\in V$.\\
-Si chiama \textbf{vettore delle coordinate} del vettore $\vec{v}\in V$ rispetto alla base ordinata B il vettore 
+Si chiama \textbf{vettore delle coordinate} del vettore $\vec{v}\in V$ 
+rispetto alla base ordinata B il vettore \\
 
-PAOLO 
+$\begin{bmatrix}
+    \alpha_1\\
+    \alpha_2\\
+    :\\
+    \alpha_n
+\end{bmatrix}\in K^n$\\
+Tale che $\vec{v}=\sum_{i=1}^{n} \alpha_1\vec{v}_i$.\\
+Si scrive
+\[
+    C_B(\vec{v})= 
+    \begin{bmatrix}
+        \alpha_1\\
+        \alpha_2\\
+        :\\
+        \alpha_n
+    \end{bmatrix}
+\]
 
 \paragraph{Esempio} $V=\mathbb{R}^2, \vec{v}= 
 \begin{bmatrix}
     2\\7
 \end{bmatrix}$\\
-$\mathcal{B}_1=
+\\
+\\
+$\mathcal{B}_1=\Bigg\{
 \begin{bmatrix}
     1\\0
 \end{bmatrix}
@@ -1511,7 +1579,9 @@ $\mathcal{B}_1=
 \begin{bmatrix}
     0\\1
 \end{bmatrix}
-\mathcal{B}_2=
+\Bigg\}
+\hspace{1cm}
+\mathcal{B}_2=\Bigg\{
 \begin{bmatrix}
     0\\1
 \end{bmatrix}
@@ -1519,14 +1589,15 @@ $\mathcal{B}_1=
 \begin{bmatrix}
     1\\0
 \end{bmatrix}
+\Bigg\}
 $\\
 
 \[
-    C_{\mathcal{B}_1}( 
+    C_{\mathcal{B}_1}\Bigg( 
     \begin{bmatrix}  
         2\\7
     \end{bmatrix}  
-    )
+    \Bigg)
     = 
     \begin{bmatrix}
         \alpha_1\\
@@ -1540,20 +1611,75 @@ $\\
     \begin{bmatrix}
         1\\0
     \end{bmatrix}
+    +\alpha_2
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+    = 
+    \begin{bmatrix}
+        \alpha_1\\\alpha_2
+    \end{bmatrix}
+    \Longrightarrow
+    \begin{cases}
+        \alpha_1=2\\
+        \alpha_2=7
+    \end{cases}
 \]
 
-PAOLO
+$C_{B_1}=\Bigg(
+\begin{bmatrix}
+    2\\7
+\end{bmatrix}
+\Bigg)= 
+\begin{bmatrix}
+    2\\7
+\end{bmatrix}
+$
+
+\[
+    C_{\mathcal{B}_1}\Bigg( 
+    \begin{bmatrix}  
+        2\\7
+    \end{bmatrix}  
+    \Bigg)
+    = 
+    \begin{bmatrix}
+        \alpha_1\\
+        \alpha_2
+    \end{bmatrix}
+    \in\mathbb{R}\Big| 
+    \begin{bmatrix}
+        2\\7
+    \end{bmatrix}
+    =\alpha_1
+    \begin{bmatrix}
+        0\\1
+    \end{bmatrix}
+    +\alpha_2
+    \begin{bmatrix}
+        1\\0
+    \end{bmatrix}
+    = 
+    \begin{bmatrix}
+        \alpha_2\\\alpha_1
+    \end{bmatrix}
+    \Longrightarrow
+    \begin{cases}
+        \alpha_2=2\\
+        \alpha_1=7
+    \end{cases}
+\]
+
+$C_{B_2}=\Bigg(
+\begin{bmatrix}
+    2\\7
+\end{bmatrix}
+\Bigg)= 
+\begin{bmatrix}
+    7\\2
+\end{bmatrix}
+$
 
 
-
-
-
-
-
-    
-
-
-
-% presta attenzione quando arrivi a INSIEMI DI VETTORI LINEARMENTE INDIPENDENTI (L.I.)
 
 
